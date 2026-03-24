@@ -1,15 +1,17 @@
 import { useParams, Link } from "wouter";
 import { trades } from "@/data/trades";
 import { cities } from "@/data/cities";
+import { tradeContentMap } from "@/data/tradeContent";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
-import { ArrowRight, Phone, CheckCircle2, MapPin, ArrowLeft, Award, ShieldCheck, FileCheck2 } from "lucide-react";
+import { ArrowRight, Phone, CheckCircle2, MapPin, ArrowLeft, Award, ShieldCheck, FileCheck2, ClipboardList, Lightbulb, BookOpen, HelpCircle, Star } from "lucide-react";
 
 export default function TradeCityPage() {
   const params = useParams<{ trade: string; city: string }>();
   const trade = trades.find(t => t.slug === params.trade);
   const city = cities.find(c => c.slug === params.city);
+  const content = tradeContentMap[params.trade || ""];
 
   if (!trade || !city) {
     return (
@@ -114,7 +116,12 @@ export default function TradeCityPage() {
                 <h2 className="text-3xl font-black text-foreground mb-6">
                   {trade.name} Services in {city.name}
                 </h2>
-                <p className="text-lg text-muted-foreground leading-relaxed mb-8">{trade.description}</p>
+                <p className="text-lg text-muted-foreground leading-relaxed mb-6">{trade.description}</p>
+                {content && (
+                  <div className="prose prose-slate max-w-none mb-8">
+                    <p className="text-muted-foreground leading-relaxed">{content.longDescription}</p>
+                  </div>
+                )}
 
                 <div className="bg-orange-50 border-l-4 border-primary p-6 rounded-r-xl mb-8">
                   <h3 className="font-bold text-lg text-orange-900 mb-3">Why {city.name} Properties Choose Us:</h3>
@@ -172,13 +179,54 @@ export default function TradeCityPage() {
           </div>
         </section>
 
+        {content && content.processSteps.length > 0 && (
+          <section className="py-20 px-6 bg-slate-50 border-t border-slate-200">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-center gap-3 mb-3">
+                <ClipboardList className="w-6 h-6 text-primary" />
+                <h2 className="text-3xl font-black text-foreground">Our {trade.name} Process in {city.name}</h2>
+              </div>
+              <p className="text-muted-foreground mb-12 max-w-2xl">Every {city.name} project follows our proven process to ensure quality, safety, and client satisfaction.</p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {content.processSteps.map((step, i) => (
+                  <div key={i} className="bg-white p-8 rounded-2xl shadow-sm border border-slate-200 hover:shadow-lg hover:border-primary/30 transition-all">
+                    <div className="w-10 h-10 bg-primary text-white rounded-xl flex items-center justify-center font-black text-lg mb-4">{i + 1}</div>
+                    <h3 className="text-lg font-bold mb-3">{step.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {content && content.benefits.length > 0 && (
+          <section className="py-20 px-6 bg-background">
+            <div className="max-w-7xl mx-auto">
+              <div className="flex items-center gap-3 mb-3">
+                <Star className="w-6 h-6 text-primary" />
+                <h2 className="text-3xl font-black text-foreground">Benefits of Choosing Us in {city.name}</h2>
+              </div>
+              <p className="text-muted-foreground mb-12 max-w-2xl">{content.whyChooseContent}</p>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                {content.benefits.map((b, i) => (
+                  <div key={i} className="bg-card p-6 rounded-2xl border border-border shadow-sm">
+                    <h3 className="text-lg font-bold text-foreground mb-2">{b.title}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{b.description}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
         <section className="py-16 px-6 bg-slate-50 border-t border-slate-200">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-2xl font-black text-foreground mb-3">
               Neighborhoods We Serve in {city.name}
             </h2>
             <p className="text-muted-foreground mb-8">
-              Our {trade.name.toLowerCase()} team provides on-site service across the entire {city.region}.
+              Our {trade.name.toLowerCase()} team provides on-site service across the entire {city.region}. Whether you're in {city.neighborhoods.slice(0, 3).join(', ')} or anywhere else in {city.name}, our experienced crews are ready to serve your property.
             </p>
             <div className="flex flex-wrap gap-3">
               {city.neighborhoods.map((n) => (
@@ -190,13 +238,80 @@ export default function TradeCityPage() {
           </div>
         </section>
 
-        <section className="py-16 px-6 bg-background">
+        {content && content.educationalSections.length > 0 && (
+          <section className="py-20 px-6 bg-white border-t border-slate-200">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-3">
+                <BookOpen className="w-6 h-6 text-primary" />
+                <h2 className="text-3xl font-black text-foreground">{trade.name} Guide for {city.name} Properties</h2>
+              </div>
+              <p className="text-muted-foreground mb-12">In-depth information to help {city.name} property owners and Strata councils make informed decisions about {trade.name.toLowerCase()}.</p>
+              <div className="space-y-12">
+                {content.educationalSections.map((section, i) => (
+                  <article key={i} className="prose prose-slate max-w-none">
+                    <h3 className="text-2xl font-bold text-foreground mb-4">{section.heading}</h3>
+                    <p className="text-muted-foreground leading-relaxed whitespace-pre-line">{section.content}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {content && (
+          <section className="py-20 px-6 bg-slate-50 border-t border-slate-200">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-3">
+                <Lightbulb className="w-6 h-6 text-primary" />
+                <h2 className="text-2xl font-black text-foreground">Expert Knowledge for {city.name}</h2>
+              </div>
+              <div className="space-y-8 mt-8">
+                <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                  <h3 className="text-lg font-bold mb-3">Industry Perspective</h3>
+                  <p className="text-muted-foreground leading-relaxed">{content.industryInsight}</p>
+                </div>
+                <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                  <h3 className="text-lg font-bold mb-3">Materials & Methods</h3>
+                  <p className="text-muted-foreground leading-relaxed">{content.materialsAndMethods}</p>
+                </div>
+                <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                  <h3 className="text-lg font-bold mb-3">Strata-Specific Considerations in {city.name}</h3>
+                  <p className="text-muted-foreground leading-relaxed">{content.strataSpecificContent}</p>
+                </div>
+                <div className="grid md:grid-cols-2 gap-8">
+                  <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 className="text-lg font-bold mb-3">Seasonal Considerations</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{content.seasonalConsiderations}</p>
+                  </div>
+                  <div className="bg-white p-8 rounded-2xl border border-slate-200 shadow-sm">
+                    <h3 className="text-lg font-bold mb-3">Safety & Compliance</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">{content.safetyAndCompliance}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        )}
+
+        <section className="py-16 px-6 bg-background border-t border-slate-200">
           <div className="max-w-7xl mx-auto">
-            <h2 className="text-2xl font-black text-foreground mb-3">Frequently Asked Questions</h2>
-            <p className="text-muted-foreground mb-8">Common questions about {trade.name.toLowerCase()} in {city.name}.</p>
+            <div className="flex items-center gap-3 mb-3">
+              <HelpCircle className="w-6 h-6 text-primary" />
+              <h2 className="text-2xl font-black text-foreground">Frequently Asked Questions About {trade.name} in {city.name}</h2>
+            </div>
+            <p className="text-muted-foreground mb-8">Common questions from {city.name} property owners about {trade.name.toLowerCase()} services.</p>
             <div className="grid md:grid-cols-1 gap-4 max-w-3xl">
               {trade.faqs.map((faq, i) => (
                 <details key={i} className="bg-card border border-border rounded-xl p-6 shadow-sm group">
+                  <summary className="font-bold cursor-pointer list-none flex justify-between items-center">
+                    {faq.q}
+                    <span className="text-primary text-xl group-open:rotate-45 transition-transform">+</span>
+                  </summary>
+                  <p className="mt-4 text-muted-foreground text-sm leading-relaxed">{faq.a}</p>
+                </details>
+              ))}
+              {content && content.extendedFaqs.map((faq, i) => (
+                <details key={`ext-${i}`} className="bg-card border border-border rounded-xl p-6 shadow-sm group">
                   <summary className="font-bold cursor-pointer list-none flex justify-between items-center">
                     {faq.q}
                     <span className="text-primary text-xl group-open:rotate-45 transition-transform">+</span>
@@ -214,7 +329,7 @@ export default function TradeCityPage() {
               Get a Free {trade.name} Quote in {city.name}
             </h2>
             <p className="text-lg text-slate-300 mb-10 max-w-xl mx-auto">
-              Contact us today for {trade.name.toLowerCase()} services in {city.name} and the surrounding {city.region} area.
+              Contact us today for professional {trade.name.toLowerCase()} services in {city.name} and the surrounding {city.region} area. 35+ years of trusted service.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="tel:+16047658424" className="bg-primary hover:bg-accent text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg inline-flex items-center justify-center gap-2 text-lg">
