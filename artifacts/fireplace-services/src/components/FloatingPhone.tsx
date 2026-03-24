@@ -1,9 +1,19 @@
 import { Phone, MessageCircle } from "lucide-react";
-import { contacts } from "../data/contacts";
+import { useLocation } from "wouter";
+import { contacts, getTradeContact } from "../data/contacts";
 
 export function FloatingPhone() {
-  const phone = contacts.colin.phone;
-  const phoneTel = contacts.colin.phoneTel;
+  const [location] = useLocation();
+
+  let phone = contacts.colin.phone;
+  let phoneTel = contacts.colin.phoneTel;
+
+  const tradeMatch = location.match(/^\/services\/([^/]+)/);
+  if (tradeMatch) {
+    const contact = getTradeContact(tradeMatch[1]);
+    phone = contact.phone;
+    phoneTel = contact.phoneTel;
+  }
 
   return (
     <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-2">

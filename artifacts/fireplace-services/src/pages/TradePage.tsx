@@ -297,7 +297,7 @@ export default function TradePage() {
                 <a href="https://steelstud.ca" target="_blank" rel="noopener noreferrer" className="bg-white border border-orange-300 text-orange-900 font-bold px-6 py-3 rounded-xl hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">SteelStud.ca</a>
                 <a href="https://beewarm.ca" target="_blank" rel="noopener noreferrer" className="bg-white border border-orange-300 text-orange-900 font-bold px-6 py-3 rounded-xl hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">BeeWarm.ca</a>
                 {trade.brandUrl && (
-                  <a href={trade.brandUrl} target="_blank" rel="noopener noreferrer" className="bg-primary border border-primary text-white font-bold px-6 py-3 rounded-xl hover:bg-accent hover:border-accent transition-all shadow-sm">PlowWow.com</a>
+                  <a href={trade.brandUrl} target="_blank" rel="noopener noreferrer" className="bg-primary border border-primary text-white font-bold px-6 py-3 rounded-xl hover:bg-accent hover:border-accent transition-all shadow-sm">{trade.brandUrl.replace(/^https?:\/\//, "")}</a>
                 )}
               </div>
             </div>

@@ -112,10 +112,10 @@ Key data files:
 - `src/data/blogPosts.ts`: 14 SEO blog articles covering all 13 trades with categories, trade/city cross-references, full-length content, and featured images
 
 Contact routing:
-- Colin Hamilton (Owner): 604-761-1518, steelstud.ca — main contact for all trades except HVAC
-- Robert Hamilton (Gas & HVAC): 604-765-8424, beewarmh@gmail.com — contact for HVAC/gas fitting pages only
-- Navbar, footer, home, and most trade pages show Colin's number
-- HVAC trade page + Sample Report show Robert's number
+- Colin Hamilton (Owner): 604-761-1518, steelstud.ca — main contact for most trades, homepage, and default floater
+- Robert Hamilton (Gas & HVAC): 604-765-8424 — contact for HVAC/gas fitting pages; floater shows Robert's number on HVAC pages
+- Vee / ACC Construction Ltd: 778-636-7714, acconstructionltd@gmail.com, strataroofers.com — contact for roofing pages; floater shows Vee's number on roofing pages
+- Floating phone button is route-aware: shows the appropriate contact's number based on trade page
 
 Brand: STRATA PROPERTY SERVICES (logo: STRATA orange, PROPERTY SERVICES white), Domain: stratapropertyservices.com
 Colors: dark slate secondary (#2d3748) + orange primary (#d84315), accent (#ff6f00)

@@ -17,6 +17,15 @@ export const contacts = {
     website: "beewarm.ca",
     description: "Licensed Class B Gas Fitter and HVAC specialist. Robert manages all gas fitting, fireplace maintenance, HVAC installations, and plumbing services. Certified under TSBC with Gas Fitter License #CGA0100182243 and Gas Contractor License #LGA0041068.",
   },
+  vee: {
+    name: "Vee",
+    title: "ACC Construction Ltd — Roofing Division",
+    phone: "778-636-7714",
+    phoneTel: "+17786367714",
+    email: "acconstructionltd@gmail.com",
+    website: "strataroofers.com",
+    description: "ACC Construction Ltd specializes in flat roof, pitched roof, and emergency roof repairs for Strata and commercial properties across the Lower Mainland.",
+  },
   company: {
     name: "Strata Property Services",
     email: "info@stratapropertyservices.com",
@@ -28,11 +37,12 @@ export const contacts = {
   },
 };
 
-export type ContactPerson = typeof contacts.colin | typeof contacts.robert;
+export type ContactPerson = typeof contacts.colin | typeof contacts.robert | typeof contacts.vee;
 
 export function getTradeContact(tradeSlug: string) {
-  const robertTrades = ["hvac"];
-  return robertTrades.includes(tradeSlug) ? contacts.robert : contacts.colin;
+  if (tradeSlug === "hvac") return contacts.robert;
+  if (tradeSlug === "roofing") return contacts.vee;
+  return contacts.colin;
 }
 
 export function getMainContact() {

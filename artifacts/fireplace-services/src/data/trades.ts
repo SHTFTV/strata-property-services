@@ -154,8 +154,9 @@ export const trades: TradeData[] = [
     tagline: "Flat Roof, Pitched Roof & Emergency Roof Repairs",
     description: "Our roofing division is here for your flat roof, pitched roof, or emergency repairs. We service Strata complexes, commercial buildings, and residential properties with expert craftsmanship and quality materials. From full re-roofs to leak repairs and preventive maintenance, we protect your building from the top down.",
     heroText: "Expert Roofing Services for Strata & Commercial Properties",
-    metaDescription: "Strata roofing services in Vancouver. Flat roof, pitched roof, repairs & maintenance. SBS, TPO, shingles. Licensed & insured. Call 604-761-1518.",
+    metaDescription: "Strata roofing services in Vancouver. Flat roof, pitched roof, repairs & maintenance. SBS, TPO, shingles. Licensed & insured. Call 778-636-7714.",
     image: "images/trade-roofing.png",
+    brandUrl: "https://strataroofers.com",
     features: [
       { title: "Flat Roof Systems", desc: "SBS modified bitumen, TPO, and EPDM flat roofing systems for Strata and commercial buildings with proven waterproofing." },
       { title: "Pitched Roof Installation", desc: "Asphalt shingle, metal roofing, and cedar shake installation for residential and low-rise Strata buildings." },
