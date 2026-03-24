@@ -17,7 +17,7 @@ export default function Home() {
     "url": "https://stratapropertyservices.com",
     "description": "Strata Property Services — Vancouver's complete property maintenance partner. Gas fireplaces, HVAC, roofing, siding, painting, renovations, landscaping, snow removal & more. Licensed & bonded since 1989.",
     "telephone": "+16047611518",
-    "email": "build@buildershaus.com",
+    "email": "info@stratapropertyservices.com",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "19906 32 Ave",

@@ -62,8 +62,8 @@ export function Footer() {
             <p>19906 32 Ave</p>
             <p>Langley, BC V3A 4T1</p>
           </address>
-          <a href="mailto:build@buildershaus.com" className="text-primary hover:text-accent transition-colors text-sm mt-2 block">
-            build@buildershaus.com
+          <a href="mailto:info@stratapropertyservices.com" className="text-primary hover:text-accent transition-colors text-sm mt-2 block">
+            info@stratapropertyservices.com
           </a>
         </div>
 

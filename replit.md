@@ -119,7 +119,7 @@ Contact routing:
 
 Brand: STRATA PROPERTY SERVICES (logo: STRATA orange, PROPERTY SERVICES white), Domain: stratapropertyservices.com
 Colors: dark slate secondary (#2d3748) + orange primary (#d84315), accent (#ff6f00)
-Address: 19906 32 Ave, Langley, BC V3A 4T1; Email: build@buildershaus.com
+Address: 19906 32 Ave, Langley, BC V3A 4T1; Email: info@stratapropertyservices.com
 Credentials: Class B Gas Fitter #CGA0100182243, Gas Contractor License #LGA0041068, WorkSafeBC, Est. 1989
 17 Cities: Vancouver, Burnaby, Surrey, Coquitlam, Langley, North Vancouver, West Vancouver, New Westminster, Richmond, Port Coquitlam, Port Moody, Maple Ridge, Delta, White Rock, Abbotsford, Mission, Chilliwack
 13 Trades: snow-removal, condo-renovations, hvac, mini-excavation, siding, roofing, landscaping, painting, flooring, perimeter-drain, plumbing, drywall, restoration

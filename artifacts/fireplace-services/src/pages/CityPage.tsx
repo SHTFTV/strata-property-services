@@ -70,7 +70,7 @@ export default function CityPage() {
     "url": `https://stratapropertyservices.com/areas/${city.slug}`,
     "description": city.metaDescription,
     "telephone": "+16047611518",
-    "email": "beewarmh@gmail.com",
+    "email": "info@stratapropertyservices.com",
     "address": {
       "@type": "PostalAddress",
       "addressLocality": city.name,
