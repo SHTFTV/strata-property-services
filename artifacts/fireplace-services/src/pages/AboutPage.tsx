@@ -75,7 +75,7 @@ export default function AboutPage() {
                   </div>
                   <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 text-center">
                     <MapPin className="w-8 h-8 text-primary mx-auto mb-3" />
-                    <div className="text-3xl font-black text-foreground">19</div>
+                    <div className="text-3xl font-black text-foreground">17</div>
                     <div className="text-sm text-muted-foreground font-medium">Cities Served</div>
                   </div>
                   <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 text-center">

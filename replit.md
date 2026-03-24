@@ -99,12 +99,12 @@ Pages:
 - **Home page** (`/`): Hero with property services background, trust bar, multi-trade services grid, pricing tiers, EyeSpyR diagnostic gallery, safety section, FAQ accordion, booking form, footer
 - **About Us** (`/about`): Company story, team profiles (Colin Hamilton & Robert Hamilton), service divisions grid, CTA
 - **Sample Report** (`/sample-report`): Printable Annual Gas Fireplace Inspection Report
-- **City Pages** (`/areas/:city`): 19 city-specific landing pages — all 11 trades listed per city, maintenance guide articles, expanded FAQs
+- **City Pages** (`/areas/:city`): 17 city-specific landing pages — all 11 trades listed per city, maintenance guide articles, expanded FAQs
 - **Trade Landing Pages** (`/services/:trade`): 11 trade pages — long description, 6-step process, benefits, 5 educational articles, industry insights, materials & methods, strata-specific content, seasonal considerations, safety & compliance, 10+ FAQs
-- **Trade+City Pages** (`/services/:trade/:city`): 209 trade × city combo pages — full trade content + city-specific local facts and neighborhoods
+- **Trade+City Pages** (`/services/:trade/:city`): 187 trade × city combo pages — full trade content + city-specific local facts and neighborhoods
 
 Key data files:
-- `src/data/cities.ts`: 19 cities (incl. separate North Vancouver & West Vancouver) with neighborhoods, local facts, coordinates, meta descriptions
+- `src/data/cities.ts`: 17 cities (incl. separate North Vancouver & West Vancouver) with neighborhoods, local facts, coordinates, meta descriptions
 - `src/data/trades.ts`: 11 trades with features, FAQs, city intro templates, hero images
 - `src/data/tradeContent.ts`: ~3500 words of unique SEO content per trade (longDescription, processSteps, educationalSections, extendedFaqs, benefits, industryInsight, materialsAndMethods, strataSpecificContent, seasonalConsiderations, safetyAndCompliance)
 - `src/data/contacts.ts`: Contact info for Colin Hamilton (main) and Robert Hamilton (Gas/HVAC), with `getTradeContact()` helper
@@ -119,7 +119,7 @@ Brand: STRATA PROPERTY SERVICES (logo: STRATA orange, PROPERTY SERVICES white), 
 Colors: dark slate secondary (#2d3748) + orange primary (#d84315), accent (#ff6f00)
 Address: 311-1643 East 3rd Ave Vancouver BC V5N 5R6
 Credentials: Class B Gas Fitter #CGA0100182243, Gas Contractor License #LGA0041068, WorkSafeBC, Est. 1989
-19 Cities: Vancouver, Burnaby, Surrey, Coquitlam, Langley, North Vancouver, West Vancouver, New Westminster, Richmond, Port Coquitlam, Port Moody, Maple Ridge, Delta, White Rock, Abbotsford, Mission, Chilliwack, Squamish, Whistler
+17 Cities: Vancouver, Burnaby, Surrey, Coquitlam, Langley, North Vancouver, West Vancouver, New Westminster, Richmond, Port Coquitlam, Port Moody, Maple Ridge, Delta, White Rock, Abbotsford, Mission, Chilliwack
 11 Trades: snow-removal, condo-renovations, hvac, mini-excavation, siding, roofing, landscaping, painting, flooring, perimeter-drain, plumbing
 
 ### `scripts` (`@workspace/scripts`)
