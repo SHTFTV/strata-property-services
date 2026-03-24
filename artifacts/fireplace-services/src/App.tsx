@@ -12,6 +12,7 @@ import TradePage from "@/pages/TradePage";
 import TradeCityPage from "@/pages/TradeCityPage";
 import BlogPage from "@/pages/BlogPage";
 import BlogPostPage from "@/pages/BlogPostPage";
+import { FloatingPhone } from "@/components/FloatingPhone";
 
 const queryClient = new QueryClient();
 
@@ -38,6 +39,7 @@ function App() {
         <TooltipProvider>
           <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")}>
             <Router />
+            <FloatingPhone />
           </WouterRouter>
           <Toaster />
         </TooltipProvider>
