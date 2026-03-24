@@ -5,6 +5,7 @@ export interface TradeData {
   description: string;
   heroText: string;
   metaDescription: string;
+  image: string;
   features: { title: string; desc: string }[];
   faqs: { q: string; a: string }[];
   cityIntro: (cityName: string) => string;
@@ -18,6 +19,7 @@ export const trades: TradeData[] = [
     description: "With our all-inclusive winter packages for snow and ice management, we are your Strata snow removal company in Vancouver and the Lower Mainland. Our crews are on standby 24/7 during the winter season, ensuring your parking lots, walkways, and common areas are safe and accessible for residents and visitors.",
     heroText: "Professional Snow & Ice Management for Strata Properties",
     metaDescription: "Strata snow removal services in Vancouver & Lower Mainland. All-inclusive winter packages. 24/7 emergency response. Parking lots, walkways & common areas. Call 604-765-8424.",
+    image: "images/trade-snow-removal.png",
     features: [
       { title: "24/7 Emergency Response", desc: "Our crews are on standby around the clock during winter months to respond to snow and ice events within hours." },
       { title: "All-Inclusive Winter Packages", desc: "Predictable monthly pricing covers unlimited snow removal events — no surprise bills after major storms." },
@@ -40,6 +42,7 @@ export const trades: TradeData[] = [
     description: "We renovate your condominiums and common areas in Strata complexes. From lobby makeovers and hallway upgrades to full suite renovations, our experienced team handles flooring, tiling, cabinetry, and complete interior transformations. We understand Strata bylaws and work within building guidelines to deliver beautiful results with minimal disruption to residents.",
     heroText: "Expert Condominium & Common Area Renovations for Strata Properties",
     metaDescription: "Strata condo renovation services in Vancouver. Lobby, hallway & suite renovations. Flooring, tiling, cabinetry. Licensed & insured. Call 604-765-8424.",
+    image: "images/trade-condo-renovations.png",
     features: [
       { title: "Lobby & Entrance Renovations", desc: "Transform your building's first impression with modern lobby designs, upgraded lighting, and premium finishes." },
       { title: "Hallway & Common Area Upgrades", desc: "Refresh corridors, amenity rooms, and shared spaces with new flooring, paint, and contemporary finishes." },
@@ -62,6 +65,7 @@ export const trades: TradeData[] = [
     description: "Strata Property Services is your go-to choice for gas fitting, fireplace maintenance, and HVAC upgrades. Our licensed technicians install, repair, and maintain heating, ventilation, and air conditioning systems for Strata properties of all sizes. From rooftop units to in-suite heat pumps, we keep your building comfortable year-round.",
     heroText: "Complete HVAC Solutions for Strata Properties & Buildings",
     metaDescription: "Strata HVAC services in Vancouver. Gas fitting, fireplace maintenance, heating & cooling upgrades. Licensed technicians. Call 604-765-8424.",
+    image: "images/trade-hvac.png",
     features: [
       { title: "Heat Pump Installation", desc: "Energy-efficient heat pump systems for individual suites and common areas, reducing energy costs while improving comfort." },
       { title: "Furnace Service & Repair", desc: "Annual maintenance, repair, and replacement of gas and electric furnaces to ensure reliable heating performance." },
@@ -84,6 +88,7 @@ export const trades: TradeData[] = [
     description: "Strata Property Services is your one-stop landscape and hardscapes company with mini excavation capabilities. Our compact excavators access tight spaces, making them perfect for Strata properties where full-size equipment can't reach. From drainage trenches to foundation work, retaining walls, and landscape grading, we handle it all.",
     heroText: "Professional Mini Excavation for Strata & Residential Properties",
     metaDescription: "Mini excavation services in Vancouver. Compact excavators for tight spaces. Drainage, grading, retaining walls, foundation work. Call 604-765-8424.",
+    image: "images/trade-mini-excavation.png",
     features: [
       { title: "Drainage & Trenching", desc: "French drains, perimeter drains, and utility trenching with precision compact equipment in confined spaces." },
       { title: "Foundation Excavation", desc: "Small-scale foundation work, underpinning preparation, and crawlspace access for Strata and residential projects." },
@@ -106,6 +111,7 @@ export const trades: TradeData[] = [
     description: "Our exterior siding and building envelope experts can redo or repair exteriors for Strata complexes, commercial buildings, and residential properties. We work with all siding materials including fiber cement, vinyl, wood, metal, and composite panels. Protect your building investment with professional siding installation and repair.",
     heroText: "Professional Siding Installation & Building Envelope Repair",
     metaDescription: "Strata siding services in Vancouver. Fiber cement, vinyl, wood & metal siding. Building envelope repair & installation. Licensed & insured. Call 604-765-8424.",
+    image: "images/trade-siding.png",
     features: [
       { title: "Fiber Cement Siding", desc: "Premium James Hardie and fiber cement siding installation — durable, fire-resistant, and low maintenance for BC's climate." },
       { title: "Vinyl Siding Installation", desc: "Cost-effective vinyl siding with modern profiles and colors. Quick installation with minimal maintenance requirements." },
@@ -128,6 +134,7 @@ export const trades: TradeData[] = [
     description: "Our roofing division is here for your flat roof, pitched roof, or emergency repairs. We service Strata complexes, commercial buildings, and residential properties with expert craftsmanship and quality materials. From full re-roofs to leak repairs and preventive maintenance, we protect your building from the top down.",
     heroText: "Expert Roofing Services for Strata & Commercial Properties",
     metaDescription: "Strata roofing services in Vancouver. Flat roof, pitched roof, repairs & maintenance. SBS, TPO, shingles. Licensed & insured. Call 604-765-8424.",
+    image: "images/trade-roofing.png",
     features: [
       { title: "Flat Roof Systems", desc: "SBS modified bitumen, TPO, and EPDM flat roofing systems for Strata and commercial buildings with proven waterproofing." },
       { title: "Pitched Roof Installation", desc: "Asphalt shingle, metal roofing, and cedar shake installation for residential and low-rise Strata buildings." },
@@ -150,6 +157,7 @@ export const trades: TradeData[] = [
     description: "Strata Property Services is your one-stop landscape ground maintenance company. From weekly lawn care and seasonal planting to irrigation systems and complete landscape redesigns, we keep your Strata property looking its best year-round. Our experienced crews handle properties of all sizes with reliable, professional service.",
     heroText: "Professional Landscape Maintenance & Design for Strata Properties",
     metaDescription: "Strata landscaping services in Vancouver. Ground maintenance, lawn care, irrigation, planting & landscape design. Call 604-765-8424.",
+    image: "images/trade-landscaping.png",
     features: [
       { title: "Weekly Ground Maintenance", desc: "Reliable weekly service including mowing, edging, blowing, and litter removal to keep your property pristine." },
       { title: "Seasonal Planting & Gardens", desc: "Spring and fall planting programs, flower bed maintenance, and garden design to enhance curb appeal year-round." },
@@ -172,6 +180,7 @@ export const trades: TradeData[] = [
     description: "From painting your exterior buildings to specialized coatings for kitchen resurfacing, we deliver professional results for Strata complexes and residential properties. Our painting division handles everything from full building exterior repaints to common area refreshes, deck coatings, and specialty finishes.",
     heroText: "Professional Painting Services for Strata & Commercial Properties",
     metaDescription: "Strata painting services in Vancouver. Exterior building painting, interior common areas, deck coatings & specialized finishes. Call 604-765-8424.",
+    image: "images/trade-painting.png",
     features: [
       { title: "Exterior Building Painting", desc: "Complete exterior repainting for Strata buildings including preparation, priming, and premium weather-resistant coatings." },
       { title: "Common Area Refreshes", desc: "Lobbies, hallways, stairwells, amenity rooms, and parking areas — refreshed with durable, easy-clean finishes." },
@@ -194,6 +203,7 @@ export const trades: TradeData[] = [
     description: "Our flooring division is here for your common areas or individual homeowner's suite. We install, repair, and replace all types of flooring including hardwood, laminate, luxury vinyl plank, tile, carpet, and epoxy coatings. Professional installation with minimal disruption to Strata residents.",
     heroText: "Expert Flooring Installation for Strata Properties & Homes",
     metaDescription: "Strata flooring services in Vancouver. Hardwood, LVP, tile, carpet & epoxy. Common areas & individual suites. Licensed & insured. Call 604-765-8424.",
+    image: "images/trade-flooring.png",
     features: [
       { title: "Luxury Vinyl Plank (LVP)", desc: "Waterproof, durable, and stylish LVP flooring — the most popular choice for Strata common areas and individual suites." },
       { title: "Hardwood Flooring", desc: "Solid and engineered hardwood installation, sanding, and refinishing for premium residential and common area spaces." },
@@ -216,6 +226,7 @@ export const trades: TradeData[] = [
     description: "Protect your building's foundation with professional perimeter drain services. We install, repair, and maintain perimeter drainage systems for Strata complexes and residential properties. BC's heavy rainfall makes functioning perimeter drains critical — our experienced team handles everything from new installations to camera inspections, flushing, and complete replacements.",
     heroText: "Professional Perimeter Drain Services for Strata & Residential",
     metaDescription: "Perimeter drain services in Vancouver. Installation, repair, camera inspection & flushing. Protect your foundation from water damage. Call 604-765-8424.",
+    image: "images/trade-perimeter-drain.png",
     features: [
       { title: "Perimeter Drain Installation", desc: "New perimeter drain systems with proper grading, gravel bedding, filter fabric, and connection to storm drainage." },
       { title: "Camera Inspection", desc: "CCTV drain camera inspection to assess condition, identify blockages, root intrusion, and collapse points." },

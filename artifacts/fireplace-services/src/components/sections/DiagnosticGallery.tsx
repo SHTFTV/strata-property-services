@@ -9,7 +9,8 @@ const deficiencies = [
     description: "Heavy carbon buildup on logs and glass indicates a poor air-to-fuel ratio.",
     risk: "High",
     riskDetail: "Carbon Monoxide (CO) production and fire hazard.",
-    eyeSpyrNote: "AI Analysis detected 85% blockage in primary air shutter."
+    eyeSpyrNote: "AI Analysis detected 85% blockage in primary air shutter.",
+    image: "images/gallery-sooting.png",
   },
   {
     id: 2,
@@ -17,7 +18,8 @@ const deficiencies = [
     description: "Oxidation on the safety sensor prevents the pilot from holding.",
     risk: "Medium",
     riskDetail: "Total system failure during cold snaps; no heat.",
-    eyeSpyrNote: "Voltage drop detected: 12mV (Required: 25mV+)."
+    eyeSpyrNote: "Voltage drop detected: 12mV (Required: 25mV+).",
+    image: "images/gallery-thermocouple.png",
   },
   {
     id: 3,
@@ -25,7 +27,8 @@ const deficiencies = [
     description: "Bird nests or debris found in the exterior exhaust cap.",
     risk: "Critical",
     riskDetail: "Immediate CO backup into the living space.",
-    eyeSpyrNote: "Visual reasoning identified non-compliant vent cap style."
+    eyeSpyrNote: "Visual reasoning identified non-compliant vent cap style.",
+    image: "images/gallery-blocked-vent.png",
   },
   {
     id: 4,
@@ -33,7 +36,8 @@ const deficiencies = [
     description: "Gas builds up before the spark catches, causing a loud 'thump'.",
     risk: "High",
     riskDetail: "Can shatter ceramic glass and damage burner pan.",
-    eyeSpyrNote: "Ignition delay timed at 4.2 seconds via sensor log."
+    eyeSpyrNote: "Ignition delay timed at 4.2 seconds via sensor log.",
+    image: "images/gallery-delayed-ignition.png",
   }
 ];
 
@@ -63,13 +67,9 @@ export function DiagnosticGallery() {
               transition={{ delay: idx * 0.1 }}
               className="group border border-slate-200 rounded-2xl overflow-hidden hover:shadow-2xl hover:border-primary/50 transition-all duration-300 flex flex-col sm:flex-row bg-white"
             >
-              {/* Image Placeholder Area */}
-              <div className="sm:w-48 bg-slate-100 flex-shrink-0 relative flex items-center justify-center p-6 border-b sm:border-b-0 sm:border-r border-slate-200 overflow-hidden">
-                <div className="absolute inset-0 opacity-10 bg-[radial-gradient(circle_at_center,_var(--tw-gradient-stops))] from-slate-400 to-transparent" />
-                <div className="text-center relative z-10">
-                  <AlertTriangle className="w-10 h-10 mx-auto text-slate-400 mb-2 opacity-50" />
-                  <div className="text-slate-500 text-xs font-bold uppercase tracking-widest">Case #{item.id}</div>
-                </div>
+              <div className="sm:w-48 bg-slate-100 flex-shrink-0 relative flex items-center justify-center border-b sm:border-b-0 sm:border-r border-slate-200 overflow-hidden">
+                <img src={`${import.meta.env.BASE_URL}${item.image}`} alt={item.title} className="w-full h-full object-cover absolute inset-0" />
+                <div className="absolute inset-0 bg-black/20" />
                 
                 {/* Risk Badge */}
                 <span className={`absolute top-4 left-4 px-2.5 py-1 rounded-md text-[10px] font-black uppercase tracking-wider shadow-sm

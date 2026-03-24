@@ -26,7 +26,7 @@ export function HeroSection() {
       <header className="relative bg-secondary text-white py-24 px-6 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
-            src={`${import.meta.env.BASE_URL}images/hero-fireplace.png`}
+            src={`${import.meta.env.BASE_URL}images/hero-property-services.png`}
             alt="Strata Property Services Vancouver" 
             className="w-full h-full object-cover opacity-30 mix-blend-overlay"
           />

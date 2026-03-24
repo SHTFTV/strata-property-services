@@ -40,7 +40,7 @@ export function ContactSection() {
       {/* Background Image/Gradient */}
       <div className="absolute inset-0 z-0">
         <img 
-          src={`${import.meta.env.BASE_URL}images/contact-bg.png`}
+          src={`${import.meta.env.BASE_URL}images/contact-bg-new.png`}
           alt="Technical Background" 
           className="w-full h-full object-cover opacity-20 mix-blend-overlay"
         />

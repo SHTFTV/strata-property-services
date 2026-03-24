@@ -59,7 +59,10 @@ export default function TradeCityPage() {
       <Navbar />
 
       <header className="relative bg-secondary text-white py-20 px-6 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/95 to-secondary/70" />
+        <div className="absolute inset-0 z-0">
+          <img src={`${import.meta.env.BASE_URL}${trade.image}`} alt={`${trade.name} in ${city.name}`} className="w-full h-full object-cover opacity-25 mix-blend-overlay" />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/95 to-secondary/70" />
+        </div>
         <div className="max-w-7xl mx-auto relative z-10">
           <div className="flex flex-wrap gap-3 mb-6">
             <Link href={`/services/${trade.slug}`} className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-primary transition">
