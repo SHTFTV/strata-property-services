@@ -6,7 +6,7 @@ import { getTradeContact } from "@/data/contacts";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
-import { ArrowRight, Phone, CheckCircle2, MapPin, ArrowLeft, Award, ShieldCheck, FileCheck2, ClipboardList, Lightbulb, BookOpen, HelpCircle, Star } from "lucide-react";
+import { ArrowRight, Phone, CheckCircle2, MapPin, ArrowLeft, Award, ShieldCheck, FileCheck2, ClipboardList, Lightbulb, BookOpen, HelpCircle, Star, ExternalLink, Link2 } from "lucide-react";
 
 export default function TradePage() {
   const params = useParams<{ trade: string }>();
@@ -263,6 +263,46 @@ export default function TradePage() {
             </div>
           </div>
         </section>
+
+        {trade.resourceLinks && trade.resourceLinks.length > 0 && (
+          <section className="py-16 px-6 bg-white border-t border-slate-200">
+            <div className="max-w-4xl mx-auto">
+              <div className="flex items-center gap-3 mb-3">
+                <Link2 className="w-6 h-6 text-primary" />
+                <h2 className="text-2xl font-black text-foreground">Winter Storm Resources & Roadway Clearing Routes</h2>
+              </div>
+              <p className="text-muted-foreground mb-8">Stay informed during winter storms. Check road clearing routes, weather alerts, and school closures across the Lower Mainland.</p>
+              <div className="grid md:grid-cols-2 gap-4">
+                {trade.resourceLinks.map((link, i) => (
+                  <a key={i} href={link.url} target="_blank" rel="noopener noreferrer" className="bg-slate-50 border border-slate-200 p-5 rounded-xl hover:border-primary hover:shadow-md transition-all group flex items-start gap-4">
+                    <ExternalLink className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" />
+                    <div>
+                      <h3 className="font-bold text-sm group-hover:text-primary transition mb-1">{link.label}</h3>
+                      <p className="text-xs text-muted-foreground leading-relaxed">{link.description}</p>
+                    </div>
+                  </a>
+                ))}
+              </div>
+            </div>
+          </section>
+        )}
+
+        {trade.brandUrl && (
+          <section className="py-12 px-6 bg-orange-50 border-t border-orange-200">
+            <div className="max-w-4xl mx-auto text-center">
+              <h3 className="text-xl font-black text-orange-900 mb-3">The BuildersHaus Professional Network</h3>
+              <p className="text-orange-800 mb-6">Strata Property Services is a proud anchor member of the BuildersHaus trade ecosystem.</p>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a href="https://buildershaus.com" target="_blank" rel="noopener noreferrer" className="bg-white border border-orange-300 text-orange-900 font-bold px-6 py-3 rounded-xl hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">BuildersHaus Hub</a>
+                <a href="https://steelstud.ca" target="_blank" rel="noopener noreferrer" className="bg-white border border-orange-300 text-orange-900 font-bold px-6 py-3 rounded-xl hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">SteelStud.ca</a>
+                <a href="https://beewarm.ca" target="_blank" rel="noopener noreferrer" className="bg-white border border-orange-300 text-orange-900 font-bold px-6 py-3 rounded-xl hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm">BeeWarm.ca</a>
+                {trade.brandUrl && (
+                  <a href={trade.brandUrl} target="_blank" rel="noopener noreferrer" className="bg-primary border border-primary text-white font-bold px-6 py-3 rounded-xl hover:bg-accent hover:border-accent transition-all shadow-sm">PlowWow.com</a>
+                )}
+              </div>
+            </div>
+          </section>
+        )}
 
         <section className="py-16 px-6 bg-slate-50 border-t border-slate-200">
           <div className="max-w-7xl mx-auto">

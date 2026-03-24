@@ -1,3 +1,9 @@
+export interface ResourceLink {
+  label: string;
+  url: string;
+  description: string;
+}
+
 export interface TradeData {
   slug: string;
   name: string;
@@ -9,31 +15,46 @@ export interface TradeData {
   features: { title: string; desc: string }[];
   faqs: { q: string; a: string }[];
   cityIntro: (cityName: string) => string;
+  brandUrl?: string;
+  resourceLinks?: ResourceLink[];
 }
 
 export const trades: TradeData[] = [
   {
     slug: "snow-removal",
     name: "Strata Snow Removal",
-    tagline: "All-Inclusive Winter Packages for Snow & Ice Management",
-    description: "With our all-inclusive winter packages for snow and ice management, we are your Strata snow removal company in Vancouver and the Lower Mainland. Our crews are on standby 24/7 during the winter season, ensuring your parking lots, walkways, and common areas are safe and accessible for residents and visitors.",
-    heroText: "Professional Snow & Ice Management for Strata Properties",
-    metaDescription: "Strata snow removal services in Vancouver & Lower Mainland. All-inclusive winter packages. 24/7 emergency response. Parking lots, walkways & common areas. Call 604-761-1518.",
+    tagline: "PlowWow.com — Fixed Contracts, 5-Times Bookings & Guaranteed 5-Hour Response",
+    description: "PlowWow.com is the snow removal division of Strata Property Services. We offer fixed-price seasonal contracts with 5-times booking capacity — meaning we schedule five crews for every storm event to guarantee coverage. Our iron-clad 5-hour response guarantee means your property will be cleared within 5 hours of any snow storm, day or night. No excuses, no exceptions. Parking lots, walkways, ramps, and common areas — cleared, de-iced, and documented.",
+    heroText: "PlowWow.com — Fixed Contracts. 5-Times Bookings. Guaranteed Within 5 Hours of Any Snow Storm.",
+    metaDescription: "PlowWow.com — Strata snow removal with fixed contracts, 5-times bookings & guaranteed 5-hour response. Parking lots, walkways & common areas. Vancouver & Lower Mainland. Call 604-761-1518.",
     image: "images/trade-snow-removal.png",
+    brandUrl: "https://plowwow.com",
     features: [
-      { title: "24/7 Emergency Response", desc: "Our crews are on standby around the clock during winter months to respond to snow and ice events within hours." },
-      { title: "All-Inclusive Winter Packages", desc: "Predictable monthly pricing covers unlimited snow removal events — no surprise bills after major storms." },
-      { title: "De-Icing & Salt Application", desc: "Proactive de-icing of walkways, ramps, stairs, and parking areas to prevent slip-and-fall hazards." },
-      { title: "Parking Lot Clearing", desc: "Complete snow clearing for underground ramps, surface lots, and visitor parking areas with commercial-grade equipment." },
-      { title: "Walkway & Common Area Service", desc: "Thorough clearing and treatment of all pedestrian pathways, building entrances, and common outdoor areas." },
-      { title: "Documentation & Reporting", desc: "Photo documentation and time-stamped service reports for Strata records and liability protection." },
+      { title: "Fixed-Price Seasonal Contracts", desc: "Lock in your winter budget with a fixed-price contract that covers the entire season — no per-event charges, no surprise invoices after major storms. One predictable price, unlimited service." },
+      { title: "5-Times Booking Capacity", desc: "We schedule 5 crews for every storm event. While other companies overbook and leave you waiting, our 5x capacity model guarantees your property gets serviced — every time, without fail." },
+      { title: "Guaranteed 5-Hour Response", desc: "Within 5 hours of any snow storm, your property will be cleared. That's our guarantee. GPS-tracked crews, real-time dispatch, and pre-positioned equipment make it possible." },
+      { title: "De-Icing & Salt Application", desc: "Proactive de-icing of walkways, ramps, stairs, and parking areas to prevent slip-and-fall hazards. Environmentally responsible products available for sensitive landscape areas." },
+      { title: "Parking Lot & Ramp Clearing", desc: "Complete snow clearing for underground ramps, surface lots, and visitor parking areas with commercial-grade plows, compact loaders, and industrial spreaders." },
+      { title: "Documentation & Liability Protection", desc: "GPS-tagged, time-stamped photo documentation of every service event. Defensible records for Strata councils demonstrating due diligence under BC's Occupiers Liability Act." },
     ],
     faqs: [
-      { q: "How does the all-inclusive pricing work?", a: "You pay a fixed monthly rate throughout the winter season that covers unlimited snow and ice response events — no surprise charges regardless of how many storms occur." },
-      { q: "What areas do you clear?", a: "We clear parking lots, underground ramps, walkways, building entrances, stairs, common outdoor areas, and any other high-traffic zones specified in your contract." },
-      { q: "How quickly do you respond to snow events?", a: "Our crews monitor weather conditions continuously and begin service within 2-4 hours of accumulation thresholds being reached, with 24/7 availability." },
+      { q: "What is PlowWow.com?", a: "PlowWow.com is the snow removal division of Strata Property Services. We specialize in fixed-price seasonal contracts with guaranteed 5-hour response times and 5-times booking capacity for Strata and commercial properties across the Lower Mainland." },
+      { q: "How does the fixed-price contract work?", a: "You pay a fixed seasonal rate that covers unlimited snow and ice response events — no per-event charges, no surprise bills. Your winter budget is locked in before the first snowflake falls." },
+      { q: "What does '5-times bookings' mean?", a: "We schedule 5 crews for every storm event. This 5x capacity model means we never overbook. While competitors scramble to cover too many properties with too few crews, PlowWow guarantees your property gets serviced — every single time." },
+      { q: "What is the 5-hour guarantee?", a: "Within 5 hours of any snow storm, your property will be cleared and de-iced. Our GPS-tracked crews, pre-positioned equipment, and real-time weather monitoring make this guarantee possible. If we miss the window, your next service is free." },
+      { q: "What areas do you clear?", a: "We clear parking lots, underground ramps, walkways, building entrances, stairs, common outdoor areas, loading docks, and any other surfaces specified in your contract." },
     ],
-    cityIntro: (city) => `Looking for reliable Strata snow removal in ${city}? Our all-inclusive winter packages keep your property safe and accessible throughout the season. We handle parking lots, walkways, and common areas with 24/7 emergency response.`,
+    cityIntro: (city) => `PlowWow.com serves ${city} with fixed-price snow removal contracts, 5-times booking capacity, and a guaranteed 5-hour response after any snow storm. Our crews handle parking lots, walkways, ramps, and common areas for Strata and commercial properties throughout ${city}.`,
+    resourceLinks: [
+      { label: "Environment Canada — Vancouver Weather Forecast", url: "https://weather.gc.ca/city/pages/bc-74_metric_e.html", description: "Official weather forecasts, snowfall warnings, and winter storm alerts for the Greater Vancouver area." },
+      { label: "BC Highway Conditions & Road Clearing", url: "https://www.drivebc.ca/", description: "Real-time highway conditions, road closures, and snowplow route information across British Columbia." },
+      { label: "City of Vancouver — Snow & Ice Response", url: "https://vancouver.ca/streets-transportation/snow-and-ice-702.aspx", description: "Vancouver's priority road clearing routes, salting schedules, and winter road maintenance information." },
+      { label: "City of Surrey — Snow Response Plan", url: "https://www.surrey.ca/services/parking-roads-transport/road-maintenance-and-construction/snow-and-ice-removal", description: "Surrey's snowplow routes, road clearing priorities, and winter maintenance schedules." },
+      { label: "City of Burnaby — Snow & Ice Removal", url: "https://www.burnaby.ca/services-and-payments/streets-and-sidewalks/snow-and-ice", description: "Burnaby's snow clearing routes and winter road maintenance information." },
+      { label: "Vancouver School Board — Closures & Alerts", url: "https://www.vsb.bc.ca/", description: "Check Vancouver school closures and weather-related alerts during winter storms." },
+      { label: "Surrey Schools — Winter Closures", url: "https://www.surreyschools.ca/", description: "Surrey school district closure announcements during severe winter weather events." },
+      { label: "Burnaby Schools — Weather Alerts", url: "https://www.burnabyschools.ca/", description: "Burnaby school district weather-related closure announcements and updates." },
+    ],
   },
   {
     slug: "condo-renovations",
