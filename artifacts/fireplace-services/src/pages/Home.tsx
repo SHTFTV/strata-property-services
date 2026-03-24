@@ -5,6 +5,7 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 import { DiagnosticGallery } from "@/components/sections/DiagnosticGallery";
 import { SafetyAndFAQSection } from "@/components/sections/SafetyAndFAQSection";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { BlogSection } from "@/components/sections/BlogSection";
 import { SEO } from "@/components/SEO";
 
 export default function Home() {
@@ -49,6 +50,7 @@ export default function Home() {
         <ServicesSection />
         <DiagnosticGallery />
         <SafetyAndFAQSection />
+        <BlogSection />
         <ContactSection />
       </main>
 
