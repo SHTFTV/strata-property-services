@@ -59,11 +59,11 @@ export function Footer() {
           </ul>
           <h4 className="text-white font-bold mb-3 mt-6 text-sm font-display tracking-wide uppercase">Contact Us</h4>
           <address className="not-italic space-y-1 text-slate-300 text-sm">
-            <p>311-1643 East 3rd Ave</p>
-            <p>Vancouver, BC V5N 5R6</p>
+            <p>19906 32 Ave</p>
+            <p>Langley, BC V3A 4T1</p>
           </address>
-          <a href="mailto:beewarmh@gmail.com" className="text-primary hover:text-accent transition-colors text-sm mt-2 block">
-            beewarmh@gmail.com
+          <a href="mailto:build@buildershaus.com" className="text-primary hover:text-accent transition-colors text-sm mt-2 block">
+            build@buildershaus.com
           </a>
         </div>
 

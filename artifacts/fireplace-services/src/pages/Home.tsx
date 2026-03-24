@@ -17,13 +17,13 @@ export default function Home() {
     "url": "https://stratapropertyservices.com",
     "description": "Strata Property Services — Vancouver's complete property maintenance partner. Gas fireplaces, HVAC, roofing, siding, painting, renovations, landscaping, snow removal & more. Licensed & bonded since 1989.",
     "telephone": "+16047611518",
-    "email": "beewarmh@gmail.com",
+    "email": "build@buildershaus.com",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "311 1643 East 3rd",
-      "addressLocality": "Vancouver",
+      "streetAddress": "19906 32 Ave",
+      "addressLocality": "Langley",
       "addressRegion": "BC",
-      "postalCode": "V5N 5R6",
+      "postalCode": "V3A 4T1",
       "addressCountry": "CA"
     },
     "hasCertification": [

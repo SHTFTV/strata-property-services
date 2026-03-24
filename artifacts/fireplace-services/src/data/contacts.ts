@@ -19,10 +19,11 @@ export const contacts = {
   },
   company: {
     name: "Strata Property Services",
-    address: "311-1643 East 3rd Ave",
-    city: "Vancouver",
+    email: "build@buildershaus.com",
+    address: "19906 32 Ave",
+    city: "Langley",
     province: "BC",
-    postalCode: "V5N 5R6",
+    postalCode: "V3A 4T1",
     established: 1989,
   },
 };
