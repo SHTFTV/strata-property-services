@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { AlertTriangle, Download, Info } from "lucide-react";
+import { Link } from "wouter";
 
 const deficiencies = [
   {
@@ -115,10 +116,10 @@ export function DiagnosticGallery() {
             <p className="text-lg text-slate-300 mb-8 max-w-2xl mx-auto">
               Get a detailed digital logbook for every unit in your building. Protect your liability and ensure resident safety with our structured reporting.
             </p>
-            <button className="bg-primary hover:bg-accent px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-2">
+            <Link href="/sample-report" className="bg-primary hover:bg-accent px-8 py-4 rounded-xl font-bold transition-all shadow-lg hover:shadow-xl hover:-translate-y-1 inline-flex items-center gap-2">
               <Download className="w-5 h-5" />
               Download Sample Strata Report
-            </button>
+            </Link>
           </div>
         </motion.div>
       </div>
