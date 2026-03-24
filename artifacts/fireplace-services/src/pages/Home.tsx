@@ -5,6 +5,7 @@ import { ServicesSection } from "@/components/sections/ServicesSection";
 import { DiagnosticGallery } from "@/components/sections/DiagnosticGallery";
 import { SafetyAndFAQSection } from "@/components/sections/SafetyAndFAQSection";
 import { ContactSection } from "@/components/sections/ContactSection";
+import { SEO } from "@/components/SEO";
 
 export default function Home() {
   const schemaMarkup = {
@@ -37,6 +38,10 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} 
       />
 
+      <SEO
+        title="Gas Fireplace Annual Services Vancouver"
+        description="Professional gas fireplace inspection, maintenance, and safety services in Vancouver. Class B Gas Fitter certified since 1989. Annual inspections, cleaning & repairs. Call 604-765-8424."
+      />
       <Navbar />
       
       <main>

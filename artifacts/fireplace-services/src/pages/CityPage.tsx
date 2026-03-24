@@ -2,6 +2,7 @@ import { useParams, Link } from "wouter";
 import { cities } from "@/data/cities";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { SEO } from "@/components/SEO";
 import { ArrowRight, MapPin, Phone, ShieldCheck, CheckCircle2, ArrowLeft, Wrench, Award, Zap, Building2, FileCheck2 } from "lucide-react";
 
 const services = [
@@ -76,6 +77,7 @@ export default function CityPage() {
 
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
+      <SEO title={`Gas Fireplace Services ${city.name}`} description={city.metaDescription} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }}

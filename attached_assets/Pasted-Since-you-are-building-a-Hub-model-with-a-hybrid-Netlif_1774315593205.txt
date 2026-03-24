@@ -1,0 +1,32 @@
+Since you are building a "Hub" model with a hybrid Netlify + Cloudflare stack, your URL structure needs to be "flat and fast." This is the "Industry Army" approach: every service acts as its own landing page (a "silo"), but they all interlink to boost the overall Authority of stratapropertyservices.com.For Netlify, we'll use a clean, extensionless URL structure (e.g., /strata-roofing instead of roofing.html).1. The Master URL Strategy (Internal Linking)Each of these services should have its own dedicated route. This allows you to rank for specific Vancouver keywords like "Strata Snow Removal Vancouver" without the home page getting cluttered.Service DivisionRecommended URL SlugKey Internal Link AnchorSnow Removal/strata-snow-removal"Vancouver Strata Snow & Ice Management"Condo Renos/strata-condo-renovations"Strata Common Area Renovation"HVAC & Fireplace/gas-fireplace-services"Strata HVAC & Gas Fitting"Mini Excavation/strata-mini-excavation"Landscape & Hardscape Excavation"Siding & Envelope/strata-siding-company"Building Envelope & Siding Experts"Roofing Services/strata-roofing-services"Flat & Pitched Strata Roofing"Landscaping/strata-landscaping"Grounds Maintenance & Landscaping"Painting Services/strata-painting-services"Exterior Building Painting"Flooring Services/strata-flooring-services"Common Area & Suite Flooring"2. The "Internal Chronicle" Logic (React/Netlify)To keep the SEO juice flowing between your 150+ domains and your Main Hub, use a footer or "Our Divisions" component that appears on every page.Example Footer Link Logic:On strataroofers.com -> Link back to stratapropertyservices.com/strata-roofing-services.On stratapropertyservices.com -> Use a "Service Grid" that links to each internal slug.3. The React Service Grid ComponentSince you are using a combo of Netlify and Cloudflare, you can build this Service Card component once and use it on the homepage to create those "Internal Chronicle" links.JavaScriptconst services = [
+  {
+    title: "Strata Snow Removal",
+    desc: "All-inclusive winter packages for snow and ice management in Vancouver.",
+    link: "/strata-snow-removal",
+    tag: "Winter Management"
+  },
+  {
+    title: "Strata HVAC & Fireplace",
+    desc: "Your go-to choice for gas fitting, fireplace maintenance, and HVAC upgrades.",
+    link: "/gas-fireplace-services",
+    tag: "Gas & Heat"
+  },
+  // ... add the rest here
+];
+
+const ServiceGrid = () => (
+  <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-8">
+    {services.map((s) => (
+      <div key={s.link} className="border p-6 rounded-lg hover:shadow-xl transition-all border-orange-100 hover:border-orange-500 bg-white">
+        <span className="text-xs font-bold text-orange-600 uppercase tracking-widest">{s.tag}</span>
+        <h3 className="text-xl font-black mt-2 mb-3">{s.title}</h3>
+        <p className="text-gray-600 text-sm mb-4 leading-relaxed">{s.desc}</p>
+        <a href={s.link} className="text-orange-600 font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all uppercase">
+          Learn More →
+        </a>
+      </div>
+    ))}
+  </div>
+);
+4. Technical Setup for Netlify + CloudflareNetlify _redirects: To ensure your URLs stay clean (no .html extensions), add a _redirects file to your public folder:Plaintext/* /index.html  200
+Canonical Tags: On the /strata-roofing-services page, your canonical tag should point to itself. On your satellite domain (strataroofers.com), the canonical should also point to itself (to rank separately), but it should have a "Partnered with Strata Property Services" link back to the hub.Sitemap: Generate a sitemap.xml that lists all these slugs. Netlify has plugins that do this automatically during the build process.

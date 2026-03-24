@@ -91,6 +91,23 @@ Generated Zod schemas from the OpenAPI spec (e.g. `HealthCheckResponse`). Used b
 
 Generated React Query hooks and fetch client from the OpenAPI spec (e.g. `useHealthCheck`, `healthCheck`).
 
+### `artifacts/fireplace-services` (`@workspace/fireplace-services`)
+
+React + Vite frontend for Gas Fireplace Annual Services Vancouver (STRATAFIREPLACE brand). SEO-optimized site with:
+
+- **Home page** (`/`): Hero, trust bar, services grid, pricing tiers, EyeSpyR diagnostic gallery, safety section, FAQ accordion, booking form, footer
+- **Sample Report** (`/sample-report`): Printable Annual Gas Fireplace Inspection Report
+- **City Pages** (`/areas/:city`): 18 city-specific landing pages for local SEO (Vancouver, Burnaby, Surrey, Coquitlam, Langley, North Shore, New Westminster, Richmond, Port Coquitlam, Port Moody, Maple Ridge, Delta, White Rock, Abbotsford, Mission, Chilliwack, Squamish, Whistler)
+- **Trade Landing Pages** (`/services/:trade`): 10 trade service pages (Snow Removal, Condo Renovations, HVAC, Mini Excavation, Siding, Roofing, Landscaping, Painting, Flooring, Perimeter Drain)
+- **Trade+City Pages** (`/services/:trade/:city`): 180 trade × city combination pages for maximum local SEO coverage
+
+Key data files:
+- `src/data/cities.ts`: 18 cities with neighborhoods, local facts, coordinates, meta descriptions
+- `src/data/trades.ts`: 10 trades with features, FAQs, city intro templates
+
+Brand: STRATAFIREPLACE, Phone: 604-765-8424, Email: beewarmh@gmail.com
+Credentials: Class B Gas Fitter #CGA0100182243, Gas Contractor License #LGA0041068, WorkSafeBC, Est. 1989
+
 ### `scripts` (`@workspace/scripts`)
 
 Utility scripts package. Each script is a `.ts` file in `src/` with a corresponding npm script in `package.json`. Run scripts via `pnpm --filter @workspace/scripts run <script>`. Scripts can import any workspace package (e.g., `@workspace/db`) by adding it as a dependency in `scripts/package.json`.
