@@ -4,6 +4,7 @@ export const contacts = {
     title: "Owner & General Manager",
     phone: "604-761-1518",
     phoneTel: "+16047611518",
+    email: "colin@steelstud.ca",
     website: "steelstud.ca",
     description: "Tenant improvement contractor and owner of Strata Property Services. Colin oversees all property maintenance divisions including snow removal, condo renovations, siding, roofing, landscaping, painting, flooring, perimeter drain, mini excavation, and plumbing services.",
   },

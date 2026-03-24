@@ -118,6 +118,12 @@ export default function AboutPage() {
                       </div>
                       <span className="font-bold">{contacts.colin.phone}</span>
                     </a>
+                    <a href={`mailto:${contacts.colin.email}`} className="flex items-center gap-3 text-foreground hover:text-primary transition group">
+                      <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition">
+                        <Mail className="w-5 h-5 text-primary" />
+                      </div>
+                      <span className="font-bold">{contacts.colin.email}</span>
+                    </a>
                     <a href={`https://${contacts.colin.website}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-primary transition group">
                       <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition">
                         <Globe className="w-5 h-5 text-primary" />
@@ -164,6 +170,12 @@ export default function AboutPage() {
                         <Mail className="w-5 h-5 text-primary" />
                       </div>
                       <span className="font-bold">{contacts.robert.email}</span>
+                    </a>
+                    <a href={`https://${contacts.robert.website}`} target="_blank" rel="noopener noreferrer" className="flex items-center gap-3 text-foreground hover:text-primary transition group">
+                      <div className="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition">
+                        <Globe className="w-5 h-5 text-primary" />
+                      </div>
+                      <span className="font-bold">{contacts.robert.website}</span>
                     </a>
                   </div>
                   <div className="mt-6 pt-6 border-t border-slate-100">
