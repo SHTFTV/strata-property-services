@@ -90,7 +90,7 @@ export function HeroSection() {
           <span className="hidden md:inline">•</span>
           <span>WorkSafeBC Insured</span>
           <span className="hidden lg:inline">•</span>
-          <span>10+ Trade Divisions</span>
+          <span>13 Trade Divisions</span>
         </div>
       </div>
 
@@ -98,7 +98,7 @@ export function HeroSection() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-black text-foreground mb-4">Why Choose Strata Property Services?</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">One trusted partner for every building maintenance and improvement need — 10+ trade divisions, 35+ years of experience.</p>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">One trusted partner for every building maintenance and improvement need — 13 trade divisions, 35+ years of experience.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

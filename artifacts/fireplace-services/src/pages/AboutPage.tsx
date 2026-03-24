@@ -51,7 +51,7 @@ export default function AboutPage() {
                 <h2 className="text-3xl font-black text-foreground mb-6">Our Story</h2>
                 <div className="space-y-4 text-muted-foreground leading-relaxed">
                   <p>
-                    Strata Property Services was founded in 1989 with a simple mission: provide reliable, professional property maintenance to Strata corporations and building owners across the Lower Mainland. What began as a focused operation has grown into a comprehensive multi-trade company with over 10 service divisions.
+                    Strata Property Services was founded in 1989 with a simple mission: provide reliable, professional property maintenance to Strata corporations and building owners across the Lower Mainland. What began as a focused operation has grown into a comprehensive multi-trade company with 13 service divisions.
                   </p>
                   <p>
                     Today, we are a family-operated business led by Colin Hamilton and Robert Hamilton. Together, they bring decades of hands-on experience across tenant improvements, gas fitting, HVAC, plumbing, and general property maintenance. Our team of licensed tradespeople serves hundreds of Strata properties, commercial buildings, and residential clients throughout Vancouver, Burnaby, Surrey, and the entire Lower Mainland.
@@ -70,7 +70,7 @@ export default function AboutPage() {
                   </div>
                   <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 text-center">
                     <Wrench className="w-8 h-8 text-primary mx-auto mb-3" />
-                    <div className="text-3xl font-black text-foreground">11</div>
+                    <div className="text-3xl font-black text-foreground">13</div>
                     <div className="text-sm text-muted-foreground font-medium">Trade Divisions</div>
                   </div>
                   <div className="bg-primary/5 border border-primary/20 rounded-2xl p-6 text-center">
@@ -134,7 +134,7 @@ export default function AboutPage() {
                   <div className="mt-6 pt-6 border-t border-slate-100">
                     <p className="text-xs font-bold uppercase tracking-wider text-muted-foreground mb-3">Divisions Managed</p>
                     <div className="flex flex-wrap gap-2">
-                      {["Snow Removal", "Renovations", "Siding", "Roofing", "Landscaping", "Painting", "Flooring", "Excavation", "Perimeter Drain", "Plumbing"].map((d) => (
+                      {["Snow Removal", "Renovations", "Siding", "Roofing", "Landscaping", "Painting", "Flooring", "Excavation", "Perimeter Drain", "Plumbing", "Drywall", "Restoration"].map((d) => (
                         <span key={d} className="bg-slate-100 text-slate-600 px-2 py-1 rounded text-xs font-medium">{d}</span>
                       ))}
                     </div>
@@ -206,7 +206,7 @@ export default function AboutPage() {
         <section className="py-20 px-6">
           <div className="max-w-7xl mx-auto">
             <h2 className="text-3xl font-black text-foreground mb-4 text-center">Our Service Divisions</h2>
-            <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">We offer comprehensive property maintenance across 11 trade specializations.</p>
+            <p className="text-muted-foreground text-center mb-12 max-w-2xl mx-auto">We offer comprehensive property maintenance across 13 trade specializations.</p>
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
               {trades.map((t) => (
                 <Link key={t.slug} href={`/services/${t.slug}`} className="flex items-center gap-4 p-4 bg-white border border-slate-200 rounded-xl hover:border-primary/30 hover:shadow-lg transition-all group">

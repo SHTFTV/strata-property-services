@@ -33,7 +33,7 @@ const cityMaintenanceGuide = {
   ],
   faqs: [
     { q: "How do I know which property maintenance services my building needs?", a: "We recommend starting with a comprehensive building assessment that evaluates all major systems — roofing, cladding, HVAC, drainage, landscaping, and common area finishes. This assessment identifies immediate repair needs, developing concerns, and long-term replacement planning requirements. We provide this assessment at no cost as part of our service relationship." },
-    { q: "Can you handle all of our building's maintenance needs?", a: "Yes, Strata Property Services provides 10+ trade divisions covering snow removal, roofing, siding, HVAC and gas fireplaces, painting, flooring, landscaping, perimeter drains, mini excavation, and condo renovations. This integrated service model eliminates the coordination challenges of managing multiple contractors." },
+    { q: "Can you handle all of our building's maintenance needs?", a: "Yes, Strata Property Services provides 13 trade divisions covering snow removal, roofing, siding, HVAC and gas fireplaces, painting, flooring, landscaping, perimeter drains, mini excavation, condo renovations, plumbing, drywall, and restoration. This integrated service model eliminates the coordination challenges of managing multiple contractors." },
     { q: "What is the advantage of a maintenance contract vs. calling for service as needed?", a: "Maintenance contracts provide scheduled preventive care that catches problems early, extends equipment life, and prevents emergency failures. Contract clients also receive priority scheduling, preferred pricing, and the documentation needed for Strata records and insurance. Reactive-only service typically costs more over time due to emergency premiums and the higher cost of repairing problems that could have been prevented." },
     { q: "How do you handle emergency maintenance situations?", a: "We provide emergency response for urgent maintenance issues including roof leaks, heating failures, drainage emergencies, and safety hazards. Our operations team is available for emergency dispatch, and we maintain crews and equipment ready for rapid response throughout the Lower Mainland." },
     { q: "Do you provide documentation for Strata council meetings?", a: "Absolutely. Every service visit generates documentation including work performed, conditions observed, photographs, and recommendations. Monthly and annual summary reports are provided for council review. Our documentation systems support AGM reporting, insurance renewals, depreciation report updates, and due diligence records." },
@@ -132,7 +132,7 @@ export default function CityPage() {
           </h1>
 
           <p className="text-xl text-slate-300 mb-10 max-w-2xl font-medium leading-relaxed">
-            Your complete Strata property maintenance partner in {city.name}. 10+ trade divisions, 35+ years of experience — gas fireplaces, HVAC, roofing, siding, painting, renovations, landscaping and more.
+            Your complete Strata property maintenance partner in {city.name}. 13 trade divisions, 35+ years of experience — gas fireplaces, HVAC, roofing, siding, painting, renovations, landscaping, plumbing, drywall, restoration and more.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4">
@@ -160,7 +160,7 @@ export default function CityPage() {
           <span className="hidden md:inline">&#8226;</span>
           <span>WorkSafeBC Insured</span>
           <span className="hidden lg:inline">&#8226;</span>
-          <span>10+ Trade Divisions</span>
+          <span>13 Trade Divisions</span>
         </div>
       </div>
 
@@ -176,7 +176,7 @@ export default function CityPage() {
                   {city.description}
                 </p>
                 <p className="text-muted-foreground leading-relaxed mb-8">
-                  Strata Property Services has been serving {city.name} property owners and Strata corporations since 1989. As a full-service property maintenance company with 10+ trade divisions, we provide every maintenance and improvement service your building needs under one roof — eliminating the coordination challenges and accountability gaps that come with managing multiple contractors. Our {city.name} service team includes licensed gas fitters, certified roofers, experienced painters, skilled renovators, professional landscapers, and specialized drainage and excavation crews, all working under unified management with consistent quality standards and comprehensive documentation for Strata records.
+                  Strata Property Services has been serving {city.name} property owners and Strata corporations since 1989. As a full-service property maintenance company with 13 trade divisions, we provide every maintenance and improvement service your building needs under one roof — eliminating the coordination challenges and accountability gaps that come with managing multiple contractors. Our {city.name} service team includes licensed gas fitters, certified roofers, experienced painters, skilled renovators, professional landscapers, and specialized drainage and excavation crews, all working under unified management with consistent quality standards and comprehensive documentation for Strata records.
                 </p>
 
                 <div className="bg-orange-50 border-l-4 border-primary p-6 rounded-r-xl mb-8">
@@ -200,7 +200,7 @@ export default function CityPage() {
                       {[
                         "35+ years of experience since 1989",
                         `Serving all ${city.name} neighborhoods`,
-                        "10+ trade divisions under one roof",
+                        "13 trade divisions under one roof",
                         "Licensed, bonded & WorkSafeBC insured",
                         "Strata specialists — we know the bylaws",
                         "Transparent pricing — no hidden fees",
@@ -329,7 +329,7 @@ export default function CityPage() {
               Get a Free Property Maintenance Quote in {city.name}
             </h2>
             <p className="text-lg text-slate-300 mb-10 max-w-xl mx-auto">
-              Contact us today for any property maintenance service in {city.name}. 35+ years of trusted service, 10+ trade divisions, one call does it all.
+              Contact us today for any property maintenance service in {city.name}. 35+ years of trusted service, 13 trade divisions, one call does it all.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a

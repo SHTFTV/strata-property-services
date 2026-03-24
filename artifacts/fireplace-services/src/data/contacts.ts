@@ -6,7 +6,7 @@ export const contacts = {
     phoneTel: "+16047611518",
     email: "colin@steelstud.ca",
     website: "steelstud.ca",
-    description: "Tenant improvement contractor and owner of Strata Property Services. Colin oversees all property maintenance divisions including snow removal, condo renovations, siding, roofing, landscaping, painting, flooring, perimeter drain, mini excavation, and plumbing services.",
+    description: "Tenant improvement contractor and owner of Strata Property Services. Colin oversees all property maintenance divisions including snow removal, condo renovations, siding, roofing, landscaping, painting, flooring, perimeter drain, mini excavation, plumbing, drywall, and restoration services.",
   },
   robert: {
     name: "Robert Hamilton",
