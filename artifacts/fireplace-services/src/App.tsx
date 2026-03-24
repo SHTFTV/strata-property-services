@@ -10,6 +10,8 @@ import AboutPage from "@/pages/AboutPage";
 import CityPage from "@/pages/CityPage";
 import TradePage from "@/pages/TradePage";
 import TradeCityPage from "@/pages/TradeCityPage";
+import BlogPage from "@/pages/BlogPage";
+import BlogPostPage from "@/pages/BlogPostPage";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +21,8 @@ function Router() {
       <Route path="/" component={Home} />
       <Route path="/about" component={AboutPage} />
       <Route path="/sample-report" component={SampleReport} />
+      <Route path="/blog" component={BlogPage} />
+      <Route path="/blog/:slug" component={BlogPostPage} />
       <Route path="/areas/:city" component={CityPage} />
       <Route path="/services/:trade" component={TradePage} />
       <Route path="/services/:trade/:city" component={TradeCityPage} />

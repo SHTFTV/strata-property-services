@@ -102,12 +102,14 @@ Pages:
 - **City Pages** (`/areas/:city`): 17 city-specific landing pages — all 13 trades listed per city, maintenance guide articles, expanded FAQs
 - **Trade Landing Pages** (`/services/:trade`): 13 trade pages — long description, 6-step process, benefits, 5 educational articles, industry insights, materials & methods, strata-specific content, seasonal considerations, safety & compliance, 10+ FAQs
 - **Trade+City Pages** (`/services/:trade/:city`): 221 trade × city combo pages — full trade content + city-specific local facts and neighborhoods
+- **Blog** (`/blog`): Blog listing page with 14 SEO articles, category filtering; individual posts at `/blog/:slug` with related services sidebar and related articles
 
 Key data files:
 - `src/data/cities.ts`: 17 cities (incl. separate North Vancouver & West Vancouver) with neighborhoods, local facts, coordinates, meta descriptions
 - `src/data/trades.ts`: 13 trades with features, FAQs, city intro templates, hero images
 - `src/data/tradeContent.ts`: ~3500 words of unique SEO content per trade (longDescription, processSteps, educationalSections, extendedFaqs, benefits, industryInsight, materialsAndMethods, strataSpecificContent, seasonalConsiderations, safetyAndCompliance)
 - `src/data/contacts.ts`: Contact info for Colin Hamilton (main) and Robert Hamilton (Gas/HVAC), with `getTradeContact()` helper
+- `src/data/blogPosts.ts`: 14 SEO blog articles covering all 13 trades with categories, trade/city cross-references, and full-length content
 
 Contact routing:
 - Colin Hamilton (Owner): 604-761-1518, steelstud.ca — main contact for all trades except HVAC

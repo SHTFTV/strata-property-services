@@ -59,6 +59,7 @@ export function Navbar() {
           </DropdownMenu>
 
           <Link href="/about" className="hover:text-primary transition-colors">About Us</Link>
+          <Link href="/blog" className="hover:text-primary transition-colors">Blog</Link>
           <a href="/#gallery" className="hover:text-primary transition-colors">Gallery</a>
           <a href="/#faq" className="hover:text-primary transition-colors">FAQ</a>
         </div>
@@ -101,6 +102,7 @@ export function Navbar() {
           </div>
           <div className="flex gap-4 px-2">
             <Link href="/about" onClick={() => setMobileOpen(false)} className="text-sm hover:text-primary transition-colors">About Us</Link>
+            <Link href="/blog" onClick={() => setMobileOpen(false)} className="text-sm hover:text-primary transition-colors">Blog</Link>
             <a href="/#gallery" onClick={() => setMobileOpen(false)} className="text-sm hover:text-primary transition-colors">Gallery</a>
             <a href="/#faq" onClick={() => setMobileOpen(false)} className="text-sm hover:text-primary transition-colors">FAQ</a>
           </div>

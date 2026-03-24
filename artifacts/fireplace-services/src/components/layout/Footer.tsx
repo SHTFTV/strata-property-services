@@ -68,6 +68,12 @@ export function Footer() {
         </div>
 
         <div>
+          <h4 className="text-white font-bold mb-4 text-sm font-display tracking-wide uppercase">Resources</h4>
+          <ul className="space-y-1.5 text-sm mb-6">
+            <li><Link href="/about" className="hover:text-primary transition-colors">About Us</Link></li>
+            <li><Link href="/blog" className="hover:text-primary transition-colors">Blog</Link></li>
+            <li><Link href="/sample-report" className="hover:text-primary transition-colors">Sample Report</Link></li>
+          </ul>
           <h4 className="text-white font-bold mb-4 text-sm font-display tracking-wide uppercase">24/7 Service</h4>
           <a
             href={`tel:${contacts.colin.phoneTel}`}
