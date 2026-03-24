@@ -16,7 +16,7 @@ export default function Home() {
     "name": "Strata Property Services",
     "url": "https://stratapropertyservices.com",
     "description": "Strata Property Services — Vancouver's complete property maintenance partner. Gas fireplaces, HVAC, roofing, siding, painting, renovations, landscaping, snow removal & more. Licensed & bonded since 1989.",
-    "telephone": "+16047658424",
+    "telephone": "+16047611518",
     "email": "beewarmh@gmail.com",
     "address": {
       "@type": "PostalAddress",
@@ -42,7 +42,7 @@ export default function Home() {
 
       <SEO
         title="Strata Property Services Vancouver — Fireplaces, HVAC, Roofing & More"
-        description="Strata Property Services — Vancouver's trusted property maintenance company since 1989. Gas fireplaces, HVAC, roofing, siding, painting, renovations, landscaping & snow removal. Licensed & bonded. Call 604-765-8424."
+        description="Strata Property Services — Vancouver's trusted property maintenance company since 1989. Gas fireplaces, HVAC, roofing, siding, painting, renovations, landscaping, plumbing & snow removal. Licensed & bonded. Call 604-761-1518."
       />
       <Navbar />
       

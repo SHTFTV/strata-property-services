@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Wrench, FileCheck2, Award, Zap, Building2, Snowflake, PaintBucket, Hammer } from "lucide-react";
+import { ArrowRight, ShieldCheck, Wrench, FileCheck2, Award, Zap, Building2, Snowflake, PaintBucket, Hammer, Droplets } from "lucide-react";
 import { Link } from "wouter";
+import { contacts } from "@/data/contacts";
 
 const trustBadges = [
   { icon: Wrench, title: "Expert Technicians", desc: "Licensed & certified trade specialists" },
@@ -17,6 +18,7 @@ const quickServices = [
   { name: "Roofing", slug: "roofing", icon: Building2 },
   { name: "Siding", slug: "siding", icon: Hammer },
   { name: "Painting", slug: "painting", icon: PaintBucket },
+  { name: "Plumbing", slug: "plumbing", icon: Droplets },
   { name: "Renovations", slug: "condo-renovations", icon: Wrench },
 ];
 
@@ -70,10 +72,10 @@ export function HeroSection() {
                 Get a Free Quote <ArrowRight className="w-5 h-5" />
               </a>
               <a 
-                href="tel:+16047658424" 
+                href={`tel:${contacts.colin.phoneTel}`}
                 className="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white hover:text-secondary transition-all flex justify-center items-center text-lg"
               >
-                Call 604-765-8424
+                Call {contacts.colin.phone}
               </a>
             </div>
           </motion.div>

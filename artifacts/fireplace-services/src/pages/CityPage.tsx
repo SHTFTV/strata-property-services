@@ -1,6 +1,7 @@
 import { useParams, Link } from "wouter";
 import { cities } from "@/data/cities";
 import { trades } from "@/data/trades";
+import { contacts } from "@/data/contacts";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
@@ -68,7 +69,7 @@ export default function CityPage() {
     "name": `Property Maintenance Services ${city.name} | Strata Property Services`,
     "url": `https://stratapropertyservices.com/areas/${city.slug}`,
     "description": city.metaDescription,
-    "telephone": "+16047658424",
+    "telephone": "+16047611518",
     "email": "beewarmh@gmail.com",
     "address": {
       "@type": "PostalAddress",
@@ -142,10 +143,10 @@ export default function CityPage() {
               Get a Quote in {city.name} <ArrowRight className="w-5 h-5" />
             </a>
             <a
-              href="tel:+16047658424"
+              href={`tel:${contacts.colin.phoneTel}`}
               className="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white hover:text-secondary transition-all flex justify-center items-center text-lg"
             >
-              Call 604-765-8424
+              Call {contacts.colin.phone}
             </a>
           </div>
         </div>
@@ -332,10 +333,10 @@ export default function CityPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a
-                href="tel:+16047658424"
+                href={`tel:${contacts.colin.phoneTel}`}
                 className="bg-primary hover:bg-accent text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg inline-flex items-center justify-center gap-2 text-lg"
               >
-                <Phone className="w-5 h-5" /> Call 604-765-8424
+                <Phone className="w-5 h-5" /> Call {contacts.colin.phone}
               </a>
               <Link
                 href="/#contact"

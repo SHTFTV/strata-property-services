@@ -1,6 +1,7 @@
 import { Link } from "wouter";
 import { cities } from "@/data/cities";
 import { trades } from "@/data/trades";
+import { contacts } from "@/data/contacts";
 
 export function Footer() {
   return (
@@ -69,10 +70,10 @@ export function Footer() {
         <div>
           <h4 className="text-white font-bold mb-4 text-sm font-display tracking-wide uppercase">24/7 Service</h4>
           <a
-            href="tel:+16047658424"
+            href={`tel:${contacts.colin.phoneTel}`}
             className="text-2xl font-black font-display text-primary hover:text-accent transition-colors block mb-4"
           >
-            604-765-8424
+            {contacts.colin.phone}
           </a>
           <p className="text-sm font-medium">Established 1989</p>
           <p className="text-sm">Serving the Lower Mainland</p>

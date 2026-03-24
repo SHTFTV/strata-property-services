@@ -2,6 +2,7 @@ import { Phone, ChevronDown, Menu, X } from "lucide-react";
 import { Link } from "wouter";
 import { trades } from "@/data/trades";
 import { cities } from "@/data/cities";
+import { contacts } from "@/data/contacts";
 import { useState, useRef, useEffect } from "react";
 
 function DropdownMenu({ label, children }: { label: string; children: React.ReactNode }) {
@@ -57,18 +58,18 @@ export function Navbar() {
             ))}
           </DropdownMenu>
 
+          <Link href="/about" className="hover:text-primary transition-colors">About Us</Link>
           <a href="/#gallery" className="hover:text-primary transition-colors">Gallery</a>
-          <a href="/#safety" className="hover:text-primary transition-colors">Safety</a>
           <a href="/#faq" className="hover:text-primary transition-colors">FAQ</a>
         </div>
 
         <div className="flex items-center gap-4">
           <a
-            href="tel:+16047658424"
+            href={`tel:${contacts.colin.phoneTel}`}
             className="bg-primary hover:bg-accent px-5 py-2.5 rounded-lg font-bold transition-all flex items-center gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 active:translate-y-0"
           >
             <Phone className="w-4 h-4" />
-            <span className="hidden sm:inline">Call Now:</span> 604-765-8424
+            <span className="hidden sm:inline">Call Now:</span> {contacts.colin.phone}
           </a>
           <button className="lg:hidden" onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
@@ -99,8 +100,8 @@ export function Navbar() {
             </div>
           </div>
           <div className="flex gap-4 px-2">
+            <Link href="/about" onClick={() => setMobileOpen(false)} className="text-sm hover:text-primary transition-colors">About Us</Link>
             <a href="/#gallery" onClick={() => setMobileOpen(false)} className="text-sm hover:text-primary transition-colors">Gallery</a>
-            <a href="/#safety" onClick={() => setMobileOpen(false)} className="text-sm hover:text-primary transition-colors">Safety</a>
             <a href="/#faq" onClick={() => setMobileOpen(false)} className="text-sm hover:text-primary transition-colors">FAQ</a>
           </div>
         </div>

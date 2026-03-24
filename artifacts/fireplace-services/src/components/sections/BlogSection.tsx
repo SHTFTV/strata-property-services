@@ -214,7 +214,7 @@ export function BlogSection() {
           </p>
 
           <p className="text-muted-foreground leading-relaxed mb-8">
-            Ready to schedule your annual gas fireplace inspection or discuss your Strata property's maintenance needs? Call us at <a href="tel:+16047658424" className="text-primary font-semibold hover:text-accent">604-765-8424</a> or <Link href="/#contact" className="text-primary font-semibold hover:text-accent">request a quote online</Link>. With over 35 years of certified experience, we're the Lower Mainland's most trusted name in gas fireplace safety and Strata property services.
+            Ready to schedule your annual gas fireplace inspection or discuss your Strata property's maintenance needs? Call Colin at <a href="tel:+16047611518" className="text-primary font-semibold hover:text-accent">604-761-1518</a> or Robert (Gas & HVAC) at <a href="tel:+16047658424" className="text-primary font-semibold hover:text-accent">604-765-8424</a>, or <Link href="/#contact" className="text-primary font-semibold hover:text-accent">request a quote online</Link>. With over 35 years of certified experience, we're the Lower Mainland's most trusted name in Strata property services.
           </p>
 
           <div className="not-prose bg-secondary text-white p-8 rounded-2xl mt-10">

@@ -3,6 +3,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import * as z from "zod";
 import { useToast } from "@/hooks/use-toast";
 import { Send, MapPin, Phone, Mail } from "lucide-react";
+import { contacts } from "@/data/contacts";
 
 const formSchema = z.object({
   name: z.string().min(2, "Name is required"),
@@ -60,23 +61,33 @@ export function ContactSection() {
             </div>
 
             <div className="space-y-6">
-              <a href="tel:+16047658424" className="flex items-center gap-4 group">
+              <a href={`tel:${contacts.colin.phoneTel}`} className="flex items-center gap-4 group">
                 <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
                   <Phone className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
                 </div>
                 <div>
-                  <div className="text-sm text-slate-400 font-medium">Call Us 24/7</div>
-                  <div className="text-2xl font-bold group-hover:text-primary transition-colors">604-765-8424</div>
+                  <div className="text-sm text-slate-400 font-medium">Call Colin Hamilton</div>
+                  <div className="text-2xl font-bold group-hover:text-primary transition-colors">{contacts.colin.phone}</div>
                 </div>
               </a>
 
-              <a href="mailto:beewarmh@gmail.com" className="flex items-center gap-4 group">
+              <a href={`tel:${contacts.robert.phoneTel}`} className="flex items-center gap-4 group">
+                <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
+                  <Phone className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
+                </div>
+                <div>
+                  <div className="text-sm text-slate-400 font-medium">Gas & HVAC — Robert Hamilton</div>
+                  <div className="text-2xl font-bold group-hover:text-primary transition-colors">{contacts.robert.phone}</div>
+                </div>
+              </a>
+
+              <a href={`mailto:${contacts.robert.email}`} className="flex items-center gap-4 group">
                 <div className="w-14 h-14 bg-primary/20 rounded-xl flex items-center justify-center group-hover:bg-primary transition-colors">
                   <Mail className="w-6 h-6 text-primary group-hover:text-white transition-colors" />
                 </div>
                 <div>
                   <div className="text-sm text-slate-400 font-medium">Email Us</div>
-                  <div className="text-xl font-bold group-hover:text-primary transition-colors">beewarmh@gmail.com</div>
+                  <div className="text-xl font-bold group-hover:text-primary transition-colors">{contacts.robert.email}</div>
                 </div>
               </a>
 

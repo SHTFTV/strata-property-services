@@ -2,6 +2,7 @@ import { useParams, Link } from "wouter";
 import { trades } from "@/data/trades";
 import { cities } from "@/data/cities";
 import { tradeContentMap } from "@/data/tradeContent";
+import { getTradeContact } from "@/data/contacts";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
@@ -28,14 +29,15 @@ export default function TradePage() {
     );
   }
 
+  const contact = getTradeContact(trade.slug);
+
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": `${trade.name} Vancouver | Strata Property Services`,
     "url": `https://stratapropertyservices.com/services/${trade.slug}`,
     "description": trade.metaDescription,
-    "telephone": "+16047658424",
-    "email": "beewarmh@gmail.com",
+    "telephone": contact.phoneTel,
     "address": {
       "@type": "PostalAddress",
       "addressLocality": "Vancouver",
@@ -69,8 +71,8 @@ export default function TradePage() {
             <a href="#contact-trade" className="bg-primary text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-primary/20 hover:bg-accent hover:-translate-y-1 transition-all flex justify-center items-center gap-2 text-lg">
               Get a Free Quote <ArrowRight className="w-5 h-5" />
             </a>
-            <a href="tel:+16047658424" className="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white hover:text-secondary transition-all flex justify-center items-center text-lg">
-              Call 604-765-8424
+            <a href={`tel:${contact.phoneTel}`} className="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white hover:text-secondary transition-all flex justify-center items-center text-lg">
+              Call {contact.phone}
             </a>
           </div>
         </div>
@@ -282,8 +284,8 @@ export default function TradePage() {
             <h2 className="text-3xl md:text-4xl font-black mb-6">Get a Free {trade.name} Quote</h2>
             <p className="text-lg text-slate-300 mb-10 max-w-xl mx-auto">Contact us today for a no-obligation quote on your {trade.name.toLowerCase()} project. 35+ years of trusted service across the Lower Mainland.</p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="tel:+16047658424" className="bg-primary hover:bg-accent text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg inline-flex items-center justify-center gap-2 text-lg">
-                <Phone className="w-5 h-5" /> Call 604-765-8424
+              <a href={`tel:${contact.phoneTel}`} className="bg-primary hover:bg-accent text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg inline-flex items-center justify-center gap-2 text-lg">
+                <Phone className="w-5 h-5" /> Call {contact.phone}
               </a>
               <Link href="/#contact" className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white hover:text-secondary transition-all inline-flex items-center justify-center text-lg">
                 Request a Quote Online
