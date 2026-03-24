@@ -1,0 +1,191 @@
+export interface CityData {
+  slug: string;
+  name: string;
+  region: string;
+  description: string;
+  heroText: string;
+  neighborhoods: string[];
+  localFacts: string[];
+  metaDescription: string;
+  lat: string;
+  lng: string;
+}
+
+export const cities: CityData[] = [
+  {
+    slug: "vancouver",
+    name: "Vancouver",
+    region: "City of Vancouver",
+    description: "As Vancouver's most experienced gas fireplace service provider, we've been keeping homes safe since 1989. From Kitsilano condos to Shaughnessy estates, our Class B Gas Fitter certified technicians provide comprehensive annual inspections, cleaning, and safety testing for every type of gas fireplace installation.",
+    heroText: "Vancouver's Most Trusted Gas Fireplace Professionals Since 1989",
+    neighborhoods: ["Kitsilano", "West End", "Downtown", "Mount Pleasant", "Shaughnessy", "Kerrisdale", "Dunbar", "Point Grey", "Yaletown", "Coal Harbour", "Gastown", "Fairview", "Cambie", "Riley Park", "Hastings-Sunrise"],
+    localFacts: [
+      "Vancouver's coastal climate causes accelerated corrosion in vent terminations and outdoor fireplace components.",
+      "Many pre-2000 Vancouver condos have shared B-vent systems requiring specialized multi-unit inspection protocols.",
+      "Strata councils in Vancouver are legally required to maintain common area gas appliance safety records.",
+    ],
+    metaDescription: "Professional gas fireplace inspection and annual maintenance in Vancouver BC. Class B Gas Fitter certified since 1989. Serving all Vancouver neighborhoods. Call 604-765-8424.",
+    lat: "49.2827",
+    lng: "-123.1207",
+  },
+  {
+    slug: "burnaby",
+    name: "Burnaby",
+    region: "City of Burnaby",
+    description: "Burnaby's rapid condo development means thousands of gas fireplaces need annual professional servicing. From Metrotown high-rises to Burnaby Mountain townhomes, we provide TSBC-compliant inspections and detailed Strata reporting for buildings of all sizes.",
+    heroText: "Burnaby's Trusted Gas Fireplace Inspection & Maintenance Experts",
+    neighborhoods: ["Metrotown", "Brentwood", "Lougheed", "Burnaby Heights", "Edmonds", "Deer Lake", "Capitol Hill", "Willingdon Heights", "Burnaby Mountain", "Big Bend"],
+    localFacts: [
+      "Burnaby's high-rise density along the Metrotown corridor means bulk Strata inspection contracts are our specialty.",
+      "Newer Burnaby developments often feature sealed direct-vent systems that require manufacturer-specific service protocols.",
+      "Burnaby's proximity to mountain terrain can affect chimney draft performance, making annual ventilation testing critical.",
+    ],
+    metaDescription: "Gas fireplace annual service in Burnaby BC. TSBC licensed technician. Strata bulk inspection rates for Metrotown, Brentwood & all Burnaby areas. Call 604-765-8424.",
+    lat: "49.2488",
+    lng: "-122.9805",
+  },
+  {
+    slug: "surrey",
+    name: "Surrey",
+    region: "City of Surrey",
+    description: "Surrey is BC's fastest-growing city, and we're here to keep every gas fireplace running safely. From Cloverdale heritage homes to South Surrey estates and Fleetwood townhome complexes, our certified technicians deliver thorough annual inspections and maintenance across all six Surrey town centres.",
+    heroText: "Surrey's Premier Gas Fireplace Safety & Inspection Service",
+    neighborhoods: ["Cloverdale", "South Surrey", "White Rock", "Fleetwood", "Guildford", "Newton", "Whalley", "City Centre", "Panorama Ridge", "Sullivan", "Fraser Heights"],
+    localFacts: [
+      "Surrey's mix of older heritage homes and new construction means we encounter every type of gas fireplace system.",
+      "South Surrey and White Rock properties often have premium fireplace installations requiring specialized cleaning products.",
+      "Surrey Strata properties in the Guildford and Fleetwood corridors benefit from our preferred multi-unit bulk rates.",
+    ],
+    metaDescription: "Gas fireplace inspection services in Surrey BC. Class B Gas Fitter certified. Annual safety maintenance for all Surrey neighborhoods. Call 604-765-8424.",
+    lat: "49.1913",
+    lng: "-122.8490",
+  },
+  {
+    slug: "coquitlam",
+    name: "Coquitlam",
+    region: "City of Coquitlam",
+    description: "Coquitlam homeowners and Strata councils trust us for reliable, code-compliant gas fireplace services. From Burke Mountain new builds to Maillardville's established neighborhoods, we deliver thorough inspections backed by 35+ years of expertise and full TSBC licensing.",
+    heroText: "Coquitlam's Certified Gas Fireplace Inspection Professionals",
+    neighborhoods: ["Burke Mountain", "Westwood Plateau", "Maillardville", "Town Centre", "Austin Heights", "Ranch Park", "Eagle Ridge", "Harbour Chines", "Coquitlam West"],
+    localFacts: [
+      "Burke Mountain's newer developments feature high-efficiency sealed fireplaces that require updated service techniques.",
+      "Coquitlam's mountainside homes are more susceptible to downdraft issues, making annual ventilation checks essential.",
+      "Many Coquitlam townhome Stratas schedule bulk annual inspections in late summer before heating season begins.",
+    ],
+    metaDescription: "Gas fireplace annual service in Coquitlam BC. Licensed Class B Gas Fitter. Serving Burke Mountain, Westwood Plateau & all Coquitlam areas. Call 604-765-8424.",
+    lat: "49.2838",
+    lng: "-122.7932",
+  },
+  {
+    slug: "langley",
+    name: "Langley",
+    region: "Township of Langley & City of Langley",
+    description: "Langley's growing communities need reliable gas fireplace maintenance. From Willoughby's new townhome developments to Walnut Grove family homes and Fort Langley heritage properties, we provide full-service annual inspections, safety testing, and TSBC-compliant documentation.",
+    heroText: "Langley's Trusted Gas Fireplace Service & Safety Experts",
+    neighborhoods: ["Willoughby", "Walnut Grove", "Fort Langley", "Brookswood", "Murrayville", "Aldergrove", "Langley City", "Willowbrook", "Township of Langley"],
+    localFacts: [
+      "Langley's newer Willoughby developments feature modern gas fireplace systems with electronic ignition requiring specialized tools.",
+      "Rural Langley properties may have unique venting configurations that need careful annual inspection.",
+      "Fort Langley's heritage homes often contain older gas insert installations that benefit from proactive annual maintenance.",
+    ],
+    metaDescription: "Gas fireplace inspection & maintenance in Langley BC. TSBC licensed. Annual safety service for Willoughby, Walnut Grove & all Langley areas. Call 604-765-8424.",
+    lat: "49.1044",
+    lng: "-122.6605",
+  },
+  {
+    slug: "north-shore",
+    name: "North Shore",
+    region: "North Vancouver & West Vancouver",
+    description: "The North Shore's premium homes and mountain-adjacent properties demand expert gas fireplace care. From West Vancouver's waterfront estates to North Vancouver's Lynn Valley townhomes and Lower Lonsdale condos, our certified technicians handle the unique challenges of mountainside fireplace installations.",
+    heroText: "North Shore's Expert Gas Fireplace Inspection & Safety Service",
+    neighborhoods: ["West Vancouver", "North Vancouver", "Lower Lonsdale", "Lynn Valley", "Deep Cove", "Edgemont", "Upper Lonsdale", "Capilano", "British Properties", "Pemberton Heights", "Lions Bay"],
+    localFacts: [
+      "North Shore mountain proximity creates unique downdraft and wind conditions that can affect fireplace venting performance.",
+      "West Vancouver's luxury homes often feature custom or imported fireplace systems requiring manufacturer-specific expertise.",
+      "North Vancouver's dense condo development along Lonsdale means significant demand for Strata bulk inspection services.",
+    ],
+    metaDescription: "Gas fireplace annual service for North Shore BC. West Vancouver & North Vancouver. Class B Gas Fitter certified since 1989. Call 604-765-8424.",
+    lat: "49.3200",
+    lng: "-123.0724",
+  },
+  {
+    slug: "new-westminster",
+    name: "New Westminster",
+    region: "City of New Westminster",
+    description: "New Westminster blends historic charm with modern development, and gas fireplaces are found in both. From Queen's Park heritage homes to Quayside waterfront condos and Sapperton townhomes, our Class B Gas Fitter certified team delivers annual inspections with full safety documentation.",
+    heroText: "New Westminster's Professional Gas Fireplace Service Provider",
+    neighborhoods: ["Queen's Park", "Quayside", "Sapperton", "Downtown New West", "Uptown", "Queensborough", "Brow of the Hill", "Connaught Heights"],
+    localFacts: [
+      "New Westminster's heritage homes in Queen's Park often have retrofitted gas inserts that need careful annual inspection.",
+      "Quayside and Downtown New West high-rises benefit from our preferred Strata bulk pricing for multi-unit inspections.",
+      "New Westminster's river-adjacent properties face humidity conditions that can accelerate vent corrosion over time.",
+    ],
+    metaDescription: "Gas fireplace inspection in New Westminster BC. Licensed Gas Fitter. Annual maintenance for Queen's Park, Quayside & all New West areas. Call 604-765-8424.",
+    lat: "49.2057",
+    lng: "-122.9110",
+  },
+  {
+    slug: "richmond",
+    name: "Richmond",
+    region: "City of Richmond",
+    description: "Richmond's extensive condo and townhome developments mean thousands of gas fireplaces requiring annual professional servicing. From Steveston Village to City Centre high-rises and Broadmoor family homes, we deliver thorough, TSBC-compliant inspections with detailed reporting for homeowners and Strata councils.",
+    heroText: "Richmond's Certified Gas Fireplace Inspection & Safety Experts",
+    neighborhoods: ["Steveston", "City Centre", "Broadmoor", "Terra Nova", "West Cambie", "Brighouse", "Thompson", "Blundell", "Seafair", "East Richmond"],
+    localFacts: [
+      "Richmond's sea-level location and moisture-heavy air make annual vent and termination inspections especially important.",
+      "City Centre's rapid high-rise development has created significant demand for Strata bulk inspection and logbook services.",
+      "Steveston's character homes often feature gas insert conversions from wood-burning fireplaces requiring specialized care.",
+    ],
+    metaDescription: "Gas fireplace annual service in Richmond BC. TSBC licensed Class B Gas Fitter. Serving Steveston, City Centre & all Richmond areas. Call 604-765-8424.",
+    lat: "49.1666",
+    lng: "-123.1336",
+  },
+  {
+    slug: "port-coquitlam",
+    name: "Port Coquitlam",
+    region: "City of Port Coquitlam",
+    description: "Port Coquitlam families and Strata councils rely on our expert gas fireplace services to keep their homes safe year-round. From Citadel Heights to Downtown PoCo and the Shaughnessy Street corridor, we deliver thorough annual inspections and maintenance backed by decades of certified experience.",
+    heroText: "Port Coquitlam's Trusted Gas Fireplace Safety Professionals",
+    neighborhoods: ["Citadel Heights", "Downtown Port Coquitlam", "Mary Hill", "Oxford Heights", "Riverwood", "Shaughnessy Street", "Lincoln Park"],
+    localFacts: [
+      "Port Coquitlam's family-oriented neighborhoods feature a mix of older and newer gas fireplace systems needing tailored service.",
+      "PoCo's townhome Stratas along the Shaughnessy corridor regularly schedule bulk annual inspections through our preferred rate program.",
+      "The Pitt River proximity can bring higher humidity, making annual vent and component inspections especially important.",
+    ],
+    metaDescription: "Gas fireplace inspection in Port Coquitlam BC. Licensed Class B Gas Fitter. Annual safety service for all PoCo neighborhoods. Call 604-765-8424.",
+    lat: "49.2625",
+    lng: "-122.7510",
+  },
+  {
+    slug: "port-moody",
+    name: "Port Moody",
+    region: "City of Port Moody",
+    description: "Port Moody's scenic waterfront and hillside communities deserve expert gas fireplace care. From Inlet Centre condos to Heritage Mountain homes and Glenayre townhomes, our certified technicians ensure every fireplace meets safety standards with comprehensive annual inspections.",
+    heroText: "Port Moody's Expert Gas Fireplace Service & Maintenance Team",
+    neighborhoods: ["Inlet Centre", "Heritage Mountain", "Glenayre", "April Road", "Moody Centre", "College Park", "Ioco"],
+    localFacts: [
+      "Heritage Mountain's elevation creates unique airflow dynamics that can affect chimney draft and venting performance.",
+      "Port Moody's newer Inlet Centre developments feature modern sealed-combustion fireplaces requiring updated service protocols.",
+      "Port Moody's waterfront proximity means higher moisture exposure for exterior vent components.",
+    ],
+    metaDescription: "Gas fireplace annual maintenance in Port Moody BC. TSBC licensed technician. Serving Heritage Mountain, Inlet Centre & all Port Moody. Call 604-765-8424.",
+    lat: "49.2783",
+    lng: "-122.8601",
+  },
+  {
+    slug: "maple-ridge",
+    name: "Maple Ridge",
+    region: "City of Maple Ridge & Pitt Meadows",
+    description: "Maple Ridge and Pitt Meadows homeowners trust our team for dependable gas fireplace maintenance. From Silver Valley's newer developments to Haney's established neighborhoods and Pitt Meadows family homes, we deliver full annual inspections with TSBC-compliant safety documentation.",
+    heroText: "Maple Ridge & Pitt Meadows Gas Fireplace Safety Experts",
+    neighborhoods: ["Silver Valley", "Albion", "Haney", "Hammond", "Websters Corners", "Whonnock", "Pitt Meadows", "Kanaka Creek"],
+    localFacts: [
+      "Silver Valley's newer developments feature modern high-efficiency gas fireplaces with electronic controls requiring updated service tools.",
+      "Maple Ridge's semi-rural properties may have longer vent runs that need careful annual draft testing.",
+      "Pitt Meadows' river-adjacent location means heightened awareness of moisture-related vent corrosion during inspections.",
+    ],
+    metaDescription: "Gas fireplace inspection in Maple Ridge & Pitt Meadows BC. Licensed Class B Gas Fitter. Annual safety maintenance. Call 604-765-8424.",
+    lat: "49.2193",
+    lng: "-122.5984",
+  },
+];

@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import { CheckCircle2, ShieldAlert, Sparkles, Wind, Wrench, CalendarClock } from "lucide-react";
+import { Link } from "wouter";
+import { cities } from "@/data/cities";
 
 const services = [
   { icon: ShieldAlert, title: "Annual Safety Inspection", desc: "Comprehensive inspection of all fireplace components, burner operation, and ventilation systems to ensure safe operation." },
@@ -104,7 +106,18 @@ export function ServicesSection() {
               </table>
               <div className="p-5 bg-slate-50 text-sm text-slate-600 text-center border-t border-slate-200">
                 All services include a Technical Safety BC compliant inspection record. <br/>
-                Serving: Vancouver, Langley, Surrey, Burnaby, Coquitlam, North Shore, New West.
+                <span className="mt-2 inline-flex flex-wrap justify-center gap-x-2 gap-y-1">
+                  Serving:{" "}
+                  {cities.slice(0, 7).map((city, i) => (
+                    <span key={city.slug}>
+                      <Link href={`/areas/${city.slug}`} className="text-primary hover:text-accent underline underline-offset-2 transition-colors">
+                        {city.name}
+                      </Link>
+                      {i < 6 ? "," : ""}
+                    </span>
+                  ))}
+                  {" & more."}
+                </span>
               </div>
             </div>
           </div>
