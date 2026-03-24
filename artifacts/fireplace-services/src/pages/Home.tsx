@@ -15,7 +15,7 @@ export default function Home() {
     "@id": "https://stratapropertyservices.com/#organization",
     "name": "Strata Property Services",
     "url": "https://stratapropertyservices.com",
-    "description": "Professional gas fireplace inspection, maintenance, and safety services. Class B Gas Fitter certified. Annual maintenance and repairs for Vancouver homes and buildings.",
+    "description": "Strata Property Services — Vancouver's complete property maintenance partner. Gas fireplaces, HVAC, roofing, siding, painting, renovations, landscaping, snow removal & more. Licensed & bonded since 1989.",
     "telephone": "+16047658424",
     "email": "beewarmh@gmail.com",
     "address": {
@@ -41,8 +41,8 @@ export default function Home() {
       />
 
       <SEO
-        title="Gas Fireplace Annual Services Vancouver"
-        description="Professional gas fireplace inspection, maintenance, and safety services in Vancouver. Class B Gas Fitter certified since 1989. Annual inspections, cleaning & repairs. Call 604-765-8424."
+        title="Strata Property Services Vancouver — Fireplaces, HVAC, Roofing & More"
+        description="Strata Property Services — Vancouver's trusted property maintenance company since 1989. Gas fireplaces, HVAC, roofing, siding, painting, renovations, landscaping & snow removal. Licensed & bonded. Call 604-765-8424."
       />
       <Navbar />
       

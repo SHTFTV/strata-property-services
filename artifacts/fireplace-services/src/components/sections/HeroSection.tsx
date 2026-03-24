@@ -1,24 +1,33 @@
 import { motion } from "framer-motion";
-import { ArrowRight, ShieldCheck, Wrench, FileCheck2, Award, Zap, Building2 } from "lucide-react";
+import { ArrowRight, ShieldCheck, Wrench, FileCheck2, Award, Zap, Building2, Snowflake, PaintBucket, Hammer } from "lucide-react";
+import { Link } from "wouter";
 
 const trustBadges = [
-  { icon: Wrench, title: "Expert Technicians", desc: "Class B Gas Fitter certified specialists" },
+  { icon: Wrench, title: "Expert Technicians", desc: "Licensed & certified trade specialists" },
   { icon: Award, title: "35+ Years Experience", desc: "Serving Vancouver since 1989" },
   { icon: ShieldCheck, title: "Licensed & Certified", desc: "Gas Contractor & WorkSafeBC" },
   { icon: FileCheck2, title: "Comprehensive Reports", desc: "Detailed inspection documents" },
   { icon: Zap, title: "Safety First", desc: "CO detection & ventilation testing" },
-  { icon: Building2, title: "Professional Grade", desc: "BC Building Code compliant" },
+  { icon: Building2, title: "Strata Specialists", desc: "We know Strata bylaws & processes" },
+];
+
+const quickServices = [
+  { name: "Gas Fireplaces", slug: "hvac", icon: Zap },
+  { name: "Snow Removal", slug: "snow-removal", icon: Snowflake },
+  { name: "Roofing", slug: "roofing", icon: Building2 },
+  { name: "Siding", slug: "siding", icon: Hammer },
+  { name: "Painting", slug: "painting", icon: PaintBucket },
+  { name: "Renovations", slug: "condo-renovations", icon: Wrench },
 ];
 
 export function HeroSection() {
   return (
     <>
       <header className="relative bg-secondary text-white py-24 px-6 overflow-hidden">
-        {/* Background Image with Overlay */}
         <div className="absolute inset-0 z-0">
           <img 
             src={`${import.meta.env.BASE_URL}images/hero-fireplace.png`}
-            alt="Luxury Gas Fireplace" 
+            alt="Strata Property Services Vancouver" 
             className="w-full h-full object-cover opacity-30 mix-blend-overlay"
           />
           <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/90 to-secondary/40" />
@@ -36,33 +45,41 @@ export function HeroSection() {
             </div>
             
             <h1 className="text-5xl md:text-7xl font-black mb-6 leading-tight">
-              Professional Gas Fireplace <br/>
-              <span className="text-primary">Annual Services</span>
+              Strata Property <br/>
+              <span className="text-primary">Services</span>
             </h1>
             
-            <p className="text-xl text-slate-300 mb-10 max-w-xl font-medium leading-relaxed">
-              Class B Gas Fitter Certified | Safety Inspections & Maintenance | Trusted Since 1989
+            <p className="text-xl text-slate-300 mb-8 max-w-xl font-medium leading-relaxed">
+              Your complete Strata property maintenance partner. Gas fireplaces, HVAC, roofing, siding, painting, renovations, landscaping & more — all under one roof since 1989.
             </p>
+
+            <div className="flex flex-wrap gap-2 mb-8">
+              {quickServices.map((s) => (
+                <Link key={s.slug} href={`/services/${s.slug}`} className="inline-flex items-center gap-1.5 bg-white/10 border border-white/20 text-sm font-medium px-3 py-1.5 rounded-full hover:bg-primary hover:border-primary transition-all">
+                  <s.icon className="w-3.5 h-3.5" />
+                  {s.name}
+                </Link>
+              ))}
+            </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
               <a 
                 href="#contact" 
                 className="bg-primary text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-primary/20 hover:bg-accent hover:-translate-y-1 transition-all flex justify-center items-center gap-2 text-lg"
               >
-                Book Annual Service <ArrowRight className="w-5 h-5" />
+                Get a Free Quote <ArrowRight className="w-5 h-5" />
               </a>
               <a 
                 href="tel:+16047658424" 
                 className="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white hover:text-secondary transition-all flex justify-center items-center text-lg"
               >
-                Call Now
+                Call 604-765-8424
               </a>
             </div>
           </motion.div>
         </div>
       </header>
 
-      {/* Trust Bar */}
       <div className="bg-primary text-white py-4 px-6 relative z-20 shadow-xl">
         <div className="max-w-7xl mx-auto flex flex-wrap justify-center md:justify-between gap-6 text-sm md:text-base font-bold uppercase tracking-widest text-center">
           <span>Est. 1989</span>
@@ -71,16 +88,15 @@ export function HeroSection() {
           <span className="hidden md:inline">•</span>
           <span>WorkSafeBC Insured</span>
           <span className="hidden lg:inline">•</span>
-          <span>BC Building Code Compliant</span>
+          <span>10+ Trade Divisions</span>
         </div>
       </div>
 
-      {/* Why Choose Us */}
       <section className="py-24 bg-background">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-black text-foreground mb-4">Why Choose Our Gas Fireplace Services?</h2>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">We bring decades of technical expertise and rigorous safety standards to every home.</p>
+            <h2 className="text-3xl md:text-4xl font-black text-foreground mb-4">Why Choose Strata Property Services?</h2>
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">One trusted partner for every building maintenance and improvement need — 10+ trade divisions, 35+ years of experience.</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">

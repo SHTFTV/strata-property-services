@@ -54,7 +54,7 @@ export default function SampleReport() {
               </h1>
             </div>
             <div className="text-right text-sm text-slate-400 hidden sm:block">
-              <p className="font-bold text-white text-base">STRATA<span className="text-primary">FIREPLACE</span></p>
+              <p className="font-bold text-white text-base">STRATA<span className="text-primary">PROPERTY</span> SERVICES</p>
               <p className="mt-1">Class B Gas Fitter</p>
               <p>#CGA0100182243</p>
               <p className="mt-1">Gas Contractor License</p>

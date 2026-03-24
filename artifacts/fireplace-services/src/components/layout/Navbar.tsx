@@ -37,7 +37,7 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 bg-secondary/95 backdrop-blur-md text-white py-4 px-6 shadow-xl border-b border-white/10">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <Link href="/" className="font-display font-black text-2xl tracking-tighter cursor-pointer">
-          STRATA<span className="text-primary">FIREPLACE</span>
+          STRATA<span className="text-primary">PROPERTY</span> <span className="text-white/80 font-bold text-lg">SERVICES</span>
         </Link>
 
         <div className="hidden lg:flex items-center gap-8 font-medium text-sm">

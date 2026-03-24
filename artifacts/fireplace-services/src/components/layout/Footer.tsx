@@ -8,7 +8,7 @@ export function Footer() {
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10">
         <div className="lg:col-span-1">
           <div className="font-display font-black text-2xl mb-4 tracking-tighter text-white">
-            STRATA<span className="text-primary">FIREPLACE</span>
+            STRATA<span className="text-primary">PROPERTY</span> SERVICES
           </div>
           <p className="mb-4 text-slate-300 text-sm leading-relaxed">
             Professional Strata property services. Serving the entire Lower Mainland since 1989.
