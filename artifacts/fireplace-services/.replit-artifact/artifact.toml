@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Gas Fireplace Services"
+version = "1.0.0"
+id = "artifacts/fireplace-services"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 18987
+
+[services.development]
+run = "pnpm --filter @workspace/fireplace-services run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/fireplace-services", "run", "build" ]
+publicDir = "artifacts/fireplace-services/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "18987"
+BASE_PATH = "/"
