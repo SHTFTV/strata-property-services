@@ -48,7 +48,8 @@ export default function CityPage() {
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": `Gas Fireplace Services ${city.name}`,
+    "name": `Gas Fireplace Services ${city.name} | Strata Property Services`,
+    "url": `https://stratapropertyservices.com/areas/${city.slug}`,
     "description": city.metaDescription,
     "telephone": "+16047658424",
     "email": "beewarmh@gmail.com",

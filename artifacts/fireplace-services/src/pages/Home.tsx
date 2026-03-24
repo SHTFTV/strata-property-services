@@ -12,8 +12,9 @@ export default function Home() {
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "@id": "https://stratapropertyservices.com/gas-fireplace-services#organization",
-    "name": "Gas Fireplace Annual Services Vancouver",
+    "@id": "https://stratapropertyservices.com/#organization",
+    "name": "Strata Property Services",
+    "url": "https://stratapropertyservices.com",
     "description": "Professional gas fireplace inspection, maintenance, and safety services. Class B Gas Fitter certified. Annual maintenance and repairs for Vancouver homes and buildings.",
     "telephone": "+16047658424",
     "email": "beewarmh@gmail.com",

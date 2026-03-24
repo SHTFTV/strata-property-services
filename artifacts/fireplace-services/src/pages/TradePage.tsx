@@ -29,7 +29,8 @@ export default function TradePage() {
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": `${trade.name} Vancouver`,
+    "name": `${trade.name} Vancouver | Strata Property Services`,
+    "url": `https://stratapropertyservices.com/services/${trade.slug}`,
     "description": trade.metaDescription,
     "telephone": "+16047658424",
     "email": "beewarmh@gmail.com",

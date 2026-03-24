@@ -30,7 +30,8 @@ export default function TradeCityPage() {
   const schemaMarkup = {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
-    "name": `${trade.name} ${city.name}`,
+    "name": `${trade.name} ${city.name} | Strata Property Services`,
+    "url": `https://stratapropertyservices.com/services/${trade.slug}/${city.slug}`,
     "description": `${trade.name} services in ${city.name}, BC. ${trade.metaDescription}`,
     "telephone": "+16047658424",
     "email": "beewarmh@gmail.com",
