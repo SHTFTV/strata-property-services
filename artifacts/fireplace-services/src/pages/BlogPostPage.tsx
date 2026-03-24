@@ -39,6 +39,7 @@ export default function BlogPostPage() {
     "@type": "BlogPosting",
     "headline": post.title,
     "description": post.metaDescription,
+    "image": `https://stratapropertyservices.com/${post.image}`,
     "datePublished": post.date,
     "author": {
       "@type": "Organization",
@@ -57,8 +58,12 @@ export default function BlogPostPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
       <Navbar />
 
-      <header className="bg-secondary text-white py-16 px-6">
-        <div className="max-w-4xl mx-auto">
+      <header className="relative bg-secondary text-white py-16 px-6 overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img src={`${import.meta.env.BASE_URL}${post.image}`} alt={post.title} className="w-full h-full object-cover opacity-20 mix-blend-overlay" />
+          <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/95 to-secondary/80" />
+        </div>
+        <div className="max-w-4xl mx-auto relative z-10">
           <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-primary transition mb-6">
             <ArrowLeft className="w-4 h-4" /> Back to Blog
           </Link>
@@ -84,6 +89,9 @@ export default function BlogPostPage() {
         <div className="max-w-4xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-12">
             <article className="lg:col-span-2 prose prose-slate prose-lg max-w-none">
+              <div className="rounded-2xl overflow-hidden mb-8 not-prose">
+                <img src={`${import.meta.env.BASE_URL}${post.image}`} alt={post.title} className="w-full h-64 md:h-80 object-cover" />
+              </div>
               <p className="text-xl text-muted-foreground font-medium leading-relaxed mb-8 not-prose">{post.excerpt}</p>
               {post.content.map((paragraph, i) => (
                 <p key={i} className="text-muted-foreground leading-relaxed mb-6 not-prose">{paragraph}</p>

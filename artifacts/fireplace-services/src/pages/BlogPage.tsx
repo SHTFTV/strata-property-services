@@ -84,16 +84,18 @@ export default function BlogPage() {
             {filteredPosts.map((post) => (
               <Link key={post.slug} href={`/blog/${post.slug}`}>
                 <article className="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl hover:border-primary/30 transition-all group cursor-pointer h-full flex flex-col">
-                  <div className="bg-secondary p-6">
-                    <div className="flex items-center gap-2 mb-3">
+                  <div className="relative h-48 overflow-hidden">
+                    <img src={`${import.meta.env.BASE_URL}${post.image}`} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-secondary/80 to-transparent" />
+                    <div className="absolute bottom-4 left-4 flex items-center gap-2">
                       <Tag className="w-3.5 h-3.5 text-primary" />
                       <span className="text-xs font-bold text-primary uppercase tracking-wider">{post.category}</span>
                     </div>
-                    <h2 className="text-lg font-black text-white group-hover:text-primary transition-colors leading-snug">
-                      {post.title}
-                    </h2>
                   </div>
                   <div className="p-6 flex-1 flex flex-col">
+                    <h2 className="text-lg font-black text-foreground group-hover:text-primary transition-colors leading-snug mb-3">
+                      {post.title}
+                    </h2>
                     <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">{post.excerpt}</p>
                     <div className="flex items-center justify-between mt-auto pt-4 border-t border-slate-100">
                       <div className="flex items-center gap-4 text-xs text-muted-foreground">

@@ -9,6 +9,7 @@ export interface BlogPost {
   date: string;
   readTime: string;
   metaDescription: string;
+  image: string;
 }
 
 export const blogPosts: BlogPost[] = [
@@ -30,6 +31,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-10-15",
     readTime: "4 min read",
     metaDescription: "Fixed-price snow removal contracts vs per-event billing for Strata properties. PlowWow.com explains why fixed contracts save money and improve service quality.",
+    image: "images/blog-snow-contracts.png",
   },
   {
     slug: "plumbing-re-fits-strata-buildings-guide",
@@ -49,6 +51,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-09-20",
     readTime: "5 min read",
     metaDescription: "Complete guide to plumbing re-fits and re-piping for Strata buildings. Signs you need a re-fit, the process, costs, and how to choose the right contractor.",
+    image: "images/blog-plumbing-refits.png",
   },
   {
     slug: "hvac-maintenance-strata-buildings-seasonal-checklist",
@@ -68,6 +71,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-09-05",
     readTime: "5 min read",
     metaDescription: "HVAC maintenance checklist for Strata buildings. Seasonal tasks for spring, summer, fall, and winter that prevent costly breakdowns. Licensed gas fitter services.",
+    image: "images/blog-hvac-maintenance.png",
   },
   {
     slug: "water-damage-restoration-strata-first-48-hours",
@@ -88,6 +92,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-08-25",
     readTime: "6 min read",
     metaDescription: "Water damage restoration guide for Strata buildings. Critical first 48 hours timeline, mold prevention, insurance claims, and professional restoration services.",
+    image: "images/blog-water-damage.png",
   },
   {
     slug: "strata-roof-maintenance-lower-mainland-rain",
@@ -107,6 +112,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-08-10",
     readTime: "5 min read",
     metaDescription: "Strata roof maintenance guide for Lower Mainland buildings. Protect against BC rainfall with inspections, drain clearing, and proactive repairs. Save on costly replacements.",
+    image: "images/blog-roof-maintenance.png",
   },
   {
     slug: "condo-renovation-strata-bylaw-approval-guide",
@@ -127,6 +133,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-07-28",
     readTime: "5 min read",
     metaDescription: "Step-by-step guide to getting Strata bylaw approval for condo renovations in BC. Alteration requests, permits, contractor requirements, and timeline planning.",
+    image: "images/blog-condo-renovation.png",
   },
   {
     slug: "perimeter-drain-failure-signs-strata-buildings",
@@ -148,6 +155,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-07-15",
     readTime: "6 min read",
     metaDescription: "5 warning signs of perimeter drain failure in Strata buildings. Efflorescence, musty smells, standing water, foundation cracks. Assessment and repair guide.",
+    image: "images/blog-perimeter-drain.png",
   },
   {
     slug: "exterior-painting-strata-building-timeline-costs",
@@ -167,6 +175,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-07-01",
     readTime: "5 min read",
     metaDescription: "Strata building exterior painting guide. Timeline, costs, depreciation report requirements, and planning tips for Lower Mainland Strata councils.",
+    image: "images/blog-exterior-painting.png",
   },
   {
     slug: "siding-replacement-rain-screen-strata-buildings",
@@ -186,6 +195,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-06-15",
     readTime: "5 min read",
     metaDescription: "Rain screen siding systems for Strata buildings in BC. Building code requirements, cladding options, costs, and lessons from the leaky condo crisis.",
+    image: "images/blog-siding-rainscreen.png",
   },
   {
     slug: "strata-landscaping-common-area-maintenance-plan",
@@ -207,6 +217,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-06-01",
     readTime: "6 min read",
     metaDescription: "Year-round landscaping maintenance plan for Strata properties. Monthly tasks for the Lower Mainland climate. Mowing, pruning, fertilizing, drainage management.",
+    image: "images/blog-landscaping.png",
   },
   {
     slug: "drywall-water-damage-repair-strata-units",
@@ -227,6 +238,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-05-20",
     readTime: "5 min read",
     metaDescription: "Drywall water damage repair guide for Strata units. Professional cut, dry, replace process. Texture matching, mold prevention, and insurance documentation.",
+    image: "images/blog-drywall-repair.png",
   },
   {
     slug: "mini-excavation-strata-utility-access-guide",
@@ -246,6 +258,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-05-05",
     readTime: "5 min read",
     metaDescription: "Mini excavation guide for Strata properties. Underground utility access, perimeter drain repair, and site restoration with minimal disruption.",
+    image: "images/blog-mini-excavation.png",
   },
   {
     slug: "strata-flooring-replacement-noise-bylaws-materials",
@@ -265,6 +278,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-04-20",
     readTime: "5 min read",
     metaDescription: "Strata flooring replacement guide. STC/IIC noise ratings, acoustic underlay requirements, material choices, and bylaw approval process for condo units.",
+    image: "images/blog-flooring.png",
   },
   {
     slug: "vancouver-strata-property-maintenance-checklist",
@@ -287,6 +301,7 @@ export const blogPosts: BlogPost[] = [
     date: "2025-04-01",
     readTime: "7 min read",
     metaDescription: "Complete Strata property maintenance checklist for Vancouver buildings. 50+ items across roof, mechanical, plumbing, electrical, grounds, and safety systems.",
+    image: "images/blog-maintenance-checklist.png",
   },
 ];
 
