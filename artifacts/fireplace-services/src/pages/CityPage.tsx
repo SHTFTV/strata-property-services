@@ -5,7 +5,7 @@ import { contacts } from "@/data/contacts";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
-import { ArrowRight, MapPin, Phone, ShieldCheck, CheckCircle2, ArrowLeft, Wrench, Award, FileCheck2, BookOpen, HelpCircle } from "lucide-react";
+import { ArrowRight, MapPin, Phone, ShieldCheck, CheckCircle2, ArrowLeft, Wrench, Award, FileCheck2, BookOpen, HelpCircle, Home, ChevronRight } from "lucide-react";
 
 const cityMaintenanceGuide = {
   title: "Complete Property Maintenance Guide for Lower Mainland Strata Properties",
@@ -63,48 +63,75 @@ export default function CityPage() {
     );
   }
 
-  const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": `Property Maintenance Services ${city.name} | Strata Property Services`,
-    "url": `https://stratapropertyservices.com/areas/${city.slug}`,
-    "description": city.metaDescription,
-    "telephone": "+16047611518",
-    "email": "info@stratapropertyservices.com",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": city.name,
-      "addressRegion": "BC",
-      "addressCountry": "CA"
+  const schemaMarkup = [
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": `Property Maintenance Services ${city.name} | Strata Property Services`,
+      "url": `https://stratapropertyservices.com/areas/${city.slug}`,
+      "description": city.metaDescription,
+      "telephone": "+16047611518",
+      "email": "info@stratapropertyservices.com",
+      "image": "https://stratapropertyservices.com/opengraph.jpg",
+      "foundingDate": "1989",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": city.name,
+        "addressRegion": "BC",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": city.lat,
+        "longitude": city.lng
+      },
+      "areaServed": {
+        "@type": "City",
+        "name": city.name
+      },
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Property Maintenance Services",
+        "itemListElement": trades.map(t => ({
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": t.name
+          }
+        }))
+      }
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": city.lat,
-      "longitude": city.lng
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stratapropertyservices.com/" },
+        { "@type": "ListItem", "position": 2, "name": city.name, "item": `https://stratapropertyservices.com/areas/${city.slug}` },
+      ],
     },
-    "areaServed": {
-      "@type": "City",
-      "name": city.name
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": cityMaintenanceGuide.faqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a,
+        },
+      })),
     },
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Property Maintenance Services",
-      "itemListElement": trades.map(t => ({
-        "@type": "Offer",
-        "itemOffered": {
-          "@type": "Service",
-          "name": t.name
-        }
-      }))
-    }
-  };
+  ];
 
   const otherCities = cities.filter(c => c.slug !== city.slug).slice(0, 12);
 
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
       <SEO title={`Property Maintenance Services ${city.name}`} description={city.metaDescription} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
+      {schemaMarkup.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <Navbar />
 
       <header className="relative bg-secondary text-white py-20 px-6 overflow-hidden">
@@ -118,9 +145,15 @@ export default function CityPage() {
         </div>
 
         <div className="max-w-7xl mx-auto relative z-10">
-          <Link href="/" className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-primary transition mb-6">
-            <ArrowLeft className="w-4 h-4" /> Back to Home
-          </Link>
+          <nav aria-label="Breadcrumb" className="mb-6">
+            <ol className="flex items-center gap-1.5 text-sm text-slate-400">
+              <li><Link href="/" className="hover:text-primary transition flex items-center gap-1"><Home className="w-3.5 h-3.5" /> Home</Link></li>
+              <li><ChevronRight className="w-3.5 h-3.5" /></li>
+              <li><span className="text-slate-500">Service Areas</span></li>
+              <li><ChevronRight className="w-3.5 h-3.5" /></li>
+              <li className="text-slate-300">{city.name}</li>
+            </ol>
+          </nav>
 
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm font-medium mb-6">
             <MapPin className="w-4 h-4 text-primary" />

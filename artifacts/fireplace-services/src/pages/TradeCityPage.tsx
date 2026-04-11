@@ -6,7 +6,7 @@ import { getTradeContact } from "@/data/contacts";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
-import { ArrowRight, Phone, CheckCircle2, MapPin, ArrowLeft, Award, ShieldCheck, FileCheck2, ClipboardList, Lightbulb, BookOpen, HelpCircle, Star } from "lucide-react";
+import { ArrowRight, Phone, CheckCircle2, MapPin, ArrowLeft, Award, ShieldCheck, FileCheck2, ClipboardList, Lightbulb, BookOpen, HelpCircle, Star, Home, ChevronRight } from "lucide-react";
 
 export default function TradeCityPage() {
   const params = useParams<{ trade: string; city: string }>();
@@ -32,26 +32,68 @@ export default function TradeCityPage() {
 
   const contact = getTradeContact(trade.slug);
 
-  const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": `${trade.name} ${city.name} | Strata Property Services`,
-    "url": `https://stratapropertyservices.com/services/${trade.slug}/${city.slug}`,
-    "description": `${trade.name} services in ${city.name}, BC. ${trade.metaDescription}`,
-    "telephone": contact.phoneTel,
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": city.name,
-      "addressRegion": "BC",
-      "addressCountry": "CA"
+  const allFaqs = [...trade.faqs, ...(content ? content.extendedFaqs : [])];
+
+  const schemaMarkup = [
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": `${trade.name} ${city.name} | Strata Property Services`,
+      "url": `https://stratapropertyservices.com/services/${trade.slug}/${city.slug}`,
+      "description": `${trade.name} services in ${city.name}, BC. ${trade.metaDescription}`,
+      "telephone": contact.phoneTel,
+      "image": "https://stratapropertyservices.com/opengraph.jpg",
+      "foundingDate": "1989",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": city.name,
+        "addressRegion": "BC",
+        "addressCountry": "CA"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": city.lat,
+        "longitude": city.lng,
+      },
+      "areaServed": { "@type": "City", "name": city.name },
     },
-    "geo": {
-      "@type": "GeoCoordinates",
-      "latitude": city.lat,
-      "longitude": city.lng,
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": `${trade.name} in ${city.name}`,
+      "description": `${trade.name} services in ${city.name}, BC. ${trade.description}`,
+      "url": `https://stratapropertyservices.com/services/${trade.slug}/${city.slug}`,
+      "provider": {
+        "@type": "Organization",
+        "name": "Strata Property Services",
+        "url": "https://stratapropertyservices.com",
+      },
+      "areaServed": { "@type": "City", "name": city.name },
+      "serviceType": trade.name,
     },
-    "areaServed": { "@type": "City", "name": city.name },
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stratapropertyservices.com/" },
+        { "@type": "ListItem", "position": 2, "name": trade.name, "item": `https://stratapropertyservices.com/services/${trade.slug}` },
+        { "@type": "ListItem", "position": 3, "name": city.name, "item": `https://stratapropertyservices.com/services/${trade.slug}/${city.slug}` },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": allFaqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a,
+        },
+      })),
+    },
+  ];
 
   const otherCities = cities.filter(c => c.slug !== city.slug).slice(0, 6);
   const otherTrades = trades.filter(t => t.slug !== trade.slug).slice(0, 5);
@@ -59,7 +101,9 @@ export default function TradeCityPage() {
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
       <SEO title={`${trade.name} in ${city.name}`} description={`${trade.name} services in ${city.name}, BC. ${trade.metaDescription}`} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
+      {schemaMarkup.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <Navbar />
 
       <header className="relative bg-secondary text-white py-20 px-6 overflow-hidden">
@@ -68,15 +112,15 @@ export default function TradeCityPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/95 to-secondary/70" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <div className="flex flex-wrap gap-3 mb-6">
-            <Link href={`/services/${trade.slug}`} className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-primary transition">
-              <ArrowLeft className="w-4 h-4" /> {trade.name}
-            </Link>
-            <span className="text-slate-600">|</span>
-            <Link href={`/areas/${city.slug}`} className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-primary transition">
-              <MapPin className="w-4 h-4" /> {city.name}
-            </Link>
-          </div>
+          <nav aria-label="Breadcrumb" className="mb-6">
+            <ol className="flex items-center gap-1.5 text-sm text-slate-400 flex-wrap">
+              <li><Link href="/" className="hover:text-primary transition flex items-center gap-1"><Home className="w-3.5 h-3.5" /> Home</Link></li>
+              <li><ChevronRight className="w-3.5 h-3.5" /></li>
+              <li><Link href={`/services/${trade.slug}`} className="hover:text-primary transition">{trade.name}</Link></li>
+              <li><ChevronRight className="w-3.5 h-3.5" /></li>
+              <li className="text-slate-300">{city.name}</li>
+            </ol>
+          </nav>
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 border border-white/20 text-sm font-medium mb-6">
             <MapPin className="w-4 h-4 text-primary" />
             {city.region}

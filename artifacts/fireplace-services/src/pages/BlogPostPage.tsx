@@ -60,6 +60,7 @@ export default function BlogPostPage() {
           "url": "https://stratapropertyservices.com/favicon.svg",
         },
       },
+      "wordCount": post.content.reduce((sum, p) => sum + p.split(/\s+/).length, 0),
       "keywords": post.tradeSlugs.map(s => s.replace(/-/g, " ")).join(", "),
       "articleSection": post.category,
       "inLanguage": "en-CA",
@@ -99,7 +100,7 @@ export default function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
-      <SEO title={post.title} description={post.metaDescription} />
+      <SEO title={post.title} description={post.metaDescription} ogType="article" ogImage={`https://stratapropertyservices.com/${post.image}`} />
       {schemaMarkup.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}

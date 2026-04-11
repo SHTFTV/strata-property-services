@@ -108,8 +108,16 @@ Key data files:
 - `src/data/cities.ts`: 17 cities (incl. separate North Vancouver & West Vancouver) with neighborhoods, local facts, coordinates, meta descriptions
 - `src/data/trades.ts`: 13 trades with features, FAQs, city intro templates, hero images
 - `src/data/tradeContent.ts`: ~3500 words of unique SEO content per trade (longDescription, processSteps, educationalSections, extendedFaqs, benefits, industryInsight, materialsAndMethods, strataSpecificContent, seasonalConsiderations, safetyAndCompliance)
-- `src/data/contacts.ts`: Contact info for Colin Hamilton (main) and Robert Hamilton (Gas/HVAC), with `getTradeContact()` helper
-- `src/data/blogPosts.ts`: 14 SEO blog articles covering all 13 trades with categories, trade/city cross-references, full-length content, and featured images
+- `src/data/contacts.ts`: Contact info for Colin Hamilton (main), Robert Hamilton (Gas/HVAC), and Vee/ACC Construction (Roofing), with `getTradeContact()` helper
+- `src/data/blogPosts.ts`: 18 SEO blog articles covering all 13 trades with categories, trade/city cross-references, full-length content, and featured images
+
+SEO infrastructure:
+- `src/components/SEO.tsx`: Helmet-based SEO component with og:image, og:locale, twitter:card (summary_large_image), twitter:image, robots meta, optional ogType/ogImage overrides
+- `public/sitemap.xml`: 273-URL sitemap covering all pages (home, about, blog, 17 cities, 13 trades, 221 trade+city combos, 18 blog posts)
+- `public/robots.txt`: AI crawler directives (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, etc.)
+- `index.html`: Geo meta tags (geo.region CA-BC, geo.position, ICBM)
+- Schema markup: ProfessionalService + LocalBusiness (home), BreadcrumbList (all pages), FAQPage (city/trade/trade+city pages), Service (trade/trade+city pages), BlogPosting + Organization (blog posts), WebSite (home)
+- Visual breadcrumbs on all page types: City, Trade, Trade+City, Blog posts
 
 Contact routing:
 - Colin Hamilton (Owner): 604-761-1518, steelstud.ca — main contact for most trades, homepage, and default floater

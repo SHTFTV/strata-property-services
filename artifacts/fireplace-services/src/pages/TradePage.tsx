@@ -6,7 +6,7 @@ import { getTradeContact } from "@/data/contacts";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
-import { ArrowRight, Phone, CheckCircle2, MapPin, ArrowLeft, Award, ShieldCheck, FileCheck2, ClipboardList, Lightbulb, BookOpen, HelpCircle, Star, ExternalLink, Link2 } from "lucide-react";
+import { ArrowRight, Phone, CheckCircle2, MapPin, ArrowLeft, Award, ShieldCheck, FileCheck2, ClipboardList, Lightbulb, BookOpen, HelpCircle, Star, ExternalLink, Link2, Home, ChevronRight } from "lucide-react";
 
 export default function TradePage() {
   const params = useParams<{ trade: string }>();
@@ -31,26 +31,71 @@ export default function TradePage() {
 
   const contact = getTradeContact(trade.slug);
 
-  const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "ProfessionalService",
-    "name": `${trade.name} Vancouver | Strata Property Services`,
-    "url": `https://stratapropertyservices.com/services/${trade.slug}`,
-    "description": trade.metaDescription,
-    "telephone": contact.phoneTel,
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Vancouver",
-      "addressRegion": "BC",
-      "addressCountry": "CA"
+  const allFaqs = [...trade.faqs, ...(content ? content.extendedFaqs : [])];
+
+  const schemaMarkup = [
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": `${trade.name} Vancouver | Strata Property Services`,
+      "url": `https://stratapropertyservices.com/services/${trade.slug}`,
+      "description": trade.metaDescription,
+      "telephone": contact.phoneTel,
+      "image": "https://stratapropertyservices.com/opengraph.jpg",
+      "foundingDate": "1989",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "19906 32 Ave",
+        "addressLocality": "Langley",
+        "addressRegion": "BC",
+        "postalCode": "V3A 4T1",
+        "addressCountry": "CA"
+      },
+      "areaServed": cities.map(c => ({ "@type": "City", "name": c.name })),
     },
-    "areaServed": cities.map(c => ({ "@type": "City", "name": c.name })),
-  };
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": trade.name,
+      "description": trade.description,
+      "url": `https://stratapropertyservices.com/services/${trade.slug}`,
+      "provider": {
+        "@type": "Organization",
+        "name": "Strata Property Services",
+        "url": "https://stratapropertyservices.com",
+      },
+      "areaServed": cities.map(c => ({ "@type": "City", "name": c.name })),
+      "serviceType": trade.name,
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stratapropertyservices.com/" },
+        { "@type": "ListItem", "position": 2, "name": trade.name, "item": `https://stratapropertyservices.com/services/${trade.slug}` },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": allFaqs.map(faq => ({
+        "@type": "Question",
+        "name": faq.q,
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": faq.a,
+        },
+      })),
+    },
+  ];
 
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
       <SEO title={`${trade.name} Vancouver & Lower Mainland`} description={trade.metaDescription} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
+      {schemaMarkup.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <Navbar />
 
       <header className="relative bg-secondary text-white py-20 px-6 overflow-hidden">
@@ -59,9 +104,15 @@ export default function TradePage() {
           <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/95 to-secondary/70" />
         </div>
         <div className="max-w-7xl mx-auto relative z-10">
-          <Link href="/" className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-primary transition mb-6">
-            <ArrowLeft className="w-4 h-4" /> Back to Home
-          </Link>
+          <nav aria-label="Breadcrumb" className="mb-6">
+            <ol className="flex items-center gap-1.5 text-sm text-slate-400">
+              <li><Link href="/" className="hover:text-primary transition flex items-center gap-1"><Home className="w-3.5 h-3.5" /> Home</Link></li>
+              <li><ChevronRight className="w-3.5 h-3.5" /></li>
+              <li><span className="text-slate-500">Services</span></li>
+              <li><ChevronRight className="w-3.5 h-3.5" /></li>
+              <li className="text-slate-300">{trade.name}</li>
+            </ol>
+          </nav>
           <h1 className="text-4xl md:text-6xl font-black mb-6 leading-tight max-w-3xl">
             <span className="text-primary">{trade.name}</span>
           </h1>
