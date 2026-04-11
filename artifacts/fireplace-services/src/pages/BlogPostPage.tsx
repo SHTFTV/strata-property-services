@@ -5,7 +5,7 @@ import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
 import { contacts } from "@/data/contacts";
-import { ArrowLeft, Calendar, Clock, Tag, Phone, ArrowRight, BookOpen } from "lucide-react";
+import { ArrowLeft, Calendar, Clock, Tag, Phone, ArrowRight, BookOpen, ChevronRight, Home } from "lucide-react";
 
 export default function BlogPostPage() {
   const params = useParams<{ slug: string }>();
@@ -34,28 +34,75 @@ export default function BlogPostPage() {
     .filter((p, i, arr) => arr.findIndex(x => x.slug === p.slug) === i)
     .slice(0, 3);
 
-  const schemaMarkup = {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": post.title,
-    "description": post.metaDescription,
-    "image": `https://stratapropertyservices.com/${post.image}`,
-    "datePublished": post.date,
-    "author": {
+  const schemaMarkup = [
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": post.title,
+      "description": post.metaDescription,
+      "image": `https://stratapropertyservices.com/${post.image}`,
+      "datePublished": post.date,
+      "dateModified": post.date,
+      "mainEntityOfPage": {
+        "@type": "WebPage",
+        "@id": `https://stratapropertyservices.com/blog/${post.slug}`,
+      },
+      "author": {
+        "@type": "Organization",
+        "name": "Strata Property Services",
+        "url": "https://stratapropertyservices.com",
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Strata Property Services",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://stratapropertyservices.com/favicon.svg",
+        },
+      },
+      "keywords": post.tradeSlugs.map(s => s.replace(/-/g, " ")).join(", "),
+      "articleSection": post.category,
+      "inLanguage": "en-CA",
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stratapropertyservices.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://stratapropertyservices.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://stratapropertyservices.com/blog/${post.slug}` },
+      ],
+    },
+    {
+      "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Strata Property Services",
       "url": "https://stratapropertyservices.com",
+      "telephone": "+16047611518",
+      "email": "info@stratapropertyservices.com",
+      "foundingDate": "1989",
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": { "@type": "GeoCoordinates", "latitude": 49.2827, "longitude": -123.1207 },
+        "geoRadius": "80000",
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "19906 32 Ave",
+        "addressLocality": "Langley",
+        "addressRegion": "BC",
+        "postalCode": "V3A 4T1",
+        "addressCountry": "CA",
+      },
     },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Strata Property Services",
-    },
-  };
+  ];
 
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
       <SEO title={post.title} description={post.metaDescription} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaMarkup) }} />
+      {schemaMarkup.map((schema, i) => (
+        <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
+      ))}
       <Navbar />
 
       <header className="relative bg-secondary text-white py-16 px-6 overflow-hidden">
@@ -64,9 +111,15 @@ export default function BlogPostPage() {
           <div className="absolute inset-0 bg-gradient-to-r from-secondary via-secondary/95 to-secondary/80" />
         </div>
         <div className="max-w-4xl mx-auto relative z-10">
-          <Link href="/blog" className="inline-flex items-center gap-2 text-sm text-slate-400 hover:text-primary transition mb-6">
-            <ArrowLeft className="w-4 h-4" /> Back to Blog
-          </Link>
+          <nav aria-label="Breadcrumb" className="mb-6">
+            <ol className="flex items-center gap-1.5 text-sm text-slate-400">
+              <li><Link href="/" className="hover:text-primary transition flex items-center gap-1"><Home className="w-3.5 h-3.5" /> Home</Link></li>
+              <li><ChevronRight className="w-3.5 h-3.5" /></li>
+              <li><Link href="/blog" className="hover:text-primary transition">Blog</Link></li>
+              <li><ChevronRight className="w-3.5 h-3.5" /></li>
+              <li className="text-slate-300 truncate max-w-[200px] md:max-w-[400px]">{post.title}</li>
+            </ol>
+          </nav>
           <div className="flex items-center gap-3 mb-4">
             <Tag className="w-4 h-4 text-primary" />
             <span className="text-primary font-bold text-sm uppercase tracking-wider">{post.category}</span>

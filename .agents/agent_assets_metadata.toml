@@ -1,0 +1,31 @@
+uploads = []
+
+[[generated]]
+id = "i9GaM5GQzUtGDJXDLhsgs"
+uri = "file://artifacts/fireplace-services/public/images/blog-roof-repairs-langley.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "JducpJhg3ysxT-QskqFaf"
+uri = "file://artifacts/fireplace-services/public/images/blog-roof-replacement-surrey.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "YxRW8c3lVicFxaHbbV4ZU"
+uri = "file://artifacts/fireplace-services/public/images/blog-fireplace-seasonal.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "neZB2wSzgKUXLt9h7WjBf"
+uri = "file://artifacts/fireplace-services/public/images/blog-strata-exterior-painting.png"
+type = "image"
+title = "generated_image"
+
+[[outputs]]
+id = "ERNN5iwKG0SCygLX9CkLf"
+uri = "file://strata-property-services.tar.gz"
+type = "unspecified"
+title = "Strata Property Services - Complete Site Archive"

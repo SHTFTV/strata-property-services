@@ -102,7 +102,7 @@ Pages:
 - **City Pages** (`/areas/:city`): 17 city-specific landing pages — all 13 trades listed per city, maintenance guide articles, expanded FAQs
 - **Trade Landing Pages** (`/services/:trade`): 13 trade pages — long description, 6-step process, benefits, 5 educational articles, industry insights, materials & methods, strata-specific content, seasonal considerations, safety & compliance, 10+ FAQs
 - **Trade+City Pages** (`/services/:trade/:city`): 221 trade × city combo pages — full trade content + city-specific local facts and neighborhoods
-- **Blog** (`/blog`): Blog listing page with 14 SEO articles with featured images, category filtering; individual posts at `/blog/:slug` with hero image, featured image, related services sidebar, and related articles. Homepage shows 4 most recent posts in a blog roll grid.
+- **Blog** (`/blog`): Blog listing page with 18 SEO articles with featured images, category filtering; individual posts at `/blog/:slug` with breadcrumbs, hero image, featured image, related services sidebar, and related articles. Homepage shows 4 most recent posts in a blog roll grid. Enhanced schema: BlogPosting + BreadcrumbList + Organization JSON-LD per post.
 
 Key data files:
 - `src/data/cities.ts`: 17 cities (incl. separate North Vancouver & West Vancouver) with neighborhoods, local facts, coordinates, meta descriptions
