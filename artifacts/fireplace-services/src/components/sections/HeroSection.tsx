@@ -52,7 +52,7 @@ export function HeroSection() {
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 max-w-xl font-medium leading-relaxed">
-              Your complete Strata property maintenance partner. Gas fireplaces, HVAC, roofing, siding, painting, renovations, landscaping & more — all under one roof since 1989.
+              Your complete Strata property maintenance partner. Gas fireplaces, Roofing, HVAC, siding, painting, renovations, landscaping & more — all under one roof since 1989.
             </p>
 
             <div className="flex flex-wrap gap-2 mb-8">
