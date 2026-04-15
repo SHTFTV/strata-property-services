@@ -24,6 +24,30 @@ uri = "file://artifacts/fireplace-services/public/images/blog-strata-exterior-pa
 type = "image"
 title = "generated_image"
 
+[[generated]]
+id = "JvJhzeNRhfh_8ZQzNXtIm"
+uri = "file://attached_assets/generated_images/generated_image_0.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "0nsjzLC70Y9pIrv02uqM0"
+uri = "file://attached_assets/generated_images/generated_image_1.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "vNrUyY3yni-SGHueJ3HoB"
+uri = "file://attached_assets/generated_images/generated_image_2.png"
+type = "image"
+title = "generated_image"
+
+[[generated]]
+id = "o37CZVilzkT1rmr-188G0"
+uri = "file://attached_assets/generated_images/generated_image_3.png"
+type = "image"
+title = "generated_image"
+
 [[outputs]]
 id = "ERNN5iwKG0SCygLX9CkLf"
 uri = "file://strata-property-services.tar.gz"

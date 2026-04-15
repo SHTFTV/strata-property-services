@@ -102,18 +102,18 @@ Pages:
 - **City Pages** (`/areas/:city`): 17 city-specific landing pages — all 13 trades listed per city, maintenance guide articles, expanded FAQs
 - **Trade Landing Pages** (`/services/:trade`): 13 trade pages — long description, 6-step process, benefits, 5 educational articles, industry insights, materials & methods, strata-specific content, seasonal considerations, safety & compliance, 10+ FAQs
 - **Trade+City Pages** (`/services/:trade/:city`): 221 trade × city combo pages — full trade content + city-specific local facts and neighborhoods
-- **Blog** (`/blog`): Blog listing page with 18 SEO articles with featured images, category filtering; individual posts at `/blog/:slug` with breadcrumbs, hero image, featured image, related services sidebar, and related articles. Homepage shows 4 most recent posts in a blog roll grid. Enhanced schema: BlogPosting + BreadcrumbList + Organization JSON-LD per post.
+- **Blog** (`/blog`): Blog listing page with 22 SEO articles with featured images, category filtering; individual posts at `/blog/:slug` with breadcrumbs, hero image, featured image, related services sidebar, and related articles. Homepage shows 4 most recent posts in a blog roll grid. Enhanced schema: BlogPosting + BreadcrumbList + Organization JSON-LD per post.
 
 Key data files:
 - `src/data/cities.ts`: 17 cities (incl. separate North Vancouver & West Vancouver) with neighborhoods, local facts, coordinates, meta descriptions
 - `src/data/trades.ts`: 13 trades with features, FAQs, city intro templates, hero images
 - `src/data/tradeContent.ts`: ~3500 words of unique SEO content per trade (longDescription, processSteps, educationalSections, extendedFaqs, benefits, industryInsight, materialsAndMethods, strataSpecificContent, seasonalConsiderations, safetyAndCompliance)
 - `src/data/contacts.ts`: Contact info for Colin Hamilton (main), Robert Hamilton (Gas/HVAC), and Vee/ACC Construction (Roofing), with `getTradeContact()` helper
-- `src/data/blogPosts.ts`: 18 SEO blog articles covering all 13 trades with categories, trade/city cross-references, full-length content, and featured images
+- `src/data/blogPosts.ts`: 22 SEO blog articles covering all 13 trades with categories, trade/city cross-references, full-length content, and featured images
 
 SEO infrastructure:
 - `src/components/SEO.tsx`: Helmet-based SEO component with og:image, og:locale, twitter:card (summary_large_image), twitter:image, robots meta, optional ogType/ogImage overrides
-- `public/sitemap.xml`: 273-URL sitemap covering all pages (home, about, blog, 17 cities, 13 trades, 221 trade+city combos, 18 blog posts)
+- `public/sitemap.xml`: 277-URL sitemap covering all pages (home, about, blog, 17 cities, 13 trades, 221 trade+city combos, 22 blog posts)
 - `public/robots.txt`: AI crawler directives (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, etc.)
 - `index.html`: Geo meta tags (geo.region CA-BC, geo.position, ICBM)
 - Schema markup: ProfessionalService + LocalBusiness (home), BreadcrumbList (all pages), FAQPage (city/trade/trade+city pages), Service (trade/trade+city pages), BlogPosting + Organization (blog posts), WebSite (home)
