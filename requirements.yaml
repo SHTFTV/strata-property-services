@@ -1,0 +1,18 @@
+packages:
+  "framer-motion": "For scroll animations and page transitions"
+  "react-hook-form": "For the contact form state management"
+  "@hookform/resolvers": "For zod validation integration"
+  "clsx": "For merging tailwind classes"
+  "tailwind-merge": "For merging tailwind classes safely"
+
+images:
+  - path: "artifacts/fireplace-services/public/images/hero-fireplace.png"
+    description: "A luxury modern gas fireplace built into a dark slate accent wall, roaring warm orange flames, professional industrial aesthetic, dramatic cinematic lighting, photorealistic"
+    aspect_ratio: "16:9"
+  - path: "artifacts/fireplace-services/public/images/contact-bg.png"
+    description: "Abstract dark slate and warm orange gradient background with subtle industrial textures like brushed metal, technical grid lines, and soft light leaks"
+    aspect_ratio: "16:9"
+
+notes:
+  - "Since this is a frontend-only landing page, form submissions trigger a toast instead of an API call."
+  - "The layout is a single-page scrolling site with hash links for navigation."
