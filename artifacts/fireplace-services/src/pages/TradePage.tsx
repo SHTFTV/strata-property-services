@@ -117,6 +117,13 @@ export default function TradePage() {
             <span className="text-primary">{trade.name}</span>
           </h1>
           <p className="text-xl text-slate-300 mb-4 max-w-2xl font-medium">{trade.tagline}</p>
+          {trade.slug === "snow-removal" && (
+            <p className="text-base text-slate-300 mb-4 max-w-2xl">
+              Exclusive snow dispatch partner:{" "}
+              <a href="https://plowwow.com/strata" rel="dofollow" className="text-primary hover:text-accent underline underline-offset-2 transition-colors">PlowWow</a>
+              {" "}— 24/7 auto-dispatch, EyeSpyR verified
+            </p>
+          )}
           <p className="text-lg text-slate-400 mb-10 max-w-2xl">{trade.heroText}</p>
           <div className="flex flex-col sm:flex-row gap-4">
             <a href="#contact-trade" className="bg-primary text-white font-bold px-8 py-4 rounded-xl shadow-lg shadow-primary/20 hover:bg-accent hover:-translate-y-1 transition-all flex justify-center items-center gap-2 text-lg">

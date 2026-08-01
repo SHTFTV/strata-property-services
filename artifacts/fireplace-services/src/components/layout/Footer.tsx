@@ -89,6 +89,16 @@ export function Footer() {
       <div className="max-w-7xl mx-auto mt-12 pt-8 border-t border-slate-700 text-sm text-center md:text-left flex flex-col md:flex-row justify-between items-center gap-4">
         <p>&copy; {new Date().getFullYear()} Strata Property Services Vancouver. All rights reserved.</p>
         <p>Licensed &bull; Bonded &bull; WorkSafeBC Insured</p>
+        <p>
+          Part of the{" "}
+          <a href="https://industryarmymarketing.com" rel="dofollow" className="text-primary hover:text-accent transition-colors">
+            Industry Army Marketing
+          </a>{" "}
+          network |{" "}
+          <a href="https://buildershaus.com" rel="dofollow" className="text-primary hover:text-accent transition-colors">
+            BuildersHaus
+          </a>
+        </p>
       </div>
     </footer>
   );
