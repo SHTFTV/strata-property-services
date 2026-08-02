@@ -18,6 +18,7 @@ export const cities: CityData[] = [
     region: "City of Vancouver",
     description: "As Vancouver's most experienced gas fireplace service provider, we've been keeping homes safe since 1989. From Kitsilano condos to Shaughnessy estates, our Class B Gas Fitter certified technicians provide comprehensive annual inspections, cleaning, and safety testing for every type of gas fireplace installation.",
     heroText: "Vancouver's Most Trusted Gas Fireplace Professionals Since 1989",
+    image: "https://plowwow.com/og-vancouver.jpg",
     neighborhoods: ["Kitsilano", "West End", "Downtown", "Mount Pleasant", "Shaughnessy", "Kerrisdale", "Dunbar", "Point Grey", "Yaletown", "Coal Harbour", "Gastown", "Fairview", "Cambie", "Riley Park", "Hastings-Sunrise"],
     localFacts: [
       "Vancouver's coastal climate causes accelerated corrosion in vent terminations and outdoor fireplace components.",
@@ -34,6 +35,7 @@ export const cities: CityData[] = [
     region: "City of Burnaby",
     description: "Burnaby's rapid condo development means thousands of gas fireplaces need annual professional servicing. From Metrotown high-rises to Burnaby Mountain townhomes, we provide TSBC-compliant inspections and detailed Strata reporting for buildings of all sizes.",
     heroText: "Burnaby's Trusted Gas Fireplace Inspection & Maintenance Experts",
+    image: "https://plowwow.com/og-burnaby.jpg",
     neighborhoods: ["Metrotown", "Brentwood", "Lougheed", "Burnaby Heights", "Edmonds", "Deer Lake", "Capitol Hill", "Willingdon Heights", "Burnaby Mountain", "Big Bend"],
     localFacts: [
       "Burnaby's high-rise density along the Metrotown corridor means bulk Strata inspection contracts are our specialty.",
@@ -50,6 +52,7 @@ export const cities: CityData[] = [
     region: "City of Surrey",
     description: "Surrey is BC's fastest-growing city, and we're here to keep every gas fireplace running safely. From Cloverdale heritage homes to South Surrey estates and Fleetwood townhome complexes, our certified technicians deliver thorough annual inspections and maintenance across all six Surrey town centres.",
     heroText: "Surrey's Premier Gas Fireplace Safety & Inspection Service",
+    image: "https://plowwow.com/og-surrey.jpg",
     neighborhoods: ["Cloverdale", "South Surrey", "White Rock", "Fleetwood", "Guildford", "Newton", "Whalley", "City Centre", "Panorama Ridge", "Sullivan", "Fraser Heights"],
     localFacts: [
       "Surrey's mix of older heritage homes and new construction means we encounter every type of gas fireplace system.",
@@ -66,6 +69,7 @@ export const cities: CityData[] = [
     region: "City of Coquitlam",
     description: "Coquitlam homeowners and Strata councils trust us for reliable, code-compliant gas fireplace services. From Burke Mountain new builds to Maillardville's established neighborhoods, we deliver thorough inspections backed by 35+ years of expertise and full TSBC licensing.",
     heroText: "Coquitlam's Certified Gas Fireplace Inspection Professionals",
+    image: "https://plowwow.com/og-coquitlam.jpg",
     neighborhoods: ["Burke Mountain", "Westwood Plateau", "Maillardville", "Town Centre", "Austin Heights", "Ranch Park", "Eagle Ridge", "Harbour Chines", "Coquitlam West"],
     localFacts: [
       "Burke Mountain's newer developments feature high-efficiency sealed fireplaces that require updated service techniques.",
@@ -82,6 +86,7 @@ export const cities: CityData[] = [
     region: "Township of Langley & City of Langley",
     description: "Langley's growing communities need reliable gas fireplace maintenance. From Willoughby's new townhome developments to Walnut Grove family homes and Fort Langley heritage properties, we provide full-service annual inspections, safety testing, and TSBC-compliant documentation.",
     heroText: "Langley's Trusted Gas Fireplace Service & Safety Experts",
+    image: "https://plowwow.com/og-langley.jpg",
     neighborhoods: ["Willoughby", "Walnut Grove", "Fort Langley", "Brookswood", "Murrayville", "Aldergrove", "Langley City", "Willowbrook", "Township of Langley"],
     localFacts: [
       "Langley's newer Willoughby developments feature modern gas fireplace systems with electronic ignition requiring specialized tools.",
@@ -98,6 +103,7 @@ export const cities: CityData[] = [
     region: "City & District of North Vancouver",
     description: "North Vancouver's mix of high-rise condos, townhome complexes, and mountain-adjacent family homes all need reliable gas fireplace maintenance. From Lower Lonsdale's waterfront towers to Lynn Valley's established neighborhoods and Deep Cove's charming character homes, our certified technicians handle the unique challenges of North Shore fireplace installations.",
     heroText: "North Vancouver's Trusted Gas Fireplace Inspection & Maintenance Experts",
+    image: "https://plowwow.com/og-north-vancouver.jpg",
     neighborhoods: ["Lower Lonsdale", "Upper Lonsdale", "Lynn Valley", "Deep Cove", "Edgemont", "Capilano", "Pemberton Heights", "Central Lonsdale", "Norgate", "Dollarton", "Seymour Heights", "Indian River"],
     localFacts: [
       "North Vancouver's dense condo development along the Lonsdale corridor creates significant demand for Strata bulk inspection services.",
@@ -114,6 +120,7 @@ export const cities: CityData[] = [
     region: "District of West Vancouver",
     description: "West Vancouver's luxury waterfront estates, British Properties mansions, and Ambleside condominiums feature some of the finest gas fireplace installations in the Lower Mainland. Our Class B Gas Fitter certified technicians have the expertise to service premium, custom, and imported fireplace systems that demand manufacturer-specific knowledge and care.",
     heroText: "West Vancouver's Premier Gas Fireplace Safety & Service Professionals",
+    image: "https://plowwow.com/og-west-vancouver.jpg",
     neighborhoods: ["British Properties", "Ambleside", "Dundarave", "Caulfeild", "Horseshoe Bay", "Park Royal", "Sentinel Hill", "Chartwell", "Altamont", "Lions Bay", "Eagle Island", "Cypress Park"],
     localFacts: [
       "West Vancouver's luxury homes often feature custom or imported gas fireplace systems requiring manufacturer-specific expertise and premium service.",
@@ -130,6 +137,7 @@ export const cities: CityData[] = [
     region: "City of New Westminster",
     description: "New Westminster blends historic charm with modern development, and gas fireplaces are found in both. From Queen's Park heritage homes to Quayside waterfront condos and Sapperton townhomes, our Class B Gas Fitter certified team delivers annual inspections with full safety documentation.",
     heroText: "New Westminster's Professional Gas Fireplace Service Provider",
+    image: "https://plowwow.com/og-new-westminster.jpg",
     neighborhoods: ["Queen's Park", "Quayside", "Sapperton", "Downtown New West", "Uptown", "Queensborough", "Brow of the Hill", "Connaught Heights"],
     localFacts: [
       "New Westminster's heritage homes in Queen's Park often have retrofitted gas inserts that need careful annual inspection.",
@@ -146,6 +154,7 @@ export const cities: CityData[] = [
     region: "City of Richmond",
     description: "Richmond's extensive condo and townhome developments mean thousands of gas fireplaces requiring annual professional servicing. From Steveston Village to City Centre high-rises and Broadmoor family homes, we deliver thorough, TSBC-compliant inspections with detailed reporting for homeowners and Strata councils.",
     heroText: "Richmond's Certified Gas Fireplace Inspection & Safety Experts",
+    image: "https://plowwow.com/og-richmond.jpg",
     neighborhoods: ["Steveston", "City Centre", "Broadmoor", "Terra Nova", "West Cambie", "Brighouse", "Thompson", "Blundell", "Seafair", "East Richmond"],
     localFacts: [
       "Richmond's sea-level location and moisture-heavy air make annual vent and termination inspections especially important.",
@@ -162,6 +171,7 @@ export const cities: CityData[] = [
     region: "City of Port Coquitlam",
     description: "Port Coquitlam families and Strata councils rely on our expert gas fireplace services to keep their homes safe year-round. From Citadel Heights to Downtown PoCo and the Shaughnessy Street corridor, we deliver thorough annual inspections and maintenance backed by decades of certified experience.",
     heroText: "Port Coquitlam's Trusted Gas Fireplace Safety Professionals",
+    image: "https://plowwow.com/og-port-coquitlam.jpg",
     neighborhoods: ["Citadel Heights", "Downtown Port Coquitlam", "Mary Hill", "Oxford Heights", "Riverwood", "Shaughnessy Street", "Lincoln Park"],
     localFacts: [
       "Port Coquitlam's family-oriented neighborhoods feature a mix of older and newer gas fireplace systems needing tailored service.",
@@ -178,6 +188,7 @@ export const cities: CityData[] = [
     region: "City of Port Moody",
     description: "Port Moody's scenic waterfront and hillside communities deserve expert gas fireplace care. From Inlet Centre condos to Heritage Mountain homes and Glenayre townhomes, our certified technicians ensure every fireplace meets safety standards with comprehensive annual inspections.",
     heroText: "Port Moody's Expert Gas Fireplace Service & Maintenance Team",
+    image: "https://plowwow.com/og-port-moody.jpg",
     neighborhoods: ["Inlet Centre", "Heritage Mountain", "Glenayre", "April Road", "Moody Centre", "College Park", "Ioco"],
     localFacts: [
       "Heritage Mountain's elevation creates unique airflow dynamics that can affect chimney draft and venting performance.",
@@ -194,6 +205,7 @@ export const cities: CityData[] = [
     region: "City of Maple Ridge & Pitt Meadows",
     description: "Maple Ridge and Pitt Meadows homeowners trust our team for dependable gas fireplace maintenance. From Silver Valley's newer developments to Haney's established neighborhoods and Pitt Meadows family homes, we deliver full annual inspections with TSBC-compliant safety documentation.",
     heroText: "Maple Ridge & Pitt Meadows Gas Fireplace Safety Experts",
+    image: "https://plowwow.com/og-maple-ridge.jpg",
     neighborhoods: ["Silver Valley", "Albion", "Haney", "Hammond", "Websters Corners", "Whonnock", "Pitt Meadows", "Kanaka Creek"],
     localFacts: [
       "Silver Valley's newer developments feature modern high-efficiency gas fireplaces with electronic controls requiring updated service tools.",
@@ -210,6 +222,7 @@ export const cities: CityData[] = [
     region: "Corporation of Delta",
     description: "Delta's diverse communities — from Tsawwassen's oceanfront properties to Ladner's village charm and North Delta's established family neighborhoods — all need reliable gas fireplace servicing. Our certified technicians provide thorough annual inspections and Strata compliance documentation across all three Delta communities.",
     heroText: "Delta's Trusted Gas Fireplace Inspection & Service Professionals",
+    image: "https://plowwow.com/og-delta.jpg",
     neighborhoods: ["Tsawwassen", "Ladner", "North Delta", "Boundary Bay", "East Delta", "Sunbury", "Scottsdale", "Annieville", "Sunshine Hills"],
     localFacts: [
       "Tsawwassen's coastal exposure accelerates corrosion on exterior vent terminations and fireplace components.",
@@ -226,6 +239,7 @@ export const cities: CityData[] = [
     region: "City of White Rock",
     description: "White Rock's oceanfront lifestyle and premium residential properties demand expert gas fireplace care. From waterfront condos along Marine Drive to hillside homes with panoramic views, our Class B Gas Fitter certified technicians deliver meticulous annual inspections and safety maintenance.",
     heroText: "White Rock's Premier Gas Fireplace Safety & Maintenance Service",
+    image: "https://plowwow.com/og-white-rock.jpg",
     neighborhoods: ["White Rock Beach", "Hillcrest", "East Beach", "West Beach", "Town Centre", "Johnston Heights", "Ocean Park"],
     localFacts: [
       "White Rock's ocean proximity creates salt-air conditions that accelerate corrosion on exterior fireplace components.",
@@ -242,6 +256,7 @@ export const cities: CityData[] = [
     region: "City of Abbotsford",
     description: "Abbotsford's growing residential communities rely on safe, well-maintained gas fireplaces throughout the cooler months. From Historic Downtown to McMillan and Clearbrook, our TSBC-licensed technicians bring 35+ years of experience to every annual inspection and maintenance call in the Fraser Valley's hub city.",
     heroText: "Abbotsford's Certified Gas Fireplace Service & Inspection Experts",
+    image: "https://plowwow.com/og-abbotsford.jpg",
     neighborhoods: ["Historic Downtown", "McMillan", "Clearbrook", "Sumas Mountain", "Auguston", "Mill Lake", "Townline Hill", "Matsqui", "Aberdeen", "West Abbotsford"],
     localFacts: [
       "Abbotsford's Fraser Valley location means cold, damp winters that demand reliable fireplace heating performance.",
@@ -258,6 +273,7 @@ export const cities: CityData[] = [
     region: "District of Mission",
     description: "Mission's blend of rural charm and growing suburban development means gas fireplaces are essential for cold Fraser Valley winters. Our certified technicians serve Mission homeowners and Strata properties with thorough annual inspections, cleaning, and safety documentation.",
     heroText: "Mission's Professional Gas Fireplace Inspection & Safety Service",
+    image: "https://plowwow.com/og-mission.jpg",
     neighborhoods: ["Mission City", "West Heights", "Cedar Valley", "Hatzic", "Silverdale", "Steelhead", "Ferndale", "Stave Falls"],
     localFacts: [
       "Mission's semi-rural properties often feature longer vent runs and unique installation configurations needing specialized inspection.",
@@ -274,6 +290,7 @@ export const cities: CityData[] = [
     region: "City of Chilliwack",
     description: "Chilliwack homeowners depend on gas fireplaces to stay warm through the Fraser Valley's cold winters. Our Class B Gas Fitter certified team provides professional annual inspections, maintenance, and safety testing across Chilliwack's diverse neighborhoods from Sardis to Promontory and Downtown.",
     heroText: "Chilliwack's Trusted Gas Fireplace Safety & Inspection Professionals",
+    image: "https://plowwow.com/og-chilliwack.jpg",
     neighborhoods: ["Sardis", "Promontory", "Downtown Chilliwack", "Vedder", "Greendale", "Rosedale", "Yarrow", "Cultus Lake", "Eastern Hillsides"],
     localFacts: [
       "Chilliwack's cold Fraser Valley winters mean gas fireplaces are essential heating, making annual safety inspections critical.",
