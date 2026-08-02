@@ -27,7 +27,7 @@ export const trades: TradeData[] = [
     description: "PlowWow.com is the snow removal division of Strata Property Services. We offer fixed-price seasonal contracts with 5-times booking capacity — meaning we schedule five crews for every storm event to guarantee coverage. Our iron-clad 5-hour response guarantee means your property will be cleared within 5 hours of any snow storm, day or night. No excuses, no exceptions. Parking lots, walkways, ramps, and common areas — cleared, de-iced, and documented.",
     heroText: "PlowWow.com — Fixed Contracts. 5-Times Bookings. Guaranteed Within 5 Hours of Any Snow Storm.",
     metaDescription: "PlowWow.com — Strata snow removal with fixed contracts, 5-times bookings & guaranteed 5-hour response. Parking lots, walkways & common areas. Vancouver & Lower Mainland. Call 604-761-1518.",
-    image: "images/trade-snow-removal.png",
+    image: "https://plowwow.com/og-default.jpg",
     brandUrl: "https://plowwow.com",
     features: [
       { title: "Fixed-Price Seasonal Contracts", desc: "Lock in your winter budget with a fixed-price contract that covers the entire season — no per-event charges, no surprise invoices after major storms. One predictable price, unlimited service." },
