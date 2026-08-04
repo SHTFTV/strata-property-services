@@ -19,7 +19,7 @@ export const cities: CityData[] = [
     region: "City of Vancouver",
     description: "Strata Property Services has kept Vancouver properties protected and well-maintained since 1989. From Kitsilano to West End, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across City of Vancouver.",
     heroText: "Vancouver's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-vancouver.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Kitsilano", "West End", "Downtown", "Mount Pleasant", "Shaughnessy", "Kerrisdale", "Dunbar", "Point Grey", "Yaletown", "Coal Harbour", "Gastown", "Fairview", "Cambie", "Riley Park", "Hastings-Sunrise"],
     localFacts: [
       "Salt air and wind-driven rain accelerate wear on roofing, cladding, and exterior envelopes across Vancouver — regular inspection catches envelope problems before they reach the structure.",
@@ -36,7 +36,7 @@ export const cities: CityData[] = [
     region: "City of Burnaby",
     description: "Strata Property Services has kept Burnaby properties protected and well-maintained since 1989. From Metrotown to Brentwood, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across City of Burnaby.",
     heroText: "Burnaby's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-burnaby.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Metrotown", "Brentwood", "Lougheed", "Burnaby Heights", "Edmonds", "Deer Lake", "Capitol Hill", "Willingdon Heights", "Burnaby Mountain", "Big Bend"],
     localFacts: [
       "Dense multi-unit strata in Burnaby rely on shared roofing, HVAC, and building-envelope systems where a single deferred repair affects every unit.",
@@ -53,7 +53,7 @@ export const cities: CityData[] = [
     region: "City of Surrey",
     description: "Strata Property Services has kept Surrey properties protected and well-maintained since 1989. From Cloverdale to South Surrey, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across City of Surrey.",
     heroText: "Surrey's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-surrey.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Cloverdale", "South Surrey", "White Rock", "Fleetwood", "Guildford", "Newton", "Whalley", "City Centre", "Panorama Ridge", "Sullivan", "Fraser Heights"],
     localFacts: [
       "Surrey's broad mix of residential, strata, and commercial properties means maintenance plans have to scale from single homes to large multi-building complexes.",
@@ -70,7 +70,7 @@ export const cities: CityData[] = [
     region: "City of Coquitlam",
     description: "Strata Property Services has kept Coquitlam properties protected and well-maintained since 1989. From Burke Mountain to Westwood Plateau, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across City of Coquitlam.",
     heroText: "Coquitlam's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-coquitlam.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Burke Mountain", "Westwood Plateau", "Maillardville", "Town Centre", "Austin Heights", "Ranch Park", "Eagle Ridge", "Harbour Chines", "Coquitlam West"],
     localFacts: [
       "Elevation and heavy seasonal rain around Coquitlam's higher neighbourhoods put roofing, gutters, and slope drainage under real stress — drainage failures are the top cause of envelope damage.",
@@ -87,7 +87,7 @@ export const cities: CityData[] = [
     region: "Township of Langley & City of Langley",
     description: "Strata Property Services has kept Langley properties protected and well-maintained since 1989. From Willoughby to Walnut Grove, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across Township of Langley & City of Langley.",
     heroText: "Langley's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-langley.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Willoughby", "Walnut Grove", "Fort Langley", "Brookswood", "Murrayville", "Aldergrove", "Langley City", "Willowbrook", "Township of Langley"],
     localFacts: [
       "The Fraser Valley's wider temperature swings and heavy rainfall put extra stress on roofing, sealants, and HVAC systems in Langley — seasonal servicing extends their life.",
@@ -104,7 +104,7 @@ export const cities: CityData[] = [
     region: "City & District of North Vancouver",
     description: "Strata Property Services has kept North Vancouver properties protected and well-maintained since 1989. From Lower Lonsdale to Upper Lonsdale, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across City & District of North Vancouver.",
     heroText: "North Vancouver's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-north-vancouver.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Lower Lonsdale", "Upper Lonsdale", "Lynn Valley", "Deep Cove", "Edgemont", "Capilano", "Pemberton Heights", "Central Lonsdale", "Norgate", "Dollarton", "Seymour Heights", "Indian River"],
     localFacts: [
       "Elevation, tree cover, and heavy rainfall around North Vancouver put roofing, gutters, and site drainage under constant load — clogged or failing drainage is the leading cause of envelope damage here.",
@@ -121,7 +121,7 @@ export const cities: CityData[] = [
     region: "District of West Vancouver",
     description: "Strata Property Services has kept West Vancouver properties protected and well-maintained since 1989. From British Properties to Ambleside, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across District of West Vancouver.",
     heroText: "West Vancouver's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-west-vancouver.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["British Properties", "Ambleside", "Dundarave", "Caulfeild", "Horseshoe Bay", "Park Royal", "Sentinel Hill", "Chartwell", "Altamont", "Lions Bay", "Eagle Island", "Cypress Park"],
     localFacts: [
       "Elevation, tree cover, and heavy rainfall around West Vancouver put roofing, gutters, and site drainage under constant load — clogged or failing drainage is the leading cause of envelope damage here.",
@@ -138,7 +138,7 @@ export const cities: CityData[] = [
     region: "City of New Westminster",
     description: "Strata Property Services has kept New Westminster properties protected and well-maintained since 1989. From Queen's Park to Quayside, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across City of New Westminster.",
     heroText: "New Westminster's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-new-westminster.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Queen's Park", "Quayside", "Sapperton", "Downtown New West", "Uptown", "Queensborough", "Brow of the Hill", "Connaught Heights"],
     localFacts: [
       "New Westminster's mix of heritage and modern buildings along the Fraser means older and newer stock that each need a different maintenance schedule.",
@@ -155,7 +155,7 @@ export const cities: CityData[] = [
     region: "City of Richmond",
     description: "Strata Property Services has kept Richmond properties protected and well-maintained since 1989. From Steveston to City Centre, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across City of Richmond.",
     heroText: "Richmond's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-richmond.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Steveston", "City Centre", "Broadmoor", "Terra Nova", "West Cambie", "Brighouse", "Thompson", "Blundell", "Seafair", "East Richmond"],
     localFacts: [
       "Low elevation and a high water table around Richmond make drainage, sump, and foundation-envelope maintenance a year-round priority.",
@@ -172,7 +172,7 @@ export const cities: CityData[] = [
     region: "City of Port Coquitlam",
     description: "Strata Property Services has kept Port Coquitlam properties protected and well-maintained since 1989. From Citadel Heights to Downtown Port Coquitlam, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across City of Port Coquitlam.",
     heroText: "Port Coquitlam's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-port-coquitlam.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Citadel Heights", "Downtown Port Coquitlam", "Mary Hill", "Oxford Heights", "Riverwood", "Shaughnessy Street", "Lincoln Park"],
     localFacts: [
       "Port Coquitlam's broad mix of residential, strata, and commercial properties means maintenance plans have to scale from single homes to large multi-building complexes.",
@@ -189,7 +189,7 @@ export const cities: CityData[] = [
     region: "City of Port Moody",
     description: "Strata Property Services has kept Port Moody properties protected and well-maintained since 1989. From Inlet Centre to Heritage Mountain, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across City of Port Moody.",
     heroText: "Port Moody's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-port-moody.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Inlet Centre", "Heritage Mountain", "Glenayre", "April Road", "Moody Centre", "College Park", "Ioco"],
     localFacts: [
       "Elevation, tree cover, and heavy rainfall around Port Moody put roofing, gutters, and site drainage under constant load — clogged or failing drainage is the leading cause of envelope damage here.",
@@ -206,7 +206,7 @@ export const cities: CityData[] = [
     region: "City of Maple Ridge & Pitt Meadows",
     description: "Strata Property Services has kept Maple Ridge properties protected and well-maintained since 1989. From Silver Valley to Albion, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across City of Maple Ridge & Pitt Meadows.",
     heroText: "Maple Ridge's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-maple-ridge.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Silver Valley", "Albion", "Haney", "Hammond", "Websters Corners", "Whonnock", "Pitt Meadows", "Kanaka Creek"],
     localFacts: [
       "Maple Ridge ranges from valley floor to higher benches, so roofing, drainage, and exterior maintenance needs vary sharply by elevation across the city.",
@@ -223,7 +223,7 @@ export const cities: CityData[] = [
     region: "Corporation of Delta",
     description: "Strata Property Services has kept Delta properties protected and well-maintained since 1989. From Tsawwassen to Ladner, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across Corporation of Delta.",
     heroText: "Delta's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-delta.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Tsawwassen", "Ladner", "North Delta", "Boundary Bay", "East Delta", "Sunbury", "Scottsdale", "Annieville", "Sunshine Hills"],
     localFacts: [
       "Low elevation and a high water table around Delta make drainage, sump, and foundation-envelope maintenance a year-round priority.",
@@ -240,7 +240,7 @@ export const cities: CityData[] = [
     region: "City of White Rock",
     description: "Strata Property Services has kept White Rock properties protected and well-maintained since 1989. From White Rock Beach to Hillcrest, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across City of White Rock.",
     heroText: "White Rock's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-white-rock.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["White Rock Beach", "Hillcrest", "East Beach", "West Beach", "Town Centre", "Johnston Heights", "Ocean Park"],
     localFacts: [
       "Salt air off the bay accelerates corrosion and finish wear on exterior surfaces in White Rock — coastal properties need more frequent envelope and paint maintenance than inland ones.",
@@ -257,7 +257,7 @@ export const cities: CityData[] = [
     region: "City of Abbotsford",
     description: "Strata Property Services has kept Abbotsford properties protected and well-maintained since 1989. From Historic Downtown to McMillan, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across City of Abbotsford.",
     heroText: "Abbotsford's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-abbotsford.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Historic Downtown", "McMillan", "Clearbrook", "Sumas Mountain", "Auguston", "Mill Lake", "Townline Hill", "Matsqui", "Aberdeen", "West Abbotsford"],
     localFacts: [
       "The Fraser Valley's wider temperature swings and heavy rainfall put extra stress on roofing, sealants, and HVAC systems in Abbotsford — seasonal servicing extends their life.",
@@ -274,7 +274,7 @@ export const cities: CityData[] = [
     region: "District of Mission",
     description: "Strata Property Services has kept Mission properties protected and well-maintained since 1989. From Mission City to West Heights, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across District of Mission.",
     heroText: "Mission's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-mission.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Mission City", "West Heights", "Cedar Valley", "Hatzic", "Silverdale", "Steelhead", "Ferndale", "Stave Falls"],
     localFacts: [
       "The Fraser Valley's wider temperature swings and heavy rainfall put extra stress on roofing, sealants, and HVAC systems in Mission — seasonal servicing extends their life.",
@@ -291,7 +291,7 @@ export const cities: CityData[] = [
     region: "City of Chilliwack",
     description: "Strata Property Services has kept Chilliwack properties protected and well-maintained since 1989. From Sardis to Promontory, our licensed crews handle roofing, siding, HVAC, plumbing, painting, and full renovations for strata corporations, commercial buildings, and homeowners across City of Chilliwack.",
     heroText: "Chilliwack's Trusted Strata & Property Maintenance Team Since 1989",
-    image: "https://plowwow.com/og-chilliwack.jpg",
+    image: "/opengraph.jpg",
     neighborhoods: ["Sardis", "Promontory", "Downtown Chilliwack", "Vedder", "Greendale", "Rosedale", "Yarrow", "Cultus Lake", "Eastern Hillsides"],
     localFacts: [
       "The Fraser Valley's wider temperature swings and heavy rainfall put extra stress on roofing, sealants, and HVAC systems in Chilliwack — seasonal servicing extends their life.",
