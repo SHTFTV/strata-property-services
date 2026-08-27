@@ -8,15 +8,20 @@ import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
 import { ArrowRight, Phone, CheckCircle2, MapPin, ArrowLeft, Award, ShieldCheck, FileCheck2, ClipboardList, Lightbulb, BookOpen, HelpCircle, Star, Home, ChevronRight } from "lucide-react";
 
-const PLOWWOW_CITY_ASSET_SLUGS = new Set([
-  "abbotsford", "burnaby", "chilliwack", "coquitlam", "delta", "langley", "maple-ridge",
-  "mission", "new-westminster", "north-vancouver", "port-coquitlam", "port-moody", "richmond",
-  "surrey", "vancouver", "west-vancouver", "white-rock",
-]);
+const PLOWWOW_CITY_ASSET_BY_SLUG: Record<string, string> = {
+  abbotsford: "abbotsford", burnaby: "burnaby", chilliwack: "chilliwack",
+  coquitlam: "coquitlam", delta: "delta", langley: "langley",
+  "maple-ridge": "maple-ridge", mission: "mission", "new-westminster": "new-westminster",
+  "north-vancouver": "north-vancouver", "port-coquitlam": "port-coquitlam",
+  "port-moody": "port-moody", richmond: "richmond", surrey: "surrey",
+  vancouver: "vancouver", "west-vancouver": "west-vancouver", "white-rock": "white-rock",
+  "port-kells": "surrey", "campbell-heights": "surrey",
+  "walnut-grove": "langley", willoughby: "langley", "fort-langley": "langley",
+};
 
 function getTradeCityImage(tradeSlug: string, citySlug: string, fallback: string) {
   if (tradeSlug !== "snow-removal") return fallback;
-  const imageCity = PLOWWOW_CITY_ASSET_SLUGS.has(citySlug) ? citySlug : "all";
+  const imageCity = PLOWWOW_CITY_ASSET_BY_SLUG[citySlug] || "all";
   return `https://plowwow.com/blog-images/_neighborhoods/city-${imageCity}__tag-strata.jpg`;
 }
 
