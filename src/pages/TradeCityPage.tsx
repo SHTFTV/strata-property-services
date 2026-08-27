@@ -13,7 +13,7 @@ const PLOWWOW_CITY_ASSET_BY_SLUG: Record<string, string> = {
   coquitlam: "coquitlam", delta: "delta", langley: "langley",
   "maple-ridge": "maple-ridge", mission: "mission", "new-westminster": "new-westminster",
   "north-vancouver": "north-vancouver", "port-coquitlam": "port-coquitlam",
-  "port-moody": "port-moody", richmond: "richmond", surrey: "surrey",
+  "port-moody": "port-moody", "north-shore": "north-vancouver", richmond: "richmond", surrey: "surrey",
   vancouver: "vancouver", "west-vancouver": "west-vancouver", "white-rock": "white-rock",
   "port-kells": "surrey", "campbell-heights": "surrey",
   "walnut-grove": "langley", willoughby: "langley", "fort-langley": "langley",
