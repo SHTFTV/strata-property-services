@@ -301,7 +301,7 @@ export const cities: CityData[] = [
     metaDescription: "Professional property maintenance in Chilliwack BC — Strata Property Services handles roofing, siding, HVAC, plumbing, painting & renovations for strata, commercial & residential. Licensed since 1989. Call 604-761-1518.",
     lat: "49.1579",
     lng: "-121.9514",
-  },,
+  },
   {
     slug: "pitt-meadows",
     name: "Pitt Meadows",
