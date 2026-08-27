@@ -60,6 +60,21 @@
       "source": "/services/snow-removal/west-van",
       "destination": "/services/snow-removal/west-vancouver",
       "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/north-shore-snow-removal",
+      "destination": "/services/snow-removal/north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/sfu-snow-removal",
+      "destination": "/services/snow-removal/sfu",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/ubc-snow-removal",
+      "destination": "/services/snow-removal/ubc",
+      "permanent": true
     }
   ]
 }
