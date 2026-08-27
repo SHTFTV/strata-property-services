@@ -13,6 +13,7 @@ import TradeCityPage from "@/pages/TradeCityPage";
 import BlogPage from "@/pages/BlogPage";
 import BlogPostPage from "@/pages/BlogPostPage";
 import { FloatingPhone } from "@/components/FloatingPhone";
+import { WowPropertyAssistant } from "@/components/WowPropertyAssistant";
 
 const queryClient = new QueryClient();
 
@@ -40,6 +41,7 @@ function App({ ssrPath, helmetContext }: { ssrPath?: string; helmetContext?: Rec
           <WouterRouter base={import.meta.env.BASE_URL.replace(/\/$/, "")} ssrPath={ssrPath}>
             <Router />
             <FloatingPhone />
+            <WowPropertyAssistant />
           </WouterRouter>
           <Toaster />
         </TooltipProvider>
