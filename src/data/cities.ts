@@ -403,5 +403,22 @@ export const cities: CityData[] = [
     metaDescription: "Property maintenance and snow removal in Fort Langley BC. Strata, heritage, retail and residential service. Call 604-761-1518.",
     lat: "49.1684",
     lng: "-122.5792",
+  },
+  {
+    slug: "north-shore",
+    name: "North Shore",
+    region: "North Vancouver & West Vancouver",
+    description: "Strata Property Services provides coordinated property maintenance and snow and ice management across the North Shore, covering the City and District of North Vancouver and West Vancouver. Our winter routes account for steep grades, elevation changes, shaded surfaces, parkade ramps, walkways, and hillside access.",
+    heroText: "North Shore Strata Snow Removal & Property Services",
+    image: "/opengraph.jpg",
+    neighborhoods: ["Lower Lonsdale", "Upper Lonsdale", "Lynn Valley", "Deep Cove", "Edgemont", "Ambleside", "Dundarave", "British Properties", "Caulfeild", "Horseshoe Bay"],
+    localFacts: [
+      "North Shore elevation changes can produce heavier snowfall and faster ice formation than lower parts of Metro Vancouver.",
+      "Hillside strata need equipment and de-icing plans suited to steep driveways, parkade ramps, stairs, and shaded walkways.",
+      "Coordinated North and West Vancouver routes give property managers documented storm response across the full North Shore."
+    ],
+    metaDescription: "North Shore strata snow removal and property maintenance across North Vancouver and West Vancouver. Plowing, salting, ramps and walkways. Call 604-761-1518.",
+    lat: "49.3370",
+    lng: "-123.0720",
   }
 ];
