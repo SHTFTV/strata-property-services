@@ -420,5 +420,39 @@ export const cities: CityData[] = [
     metaDescription: "North Shore strata snow removal and property maintenance across North Vancouver and West Vancouver. Plowing, salting, ramps and walkways. Call 604-761-1518.",
     lat: "49.3370",
     lng: "-123.0720",
+  },
+  {
+    slug: "sfu",
+    name: "SFU Burnaby Mountain",
+    region: "Simon Fraser University & Burnaby Mountain",
+    description: "Strata Property Services provides snow and ice management and coordinated property services around SFU, UniverCity, and Burnaby Mountain. Elevation, steep approaches, wind exposure, and rapid ice formation require earlier monitoring and mountain-specific route planning.",
+    heroText: "SFU & Burnaby Mountain Snow Removal",
+    image: "/opengraph.jpg",
+    neighborhoods: ["SFU Burnaby Campus", "UniverCity", "Burnaby Mountain", "University Drive", "Gaglardi Way", "Production Way"],
+    localFacts: [
+      "Burnaby Mountain often receives snow and freezing conditions before lower-elevation parts of Metro Vancouver.",
+      "Steep access roads, parkade ramps, transit areas, stairs, and pedestrian routes require coordinated plowing and de-icing.",
+      "Early monitoring and repeat service cycles help keep residential, retail, and institutional properties accessible."
+    ],
+    metaDescription: "SFU and Burnaby Mountain snow removal for UniverCity, strata, commercial and institutional properties. Plowing and de-icing. Call 604-761-1518.",
+    lat: "49.2781",
+    lng: "-122.9199",
+  },
+  {
+    slug: "ubc",
+    name: "UBC",
+    region: "University of British Columbia & University Endowment Lands",
+    description: "Strata Property Services provides snow and ice management and coordinated property maintenance across UBC and the University Endowment Lands. Routes cover residential strata, student housing, retail properties, parkades, loading areas, entrances, and high-traffic pedestrian walkways.",
+    heroText: "UBC Snow Removal & Property Services",
+    image: "/opengraph.jpg",
+    neighborhoods: ["UBC Campus", "Wesbrook Village", "University Endowment Lands", "University Boulevard", "East Campus", "Hampton Place"],
+    localFacts: [
+      "UBC's exposed peninsula location can create fast-changing winter conditions across roads, walkways, and building entrances.",
+      "High pedestrian volumes make timely walkway treatment, stairs, ramps, and entrance de-icing especially important.",
+      "Residential, retail, and institutional sites benefit from coordinated routes and timestamped service documentation."
+    ],
+    metaDescription: "UBC snow removal and property maintenance for campus, Wesbrook Village, strata, retail and institutional properties. Call 604-761-1518.",
+    lat: "49.2606",
+    lng: "-123.2460",
   }
 ];
