@@ -4,5 +4,77 @@
       "source": "/(.*)",
       "destination": "/index.html"
     }
+  ],
+  "redirects": [
+    {
+      "source": "/services/snow-removal/poco",
+      "destination": "/services/snow-removal/port-coquitlam",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/poco-snow-removal",
+      "destination": "/services/snow-removal/port-coquitlam",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/pomo",
+      "destination": "/services/snow-removal/port-moody",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/pomo-snow-removal",
+      "destination": "/services/snow-removal/port-moody",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/east-van",
+      "destination": "/services/snow-removal/vancouver",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/east-vancouver",
+      "destination": "/services/snow-removal/vancouver",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/vancouver-west-side",
+      "destination": "/services/snow-removal/vancouver",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/west-side-vancouver",
+      "destination": "/services/snow-removal/vancouver",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/new-west",
+      "destination": "/services/snow-removal/new-westminster",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/north-van",
+      "destination": "/services/snow-removal/north-vancouver",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/west-van",
+      "destination": "/services/snow-removal/west-vancouver",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/north-shore-snow-removal",
+      "destination": "/services/snow-removal/north-shore",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/sfu-snow-removal",
+      "destination": "/services/snow-removal/sfu",
+      "permanent": true
+    },
+    {
+      "source": "/services/snow-removal/ubc-snow-removal",
+      "destination": "/services/snow-removal/ubc",
+      "permanent": true
+    }
   ]
 }
