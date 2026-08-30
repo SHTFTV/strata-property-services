@@ -6,6 +6,7 @@ import { getTradeContact } from "@/data/contacts";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { SEO } from "@/components/SEO";
+import { SnowRemovalVideo } from "@/components/SnowRemovalVideo";
 import { ArrowRight, Phone, CheckCircle2, MapPin, ArrowLeft, Award, ShieldCheck, FileCheck2, ClipboardList, Lightbulb, BookOpen, HelpCircle, Star, Home, ChevronRight } from "lucide-react";
 
 const PLOWWOW_CITY_ASSET_BY_SLUG: Record<string, string> = {
@@ -20,7 +21,7 @@ const PLOWWOW_CITY_ASSET_BY_SLUG: Record<string, string> = {
 };
 
 function getTradeCityImage(tradeSlug: string, citySlug: string, fallback: string) {
-  if (tradeSlug !== "snow-removal") return fallback;
+  if (tradeSlug !== "snow-removal") return fallback.startsWith("http") ? fallback : `/${fallback}`;
   const imageCity = PLOWWOW_CITY_ASSET_BY_SLUG[citySlug] || "all";
   return `https://plowwow.com/blog-images/_neighborhoods/city-${imageCity}__tag-strata.jpg`;
 }
@@ -48,6 +49,7 @@ export default function TradeCityPage() {
   const contact = getTradeContact(trade.slug);
   const allFaqs = [...trade.faqs, ...(content ? content.extendedFaqs : [])];
   const heroImage = getTradeCityImage(trade.slug, city.slug, trade.image);
+  const videoContentUrl = "https://stratapropertyservices.com/videos/plowwow-snow-removal-operations.mp4";
 
   const schemaMarkup = [
     {
@@ -79,6 +81,18 @@ export default function TradeCityPage() {
         "@type": "Question", "name": faq.q, "acceptedAnswer": { "@type": "Answer", "text": faq.a },
       })),
     },
+    ...(trade.slug === "snow-removal" ? [{
+      "@context": "https://schema.org", "@type": "VideoObject",
+      "@id": `https://stratapropertyservices.com/services/snow-removal/${city.slug}#snow-video`,
+      "name": `Snow Removal in ${city.name} | PlowWow Field Operations`,
+      "description": `A short PlowWow field-operations video showing professional snow-removal readiness for strata, commercial and multi-family properties in ${city.name}, British Columbia.`,
+      "thumbnailUrl": [heroImage], "uploadDate": "2026-08-30T00:00:00-07:00", "duration": "PT10S",
+      "contentUrl": videoContentUrl,
+      "embedUrl": `https://stratapropertyservices.com/services/snow-removal/${city.slug}#snow-video`,
+      "inLanguage": "en-CA",
+      "publisher": { "@type": "Organization", "name": "Strata Property Services", "logo": { "@type": "ImageObject", "url": "https://stratapropertyservices.com/favicon.svg" } },
+      "regionsAllowed": "CA",
+    }] : []),
   ];
 
   const otherCities = cities.filter(c => c.slug !== city.slug).slice(0, 6);
@@ -113,6 +127,7 @@ export default function TradeCityPage() {
       <div className="bg-primary text-white py-4 px-6"><div className="max-w-7xl mx-auto flex flex-wrap justify-center md:justify-between gap-6 text-sm md:text-base font-bold uppercase tracking-widest text-center"><span>Est. 1989</span><span className="hidden md:inline">&#8226;</span><span>Licensed & Bonded</span><span className="hidden md:inline">&#8226;</span><span>WorkSafeBC Insured</span><span className="hidden lg:inline">&#8226;</span><span>Serving {city.name}</span></div></div>
 
       <main>
+        {trade.slug === "snow-removal" && <SnowRemovalVideo cityName={city.name} poster={heroImage} />}
         <section className="py-20 px-6"><div className="max-w-7xl mx-auto"><div className="grid lg:grid-cols-3 gap-12"><div className="lg:col-span-2">
           <h2 className="text-3xl font-black text-foreground mb-6">{trade.name} Services in {city.name}</h2>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">{trade.description}</p>
