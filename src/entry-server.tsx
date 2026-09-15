@@ -15,6 +15,15 @@ export function getRoutes(): string[] {
   return r;
 }
 
+export function getRouteImages(): Record<string, { src: string; title: string; caption?: string }[]> {
+  return Object.fromEntries(blogPosts.map((post) => [
+    `/blog/${post.slug}`,
+    (post.gallery?.length
+      ? post.gallery.map((photo) => ({ src: photo.src, title: post.title, caption: photo.caption }))
+      : [{ src: post.image, title: post.title }]),
+  ]));
+}
+
 export function render(url: string): { html: string; head: string } {
   const helmetContext: Record<string, any> = {};
   const html = renderToString(<App ssrPath={url} helmetContext={helmetContext} />);

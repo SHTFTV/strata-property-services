@@ -4,9 +4,10 @@ import { pathToFileURL } from "node:url";
 
 const dist = path.resolve("dist");
 const template = fs.readFileSync(path.join(dist, "index.html"), "utf-8");
-const { render, getRoutes } = await import(pathToFileURL(path.join(dist, "server", "entry-server.js")).href);
+const { render, getRoutes, getRouteImages } = await import(pathToFileURL(path.join(dist, "server", "entry-server.js")).href);
 
 const routes = getRoutes();
+const routeImages = getRouteImages();
 let ok = 0, fail = 0;
 for (const url of routes) {
   try {
@@ -25,12 +26,18 @@ const today = new Date().toISOString().slice(0, 10);
 const escapeXml = (value) => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 const sitemapUrl = (url) => {
   const loc = `https://stratapropertyservices.com${url === "/" ? "/" : url}`;
-  if (!url.startsWith("/services/snow-removal/")) return `  <url><loc>${loc}</loc><lastmod>${today}</lastmod></url>`;
+  const imageEntries = (routeImages[url] || []).map((image) => `
+    <image:image>
+      <image:loc>https://stratapropertyservices.com/${image.src.replace(/^\//, "")}</image:loc>
+      <image:title>${escapeXml(image.title)}</image:title>${image.caption ? `
+      <image:caption>${escapeXml(image.caption)}</image:caption>` : ""}
+    </image:image>`).join("");
+  if (!url.startsWith("/services/snow-removal/")) return `  <url><loc>${loc}</loc><lastmod>${today}</lastmod>${imageEntries}</url>`;
   const citySlug = url.split("/").at(-1);
   const cityName = citySlug.split("-").map((part) => part.charAt(0).toUpperCase() + part.slice(1)).join(" ");
   return `  <url>
     <loc>${loc}</loc><lastmod>${today}</lastmod>
-    <video:video>
+    ${imageEntries}<video:video>
       <video:thumbnail_loc>https://plowwow.com/blog-images/_neighborhoods/city-all__tag-strata.jpg</video:thumbnail_loc>
       <video:title>${escapeXml(`Snow Removal in ${cityName} | PlowWow Field Operations`)}</video:title>
       <video:description>${escapeXml(`Professional PlowWow snow-removal readiness for strata and commercial properties in ${cityName}, British Columbia.`)}</video:description>
@@ -42,7 +49,7 @@ const sitemapUrl = (url) => {
 };
 const xml = [
   '<?xml version="1.0" encoding="UTF-8"?>',
-  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">',
+  '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">',
   ...routes.map(sitemapUrl),
   '</urlset>',
 ].join('\n');

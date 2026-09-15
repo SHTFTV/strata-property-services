@@ -10,9 +10,44 @@ export interface BlogPost {
   readTime: string;
   metaDescription: string;
   image: string;
+  gallery?: { src: string; alt: string; caption: string }[];
+  relatedProjectLinks?: { label: string; href: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
+  {
+    slug: "burquitlam-strata-common-area-renovation",
+    title: "Burquitlam Strata Common-Area Renovation: Meeting Room, Washrooms and Vestibule",
+    excerpt: "A documented strata renovation near Lougheed Mall coordinated a meeting-room ceiling and lighting feature with hallway framing for a three-stall commercial washroom and exterior vestibule.",
+    content: [
+      "This completed strata project on the Burnaby side of Burquitlam, near Lougheed Mall, brought several connected common-area needs into one renovation. The meeting room was updated, the ceiling and lighting relationship was reworked, and new hallway framing established a three-stall commercial washroom and a vestibule leading outside.",
+      "For a strata council or property manager, the important part of a project like this is coordination. A ceiling change affects lighting and access above the ceiling plane. New washroom partitions affect circulation, services, door locations and finished surfaces. The exterior vestibule introduces another transition that has to work with the hallway instead of feeling added on after the fact.",
+      "The meeting-room ceiling was dropped from the existing T-bar plane. A four-inch perimeter detail against the wall was formed for the lighting effect, giving the room a more deliberate finished edge while keeping the suspended ceiling system coordinated with the rest of the interior.",
+      "In the hallway, new framing laid out the commercial washroom with three stalls and created the vestibule connection to the outside. Establishing those partitions accurately was the point where circulation, privacy, doors and the later finish work all became fixed, so the layout had to be treated as part of the complete common-area plan.",
+      "The six recovered photographs below come from the original SteelStud.ca project archive. They have now been matched to the verified Burquitlam project description supplied by the contractor. The exact strata address is intentionally not published; the location is identified only at the neighbourhood level.",
+      "This is the kind of strata renovation that benefits from one documented scope and clearly assigned trade responsibilities. Council approvals, resident and building access, working hours, protection of common property, shutdowns and inspections should be confirmed for the actual building before work begins.",
+      "The related records below document the same real project from different specialist viewpoints. SteelStud.ca carries the complete framing and interior construction record, while Tenant Improvement Contractors focuses on the multi-trade meeting-room, washroom and vestibule build-out. The pages use different project-specific content rather than repeating one generic article across several domains.",
+    ],
+    category: "Strata Renovations",
+    tradeSlugs: ["condo-renovations", "drywall", "flooring"],
+    citySlugs: ["burnaby"],
+    date: "2026-09-15",
+    readTime: "5 min read",
+    metaDescription: "Burquitlam strata common-area renovation near Lougheed Mall: meeting-room dropped ceiling and lighting detail, three-stall washroom framing and exterior vestibule.",
+    image: "images/projects/burquitlam-strata-renovation/05-finished-interior.jpg",
+    gallery: [
+      { src: "images/projects/burquitlam-strata-renovation/01-meeting-room.jpg", alt: "Finished meeting-room area in a Burquitlam strata renovation", caption: "Finished meeting-room and common-area interior near Lougheed Mall." },
+      { src: "images/projects/burquitlam-strata-renovation/02-ceiling-detail.jpg", alt: "Ceiling and lighting details in the Burquitlam strata meeting room", caption: "Meeting-room ceiling and lighting coordination." },
+      { src: "images/projects/burquitlam-strata-renovation/03-glazed-meeting-room.jpg", alt: "Glazed meeting-room area and commercial interior finishes", caption: "Glazed room area and coordinated commercial finishes." },
+      { src: "images/projects/burquitlam-strata-renovation/04-common-area.jpg", alt: "Completed common-area interior in Burquitlam", caption: "Completed strata common-area interior." },
+      { src: "images/projects/burquitlam-strata-renovation/05-finished-interior.jpg", alt: "Finished strata meeting-room and common-area renovation", caption: "Finished interior from the documented strata project." },
+      { src: "images/projects/burquitlam-strata-renovation/06-perimeter-lighting.jpg", alt: "Dropped ceiling with four-inch perimeter lighting detail", caption: "Dropped ceiling and four-inch wall-side lighting feature." },
+    ],
+    relatedProjectLinks: [
+      { label: "Framing and construction record on SteelStud.ca", href: "https://www.steelstud.ca/projects/burquitlam-strata-meeting-room-renovation" },
+      { label: "Full tenant-improvement case study", href: "https://tenantimprovementcontractors.com/blog/burquitlam-meeting-room-washroom-tenant-improvement" },
+    ],
+  },
   {
     slug: "strata-snow-removal-fixed-contracts-vs-per-event",
     title: "Fixed-Price Snow Removal Contracts vs. Per-Event Billing: What Strata Councils Need to Know",

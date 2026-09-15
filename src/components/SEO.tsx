@@ -8,10 +8,11 @@ interface SEOProps {
   description: string;
   path?: string;
   ogImage?: string;
+  ogImageAlt?: string;
   ogType?: string;
 }
 
-export function SEO({ title, description, path, ogImage, ogType }: SEOProps) {
+export function SEO({ title, description, path, ogImage, ogImageAlt, ogType }: SEOProps) {
   const [location] = useLocation();
   const fullTitle = `${title} | Strata Property Services`;
   const canonicalPath = path || location;
@@ -32,7 +33,7 @@ export function SEO({ title, description, path, ogImage, ogType }: SEOProps) {
       <meta property="og:image" content={imageUrl} />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
-      <meta property="og:image:alt" content="Strata Property Services — Vancouver's Complete Property Maintenance Partner Since 1989" />
+      <meta property="og:image:alt" content={ogImageAlt || title} />
       <meta property="og:locale" content="en_CA" />
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />

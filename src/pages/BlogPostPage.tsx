@@ -40,7 +40,7 @@ export default function BlogPostPage() {
       "@type": "BlogPosting",
       "headline": post.title,
       "description": post.metaDescription,
-      "image": `https://stratapropertyservices.com/${post.image}`,
+      "image": (post.gallery?.length ? post.gallery.map(photo => `https://stratapropertyservices.com/${photo.src}`) : [`https://stratapropertyservices.com/${post.image}`]),
       "datePublished": post.date,
       "dateModified": post.date,
       "mainEntityOfPage": {
@@ -100,7 +100,7 @@ export default function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
-      <SEO title={post.title} description={post.metaDescription} ogType="article" ogImage={`https://stratapropertyservices.com/${post.image}`} />
+      <SEO title={post.title} description={post.metaDescription} ogType="article" ogImage={`https://stratapropertyservices.com/${post.image}`} ogImageAlt={post.gallery?.find(photo => photo.src === post.image)?.alt || post.title} />
       {schemaMarkup.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
@@ -150,6 +150,31 @@ export default function BlogPostPage() {
               {post.content.map((paragraph, i) => (
                 <p key={i} className="text-muted-foreground leading-relaxed mb-6 not-prose">{paragraph}</p>
               ))}
+              {post.gallery && post.gallery.length > 0 && (
+                <section className="not-prose mt-10" aria-label={`${post.title} project photographs`}>
+                  <h2 className="text-2xl font-black mb-5">Project gallery</h2>
+                  <div className="grid sm:grid-cols-2 gap-5">
+                    {post.gallery.map((photo, i) => (
+                      <figure key={photo.src} className={`${i === 0 || i === post.gallery!.length - 1 ? "sm:col-span-2" : ""} overflow-hidden rounded-xl border border-slate-200 bg-white shadow-sm`}>
+                        <a href={`${import.meta.env.BASE_URL}${photo.src}`}>
+                          <img src={`${import.meta.env.BASE_URL}${photo.src}`} alt={photo.alt} loading={i < 2 ? "eager" : "lazy"} className="w-full aspect-[4/3] object-cover" />
+                        </a>
+                        <figcaption className="p-4 text-sm text-muted-foreground">{photo.caption}</figcaption>
+                      </figure>
+                    ))}
+                  </div>
+                </section>
+              )}
+              {post.relatedProjectLinks && post.relatedProjectLinks.length > 0 && (
+                <aside className="not-prose mt-10 rounded-2xl border border-primary/20 bg-primary/5 p-6">
+                  <h2 className="text-xl font-black mb-3">Related records for this project</h2>
+                  <div className="flex flex-col gap-3">
+                    {post.relatedProjectLinks.map(link => (
+                      <a key={link.href} href={link.href} className="font-bold text-primary hover:text-accent inline-flex items-center gap-2">{link.label}<ArrowRight className="w-4 h-4" /></a>
+                    ))}
+                  </div>
+                </aside>
+              )}
             </article>
 
             <aside className="space-y-6">
