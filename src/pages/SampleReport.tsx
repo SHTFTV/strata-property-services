@@ -1,5 +1,6 @@
 import { ArrowLeft, Printer, Shield, CheckCircle, AlertTriangle, Phone } from "lucide-react";
 import { Link } from "wouter";
+import { SEO } from "@/components/SEO";
 
 const checklistItems = [
   { item: "Fuel System Integrity", note: "Gas line pressure tested at valve; no leaks detected." },
@@ -20,6 +21,7 @@ const maintenanceItems = [
 export default function SampleReport() {
   return (
     <div className="min-h-screen bg-slate-100 print:bg-white">
+      <SEO title="Sample Fireplace Service Report" description="View a sample strata fireplace inspection and maintenance report from Strata Property Services." path="/sample-report" />
       <div className="sticky top-0 z-50 bg-secondary text-white py-3 px-6 flex justify-between items-center print:hidden">
         <Link href="/" className="flex items-center gap-2 text-sm font-medium hover:text-primary transition">
           <ArrowLeft className="w-4 h-4" />

@@ -49,13 +49,13 @@ export default function TradeCityPage() {
   const contact = getTradeContact(trade.slug);
   const allFaqs = [...trade.faqs, ...(content ? content.extendedFaqs : [])];
   const heroImage = getTradeCityImage(trade.slug, city.slug, trade.image);
-  const videoContentUrl = "https://stratapropertyservices.com/videos/plowwow-snow-removal-operations.mp4";
+  const videoContentUrl = "https://www.stratapropertyservices.com/videos/plowwow-snow-removal-operations.mp4";
 
   const schemaMarkup = [
     {
       "@context": "https://schema.org", "@type": "ProfessionalService",
       "name": `${trade.name} ${city.name} | Strata Property Services`,
-      "url": `https://stratapropertyservices.com/services/${trade.slug}/${city.slug}`,
+      "url": `https://www.stratapropertyservices.com/services/${trade.slug}/${city.slug}`,
       "description": `${trade.name} services in ${city.name}, BC. ${trade.metaDescription}`,
       "telephone": contact.phoneTel, "image": heroImage, "foundingDate": "1989", "priceRange": "$$",
       "address": { "@type": "PostalAddress", "addressLocality": city.name, "addressRegion": "BC", "addressCountry": "CA" },
@@ -65,15 +65,15 @@ export default function TradeCityPage() {
     {
       "@context": "https://schema.org", "@type": "Service", "name": `${trade.name} in ${city.name}`,
       "description": `${trade.name} services in ${city.name}, BC. ${trade.description}`,
-      "url": `https://stratapropertyservices.com/services/${trade.slug}/${city.slug}`,
-      "provider": { "@type": "Organization", "name": "Strata Property Services", "url": "https://stratapropertyservices.com" },
+      "url": `https://www.stratapropertyservices.com/services/${trade.slug}/${city.slug}`,
+      "provider": { "@type": "Organization", "name": "Strata Property Services", "url": "https://www.stratapropertyservices.com" },
       "areaServed": { "@type": "City", "name": city.name }, "serviceType": trade.name,
     },
     {
       "@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stratapropertyservices.com/" },
-        { "@type": "ListItem", "position": 2, "name": trade.name, "item": `https://stratapropertyservices.com/services/${trade.slug}` },
-        { "@type": "ListItem", "position": 3, "name": city.name, "item": `https://stratapropertyservices.com/services/${trade.slug}/${city.slug}` },
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.stratapropertyservices.com/" },
+        { "@type": "ListItem", "position": 2, "name": trade.name, "item": `https://www.stratapropertyservices.com/services/${trade.slug}` },
+        { "@type": "ListItem", "position": 3, "name": city.name, "item": `https://www.stratapropertyservices.com/services/${trade.slug}/${city.slug}` },
       ],
     },
     {
@@ -83,14 +83,14 @@ export default function TradeCityPage() {
     },
     ...(trade.slug === "snow-removal" ? [{
       "@context": "https://schema.org", "@type": "VideoObject",
-      "@id": `https://stratapropertyservices.com/services/snow-removal/${city.slug}#snow-video`,
+      "@id": `https://www.stratapropertyservices.com/services/snow-removal/${city.slug}#snow-video`,
       "name": `Snow Removal in ${city.name} | PlowWow Field Operations`,
       "description": `A short PlowWow field-operations video showing professional snow-removal readiness for strata, commercial and multi-family properties in ${city.name}, British Columbia.`,
       "thumbnailUrl": [heroImage], "uploadDate": "2026-08-30T00:00:00-07:00", "duration": "PT10S",
       "contentUrl": videoContentUrl,
-      "embedUrl": `https://stratapropertyservices.com/services/snow-removal/${city.slug}#snow-video`,
+      "embedUrl": `https://www.stratapropertyservices.com/services/snow-removal/${city.slug}#snow-video`,
       "inLanguage": "en-CA",
-      "publisher": { "@type": "Organization", "name": "Strata Property Services", "logo": { "@type": "ImageObject", "url": "https://stratapropertyservices.com/favicon.svg" } },
+      "publisher": { "@type": "Organization", "name": "Strata Property Services", "logo": { "@type": "ImageObject", "url": "https://www.stratapropertyservices.com/favicon.svg" } },
       "regionsAllowed": "CA",
     }] : []),
   ];
