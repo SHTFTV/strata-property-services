@@ -26,4 +26,4 @@ Allow: /
 User-agent: Bingbot
 Allow: /
 
-Sitemap: https://stratapropertyservices.com/sitemap.xml
+Sitemap: https://www.stratapropertyservices.com/sitemap.xml
