@@ -38,10 +38,10 @@ export default function TradePage() {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": `${trade.name} Vancouver | Strata Property Services`,
-      "url": `https://stratapropertyservices.com/services/${trade.slug}`,
+      "url": `https://www.stratapropertyservices.com/services/${trade.slug}`,
       "description": trade.metaDescription,
       "telephone": contact.phoneTel,
-      "image": "https://stratapropertyservices.com/opengraph.jpg",
+      "image": "https://www.stratapropertyservices.com/opengraph.jpg",
       "foundingDate": "1989",
       "priceRange": "$$",
       "address": {
@@ -59,11 +59,11 @@ export default function TradePage() {
       "@type": "Service",
       "name": trade.name,
       "description": trade.description,
-      "url": `https://stratapropertyservices.com/services/${trade.slug}`,
+      "url": `https://www.stratapropertyservices.com/services/${trade.slug}`,
       "provider": {
         "@type": "Organization",
         "name": "Strata Property Services",
-        "url": "https://stratapropertyservices.com",
+        "url": "https://www.stratapropertyservices.com",
       },
       "areaServed": cities.map(c => ({ "@type": "City", "name": c.name })),
       "serviceType": trade.name,
@@ -72,8 +72,8 @@ export default function TradePage() {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stratapropertyservices.com/" },
-        { "@type": "ListItem", "position": 2, "name": trade.name, "item": `https://stratapropertyservices.com/services/${trade.slug}` },
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.stratapropertyservices.com/" },
+        { "@type": "ListItem", "position": 2, "name": trade.name, "item": `https://www.stratapropertyservices.com/services/${trade.slug}` },
       ],
     },
     {
