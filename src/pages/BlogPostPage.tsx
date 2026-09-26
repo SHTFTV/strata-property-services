@@ -40,24 +40,24 @@ export default function BlogPostPage() {
       "@type": "BlogPosting",
       "headline": post.title,
       "description": post.metaDescription,
-      "image": (post.gallery?.length ? post.gallery.map(photo => `https://stratapropertyservices.com/${photo.src}`) : [`https://stratapropertyservices.com/${post.image}`]),
+      "image": (post.gallery?.length ? post.gallery.map(photo => `https://www.stratapropertyservices.com/${photo.src}`) : [`https://www.stratapropertyservices.com/${post.image}`]),
       "datePublished": post.date,
       "dateModified": post.date,
       "mainEntityOfPage": {
         "@type": "WebPage",
-        "@id": `https://stratapropertyservices.com/blog/${post.slug}`,
+        "@id": `https://www.stratapropertyservices.com/blog/${post.slug}`,
       },
       "author": {
         "@type": "Organization",
         "name": "Strata Property Services",
-        "url": "https://stratapropertyservices.com",
+        "url": "https://www.stratapropertyservices.com",
       },
       "publisher": {
         "@type": "Organization",
         "name": "Strata Property Services",
         "logo": {
           "@type": "ImageObject",
-          "url": "https://stratapropertyservices.com/favicon.svg",
+          "url": "https://www.stratapropertyservices.com/favicon.svg",
         },
       },
       "wordCount": post.content.reduce((sum, p) => sum + p.split(/\s+/).length, 0),
@@ -69,16 +69,16 @@ export default function BlogPostPage() {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stratapropertyservices.com/" },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://stratapropertyservices.com/blog" },
-        { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://stratapropertyservices.com/blog/${post.slug}` },
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.stratapropertyservices.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.stratapropertyservices.com/blog" },
+        { "@type": "ListItem", "position": 3, "name": post.title, "item": `https://www.stratapropertyservices.com/blog/${post.slug}` },
       ],
     },
     {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "Strata Property Services",
-      "url": "https://stratapropertyservices.com",
+      "url": "https://www.stratapropertyservices.com",
       "telephone": "+16047611518",
       "email": "info@stratapropertyservices.com",
       "foundingDate": "1989",
@@ -100,7 +100,7 @@ export default function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
-      <SEO title={post.title} description={post.metaDescription} ogType="article" ogImage={`https://stratapropertyservices.com/${post.image}`} ogImageAlt={post.gallery?.find(photo => photo.src === post.image)?.alt || post.title} />
+      <SEO title={post.title} description={post.metaDescription} ogType="article" ogImage={`https://www.stratapropertyservices.com/${post.image}`} ogImageAlt={post.gallery?.find(photo => photo.src === post.image)?.alt || post.title} />
       {schemaMarkup.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
