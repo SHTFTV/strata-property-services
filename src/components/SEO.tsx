@@ -1,7 +1,7 @@
 import { Helmet } from "react-helmet-async";
 import { useLocation } from "wouter";
 
-const SITE_DOMAIN = "https://stratapropertyservices.com";
+const SITE_DOMAIN = "https://www.stratapropertyservices.com";
 
 interface SEOProps {
   title: string;
@@ -16,7 +16,7 @@ export function SEO({ title, description, path, ogImage, ogImageAlt, ogType }: S
   const [location] = useLocation();
   const fullTitle = `${title} | Strata Property Services`;
   const canonicalPath = path || location;
-  const canonicalUrl = `${SITE_DOMAIN}${canonicalPath === "/" ? "" : canonicalPath}`;
+  const canonicalUrl = `${SITE_DOMAIN}${canonicalPath === "/" ? "/" : canonicalPath}`;
   const imageUrl = ogImage || `${SITE_DOMAIN}/opengraph.jpg`;
 
   return (
