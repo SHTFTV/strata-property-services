@@ -67,4 +67,4 @@ Allow: /
 User-agent: MistralAI-User
 Allow: /
 
-Sitemap: https://stratapropertyservices.com/sitemap.xml
+Sitemap: https://www.stratapropertyservices.com/sitemap.xml
