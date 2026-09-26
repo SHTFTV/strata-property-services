@@ -26,8 +26,13 @@ export function getRouteImages(): Record<string, { src: string; title: string; c
 
 export function render(url: string): { html: string; head: string } {
   const helmetContext: Record<string, any> = {};
-  const html = renderToString(<App ssrPath={url} helmetContext={helmetContext} />);
+  const rendered = renderToString(<App ssrPath={url} helmetContext={helmetContext} />);
   const h = helmetContext.helmet;
-  const head = h ? [h.title, h.meta, h.link, h.script].map((x: any) => (x ? x.toString() : "")).join("") : "";
+  const inlineHead: string[] = [];
+  const html = rendered.replace(/<title\b[^>]*>[\s\S]*?<\/title>|<meta\b[^>]*>|<link\b[^>]*>/gi, (tag) => {
+    inlineHead.push(tag);
+    return "";
+  });
+  const head = (h ? [h.title, h.meta, h.link, h.script].map((x: any) => (x ? x.toString() : "")).join("") : "") + inlineHead.join("");
   return { html, head };
 }
