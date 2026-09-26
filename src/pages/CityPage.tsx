@@ -68,11 +68,11 @@ export default function CityPage() {
       "@context": "https://schema.org",
       "@type": "ProfessionalService",
       "name": `Property Maintenance Services ${city.name} | Strata Property Services`,
-      "url": `https://stratapropertyservices.com/areas/${city.slug}`,
+      "url": `https://www.stratapropertyservices.com/areas/${city.slug}`,
       "description": city.metaDescription,
       "telephone": "+16047611518",
       "email": "info@stratapropertyservices.com",
-      "image": "https://stratapropertyservices.com/opengraph.jpg",
+      "image": "https://www.stratapropertyservices.com/opengraph.jpg",
       "foundingDate": "1989",
       "priceRange": "$$",
       "address": {
@@ -106,8 +106,8 @@ export default function CityPage() {
       "@context": "https://schema.org",
       "@type": "BreadcrumbList",
       "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://stratapropertyservices.com/" },
-        { "@type": "ListItem", "position": 2, "name": city.name, "item": `https://stratapropertyservices.com/areas/${city.slug}` },
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.stratapropertyservices.com/" },
+        { "@type": "ListItem", "position": 2, "name": city.name, "item": `https://www.stratapropertyservices.com/areas/${city.slug}` },
       ],
     },
     {
