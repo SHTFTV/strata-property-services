@@ -25,10 +25,10 @@ for (const url of routes) {
 const today = new Date().toISOString().slice(0, 10);
 const escapeXml = (value) => value.replaceAll("&", "&amp;").replaceAll("<", "&lt;").replaceAll(">", "&gt;");
 const sitemapUrl = (url) => {
-  const loc = `https://stratapropertyservices.com${url === "/" ? "/" : url}`;
+  const loc = `https://www.stratapropertyservices.com${url === "/" ? "/" : url}`;
   const imageEntries = (routeImages[url] || []).map((image) => `
     <image:image>
-      <image:loc>https://stratapropertyservices.com/${image.src.replace(/^\//, "")}</image:loc>
+      <image:loc>https://www.stratapropertyservices.com/${image.src.replace(/^\//, "")}</image:loc>
       <image:title>${escapeXml(image.title)}</image:title>${image.caption ? `
       <image:caption>${escapeXml(image.caption)}</image:caption>` : ""}
     </image:image>`).join("");
@@ -41,7 +41,7 @@ const sitemapUrl = (url) => {
       <video:thumbnail_loc>https://plowwow.com/blog-images/_neighborhoods/city-all__tag-strata.jpg</video:thumbnail_loc>
       <video:title>${escapeXml(`Snow Removal in ${cityName} | PlowWow Field Operations`)}</video:title>
       <video:description>${escapeXml(`Professional PlowWow snow-removal readiness for strata and commercial properties in ${cityName}, British Columbia.`)}</video:description>
-      <video:content_loc>https://stratapropertyservices.com/videos/plowwow-snow-removal-operations.mp4</video:content_loc>
+      <video:content_loc>https://www.stratapropertyservices.com/videos/plowwow-snow-removal-operations.mp4</video:content_loc>
       <video:duration>10</video:duration>
       <video:publication_date>2026-08-30T00:00:00-07:00</video:publication_date>
     </video:video>
