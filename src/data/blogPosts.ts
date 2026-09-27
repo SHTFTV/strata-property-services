@@ -15,6 +15,43 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+{
+  "slug": "strata-snow-removal-service-handover",
+  "title": "Strata Snow Removal: A Clear Service Handover for Council and Residents",
+  "excerpt": "Set up one practical snow-service handover: a named contact, resident updates, access notes and a record of outstanding work.",
+  "content": [
+    "A strata snow-removal arrangement works more smoothly when the council, property manager and service provider share a clear handover routine. The contract describes the work; the handover explains what happened on a particular visit and what still needs attention. Setting that routine before the first dispatch gives residents a consistent source of information.",
+    "Start by naming one operational contact and one backup. Decide who receives service updates, who collects resident reports and who can authorize changes to the agreed scope. These roles may be held by different people, but the contractor should not have to guess which instruction takes priority. Keep the contact list current when council membership or property management changes.",
+    "Use a marked property plan to identify the areas included in the arrangement. Give entrances, stairs, ramps and pedestrian routes simple names that everyone can recognize. A report about the east stairway beside visitor parking is easier to act on than a message about a slippery spot somewhere behind the building. Keep access instructions separate from resident notices and share them directly with the people who need them.",
+    "Before service begins, agree on what an update should contain. Useful fields include the property name, visit time, areas completed, areas that could not be reached and any follow-up being arranged. If vehicle clearing and pedestrian work are handled separately, ask for that distinction in the update. Residents should not be told all work is complete when another part of the agreed visit is still pending.",
+    "Prepare a short resident message in advance. It can identify where service is underway, which routes are being reviewed and how to report a concern. Avoid promising a completion time that the contractor has not confirmed. If the schedule changes, send a brief correction through the same channel so residents are not relying on an earlier notice.",
+    "Give residents a consistent reporting route. Ask for a location and a description, with a photo only where it can be taken safely. A resident should not enter an area that appears unsafe to document it. The designated contact can combine duplicate reports, identify the relevant part of the site plan and send the contractor one clear request.",
+    "Keep blocked access separate from completed work. Parked vehicles, locked gates, bins or stored materials may prevent a crew from reaching an area. Record the obstruction and identify who will arrange access. Ask how a return visit is handled under the existing service arrangement before telling residents that the area will be completed at a particular time.",
+    "Use a simple issue log that the backup contact can read. For each concern, record the location, time reported, person notified, next action and current status. Mark the issue as reported, acknowledged, scheduled or resolved. This keeps an unanswered email from being confused with a completed request and helps a new shift or council member pick up the conversation.",
+    "After the first service visit, review the handover with the contractor and property manager. Discuss unclear location names, missing contact details and repeated access problems. Update the site plan and resident message where necessary. Small corrections made early can make later visits easier to coordinate without changing the whole service arrangement.",
+    "For the council file, keep the agreed scope, current site plan, service updates and approved changes together. This is an operational record, not a substitute for reviewing the actual contract. Questions about included work, return visits, pricing and authorization should be settled with the provider and recorded in writing.",
+    "Strata Property Services can help organize a snow-removal enquiry around your property layout and management requirements. Include the address, requested clearing areas, access restrictions, operating contact and the way you would like service updates delivered. Use the related snow-removal service and PlowWow quote links below to start a site-specific discussion. Availability, timing and scope are confirmed before work is booked."
+  ],
+  "category": "Snow Removal",
+  "tradeSlugs": [
+    "snow-removal"
+  ],
+  "citySlugs": [],
+  "date": "2026-09-27",
+  "readTime": "5 min read",
+  "metaDescription": "Plan a clear strata snow-removal handover with service updates, resident communication, blocked-access notes and an outstanding-work log.",
+  "image": "images/blog-snow-contracts.png",
+  "relatedProjectLinks": [
+    {
+      "label": "Request a PlowWow snow-removal quote",
+      "href": "https://www.plowwow.com/quote"
+    },
+    {
+      "label": "Snow-removal services for strata properties",
+      "href": "https://www.stratapropertyservices.com/services/snow-removal"
+    }
+  ]
+},
   {
     slug: "burquitlam-strata-common-area-renovation",
     title: "Burquitlam Strata Common-Area Renovation: Meeting Room, Washrooms and Vestibule",
