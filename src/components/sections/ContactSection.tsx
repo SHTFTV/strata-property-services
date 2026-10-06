@@ -20,20 +20,21 @@ type FormValues = z.infer<typeof formSchema>;
 export function ContactSection() {
   const { toast } = useToast();
   
-  const { register, handleSubmit, formState: { errors, isSubmitting }, reset } = useForm<FormValues>({
+  const { register, handleSubmit, formState: { errors, isSubmitting } } = useForm<FormValues>({
     resolver: zodResolver(formSchema)
   });
 
   const onSubmit = async (data: FormValues) => {
-    // Simulate API call for static frontend
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    console.log("Form submitted:", data);
-    
+    const body = [
+      `Name: ${data.name}`, `Reply email: ${data.email}`, `Phone: ${data.phone}`,
+      `Property: ${data.address}`, `Fireplace type: ${data.fireplaceType}`,
+      `Service: ${data.serviceType}`, `Details: ${data.details || "None provided"}`,
+    ].join("\n");
+    window.location.href = `mailto:frameinsteel@gmail.com?subject=${encodeURIComponent("SPS property service enquiry")}&body=${encodeURIComponent(body)}`;
     toast({
-      title: "Request Received! 🔥",
-      description: "Our team will contact you shortly to confirm your appointment.",
+      title: "Finish sending in your email app",
+      description: "This opens a draft to Colin. Your request is not sent until you press Send in your email app.",
     });
-    reset();
   };
 
   return (
@@ -108,6 +109,7 @@ export function ContactSection() {
           <div className="lg:col-span-3 bg-white p-8 md:p-10 rounded-2xl shadow-2xl text-slate-900">
             <h3 className="text-2xl font-bold mb-6">Request a Quote / Booking</h3>
             
+            <p className="mb-5 text-sm text-slate-600">Complete the details to open an email draft to <a className="underline" href="mailto:frameinsteel@gmail.com">frameinsteel@gmail.com</a>. You must send it from your email app. If no draft opens, email Colin directly or call 604-761-1518.</p>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>
@@ -192,7 +194,7 @@ export function ContactSection() {
                 disabled={isSubmitting}
                 className="w-full bg-primary hover:bg-accent text-white font-bold text-lg py-4 rounded-xl transition-all shadow-lg shadow-primary/25 hover:shadow-xl hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-70 disabled:cursor-not-allowed flex items-center justify-center gap-2"
               >
-                {isSubmitting ? "Sending..." : "Submit Request"} <Send className="w-5 h-5" />
+                {isSubmitting ? "Opening draft..." : "Open Email Draft"} <Send className="w-5 h-5" />
               </button>
             </form>
           </div>
