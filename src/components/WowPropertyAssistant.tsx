@@ -1,123 +1,89 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { ExternalLink, Mail, MessageSquare, Phone, Star, X } from "lucide-react";
+import { useLocation } from "wouter";
+import { blogPosts } from "@/data/blogPosts";
+const wowMascot = "/images/wow-mascot.webp";
 
-type Topic = "services" | "pricing" | "emergency" | "quote";
+const PHONE = "604-761-1518";
+const PHONE_HREF = "tel:+16047611518";
+const SMS_HREF = "sms:+16047611518";
+const EMAIL = "info@stratapropertyservices.com";
+const EMAIL_HREF = `mailto:${EMAIL}`;
 
-const answers: Record<Topic, { title: string; body: string }> = {
-  services: {
-    title: "Property services",
-    body: "We coordinate snow and ice management, landscaping, pressure washing, building maintenance, and property inspections for strata communities across the Lower Mainland.",
-  },
-  pricing: {
-    title: "Straightforward proposals",
-    body: "Pricing depends on property size, service frequency, access, and reporting needs. Share your address and priorities and our team will prepare a clear proposal.",
-  },
-  emergency: {
-    title: "Need urgent help?",
-    body: "Call us directly for time-sensitive snow, ice, water, or property-safety concerns. We will confirm availability and the fastest response option.",
-  },
-  quote: {
-    title: "Let’s build your service plan",
-    body: "Tell us the property address, number of buildings, and the services you need. We’ll follow up with the right next step.",
-  },
-};
 
+/**
+ * One persistent LS Fencing-style contact floater for the whole site.
+ * Dismissal lasts only for the current page view, so it returns on refresh.
+ */
 export function WowPropertyAssistant() {
-  const [open, setOpen] = useState(false);
-  const [topic, setTopic] = useState<Topic | null>(null);
-  const answer = topic ? answers[topic] : null;
+  const [location] = useLocation();
+  const path = location.split(/[?#]/)[0].replace(/\/$/, "") || "/";
+  const post = path.startsWith("/blog/") ? blogPosts.find(p => p.slug === path.slice(6)) : undefined;
+  const snow = path === "/services/snow-removal" || path.startsWith("/services/snow-removal/") || Boolean(post?.tradeSlugs.includes("snow-removal"));
+  const brand = snow ? "PlowWow" : "StrataPropertyServices.com";
+  const REVIEWS_URL = snow ? "https://www.google.com/search?q=PlowWow+snow+removal+Vancouver" : "https://www.google.com/search?q=Strata+Property+Services+Lower+Mainland";
+  const [visible, setVisible] = useState(false);
+
+  useEffect(() => { setVisible(window.matchMedia("(min-width: 768px)").matches); }, [path]);
+
+  useEffect(() => {
+    if (!visible) return;
+    const dismissWithEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setVisible(false);
+    };
+    window.addEventListener("keydown", dismissWithEscape);
+    return () => window.removeEventListener("keydown", dismissWithEscape);
+  }, [visible]);
+
+  if (!visible) return <button type="button" onClick={() => setVisible(true)} aria-label={`Open ${brand} contact panel`} className="fixed bottom-4 right-4 z-[9999] rounded-full bg-slate-950 px-4 py-3 text-sm font-semibold text-white shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-400">Contact {snow ? "PlowWow" : "SPS"}</button>;
+
+  const focusRing =
+    "focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-sky-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-950";
 
   return (
-    <div className="fixed bottom-24 right-4 z-[70] sm:bottom-6 sm:right-6">
-      {open && (
-        <section
-          className="mb-3 w-[min(360px,calc(100vw-2rem))] overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-2xl"
-          aria-label="Wow property assistant"
-        >
-          <header className="flex items-center gap-3 bg-gradient-to-r from-slate-950 via-blue-950 to-blue-800 px-4 py-3 text-white">
-            <img
-              src="https://plowwow.com/wow-mascot.png"
-              alt=""
-              aria-hidden="true"
-              className="h-14 w-14 rounded-2xl bg-white/10 object-contain p-1"
-            />
-            <div className="min-w-0">
-              <p className="font-bold">Ask Wow</p>
-              <p className="text-xs text-blue-100">Your strata property service guide</p>
-            </div>
-            <button
-              type="button"
-              onClick={() => setOpen(false)}
-              className="ml-auto rounded-full px-3 py-2 text-lg text-white/80 hover:bg-white/10 hover:text-white"
-              aria-label="Close assistant"
-            >
-              ×
-            </button>
-          </header>
-
-          <div className="space-y-4 p-4">
-            <div className="rounded-2xl bg-slate-50 p-4 text-sm leading-relaxed text-slate-700">
-              {answer ? (
-                <>
-                  <p className="mb-1 font-bold text-slate-950">{answer.title}</p>
-                  <p>{answer.body}</p>
-                </>
-              ) : (
-                <>
-                  <p className="mb-1 font-bold text-slate-950">Hi, I’m Wow 👋</p>
-                  <p>What can I help your strata or property with today?</p>
-                </>
-              )}
-            </div>
-
-            <div className="grid grid-cols-2 gap-2">
-              {([
-                ["services", "Our services"],
-                ["pricing", "Pricing"],
-                ["emergency", "Urgent help"],
-                ["quote", "Request a quote"],
-              ] as Array<[Topic, string]>).map(([key, label]) => (
-                <button
-                  key={key}
-                  type="button"
-                  onClick={() => setTopic(key)}
-                  className="rounded-xl border border-blue-200 bg-blue-50 px-3 py-2 text-left text-sm font-semibold text-blue-900 transition hover:border-blue-400 hover:bg-blue-100"
-                >
-                  {label}
-                </button>
-              ))}
-            </div>
-
-            <div className="grid grid-cols-2 gap-2 border-t border-slate-100 pt-3">
-              <a
-                href="tel:6047611518"
-                className="rounded-xl bg-orange-500 px-3 py-3 text-center text-sm font-bold text-white transition hover:bg-orange-600"
-              >
-                Call 604-761-1518
-              </a>
-              <a
-                href="mailto:wow@plowwow.com?subject=Strata%20Property%20Services%20Quote"
-                className="rounded-xl bg-blue-800 px-3 py-3 text-center text-sm font-bold text-white transition hover:bg-blue-900"
-              >
-                Email for a quote
-              </a>
-            </div>
-          </div>
-        </section>
-      )}
-
+    <aside
+      aria-label={`Contact ${brand}`}
+      data-testid="business-contact-floater" data-brand={snow ? "plowwow" : "sps"}
+      className="fixed right-4 bottom-4 md:bottom-auto md:top-1/2 z-[9999] w-[230px] max-w-[calc(100vw-1rem)] md:-translate-y-1/2 rounded-2xl border border-sky-300/30 bg-slate-950/95 text-white shadow-2xl backdrop-blur supports-[backdrop-filter]:bg-slate-950/90"
+    >
       <button
         type="button"
-        onClick={() => setOpen((value) => !value)}
-        className="ml-auto block h-20 w-20 rounded-full border-4 border-white bg-white p-1 shadow-2xl transition hover:-translate-y-1 hover:scale-105 focus:outline-none focus:ring-4 focus:ring-blue-300"
-        aria-label={open ? "Close Wow property assistant" : "Open Wow property assistant"}
-        aria-expanded={open}
+        onClick={() => setVisible(false)}
+        aria-label={`Hide ${brand} contact panel`}
+        className={`absolute -right-2 -top-2 inline-flex h-7 w-7 items-center justify-center rounded-full border border-slate-600 bg-slate-950 text-slate-300 shadow-md hover:bg-slate-800 hover:text-white ${focusRing}`}
       >
-        <img
-          src="https://plowwow.com/wow-mascot.png"
-          alt="Open the Wow property assistant"
-          className="h-full w-full object-contain"
-        />
+        <X className="h-3.5 w-3.5" aria-hidden="true" />
       </button>
-    </div>
+
+      <div className="flex items-center gap-3 px-4 pb-3 pt-4">
+        {snow && <img src={wowMascot} alt="Wow, the PlowWow snow-removal mascot" width={48} height={48} className="h-12 w-12 shrink-0 object-contain" />}
+        <div className="min-w-0">
+          <p className="text-[10px] font-semibold uppercase tracking-normal break-words text-sky-300">{snow ? "PlowWow Snow Removal" : "StrataPropertyServices.com"}</p>
+          <p className="mt-0.5 text-sm font-semibold leading-tight text-white">{snow ? "Fast quotes & storm help" : "Property services & quotes"}</p>
+        </div>
+      </div>
+
+      <div className="flex flex-col gap-1.5 px-3 pb-3">
+        <a href={PHONE_HREF} aria-label={`Call ${brand} at ${PHONE}`} className={`group inline-flex items-center gap-2.5 rounded-lg bg-sky-500 px-3 py-2 text-sm font-semibold text-slate-950 shadow-sm hover:bg-sky-400 ${focusRing}`}>
+          <Phone className="h-4 w-4 shrink-0" aria-hidden="true" />
+          <span className="flex min-w-0 flex-col leading-tight"><span className="text-[10px] font-medium uppercase tracking-wider opacity-75">Call now</span><span className="truncate">{PHONE}</span></span>
+        </a>
+
+        <a href={SMS_HREF} aria-label={`Text ${brand} at ${PHONE}`} className={`inline-flex items-center gap-2.5 rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-sm font-semibold text-white hover:bg-slate-800 ${focusRing}`}>
+          <MessageSquare className="h-4 w-4 shrink-0 text-sky-300" aria-hidden="true" />
+          <span className="flex min-w-0 flex-col leading-tight"><span className="text-[10px] font-medium uppercase tracking-wider text-slate-400">Text</span><span className="truncate">{PHONE}</span></span>
+        </a>
+
+        <a href={EMAIL_HREF} aria-label={`Email ${brand} at ${EMAIL}`} className={`inline-flex items-center gap-2.5 rounded-lg border border-slate-700 bg-slate-900 px-3 py-2 text-xs font-medium text-white hover:bg-slate-800 ${focusRing}`}>
+          <Mail className="h-4 w-4 shrink-0 text-sky-300" aria-hidden="true" />
+          <span className="flex min-w-0 flex-col leading-tight"><span className="text-[10px] font-medium uppercase tracking-wider text-slate-400">Email</span><span className="break-all">{EMAIL}</span></span>
+        </a>
+
+        <a href={REVIEWS_URL} target="_blank" rel="noopener noreferrer" aria-label={`Find ${brand} on Google`} className={`mt-1 flex items-center justify-between gap-2 rounded-lg border border-slate-700 bg-slate-900 px-3 py-2.5 hover:bg-slate-800 ${focusRing}`}>
+          <span className="flex min-w-0 items-center gap-2"><Star className="h-4 w-4 shrink-0 fill-amber-400 text-amber-400" aria-hidden="true" /><span className="text-xs font-semibold text-white">Find us on Google</span></span>
+          <ExternalLink className="h-3.5 w-3.5 shrink-0 text-slate-400" aria-hidden="true" />
+        </a>
+      </div>
+    </aside>
   );
 }
