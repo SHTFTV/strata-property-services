@@ -1,3 +1,4 @@
+import { firstFrostPosts } from "./firstFrostPosts";
 export interface BlogPost {
   slug: string;
   title: string;
@@ -10,11 +11,14 @@ export interface BlogPost {
   readTime: string;
   metaDescription: string;
   image: string;
+  imageCaption?: string;
+  imageAlt?: string;
   gallery?: { src: string; alt: string; caption: string }[];
   relatedProjectLinks?: { label: string; href: string }[];
 }
 
 export const blogPosts: BlogPost[] = [
+  ...firstFrostPosts,
 {
   "slug": "strata-snow-removal-service-handover",
   "title": "Strata Snow Removal: A Clear Service Handover for Council and Residents",

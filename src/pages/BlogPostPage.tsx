@@ -100,7 +100,7 @@ export default function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
-      <SEO title={post.title} description={post.metaDescription} ogType="article" ogImage={`https://www.stratapropertyservices.com/${post.image}`} ogImageAlt={post.gallery?.find(photo => photo.src === post.image)?.alt || post.title} />
+      <SEO title={post.title} description={post.metaDescription} ogType="article" ogImage={`https://www.stratapropertyservices.com/${post.image}`} ogImageAlt={post.imageAlt || post.gallery?.find(photo => photo.src === post.image)?.alt || post.title} />
       {schemaMarkup.map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
@@ -143,9 +143,10 @@ export default function BlogPostPage() {
         <div className="max-w-4xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-12">
             <article className="lg:col-span-2 prose prose-slate prose-lg max-w-none">
-              <div className="rounded-2xl overflow-hidden mb-8 not-prose">
-                <img src={`${import.meta.env.BASE_URL}${post.image}`} alt={post.title} className="w-full h-64 md:h-80 object-cover" />
-              </div>
+              <figure className="rounded-2xl overflow-hidden mb-8 not-prose">
+                <img src={`${import.meta.env.BASE_URL}${post.image}`} alt={post.imageAlt || post.title} className={post.imageCaption ? "w-full h-auto" : "w-full h-64 md:h-80 object-cover"} />
+                {post.imageCaption && <figcaption className="p-4 text-sm text-muted-foreground">{post.imageCaption}</figcaption>}
+              </figure>
               <p className="text-xl text-muted-foreground font-medium leading-relaxed mb-8 not-prose">{post.excerpt}</p>
               {post.content.map((paragraph, i) => (
                 <p key={i} className="text-muted-foreground leading-relaxed mb-6 not-prose">{paragraph}</p>
@@ -167,7 +168,7 @@ export default function BlogPostPage() {
               )}
               {post.relatedProjectLinks && post.relatedProjectLinks.length > 0 && (
                 <aside className="not-prose mt-10 rounded-2xl border border-primary/20 bg-primary/5 p-6">
-                  <h2 className="text-xl font-black mb-3">Related records for this project</h2>
+                  <h2 className="text-xl font-black mb-3">Related resources</h2>
                   <div className="flex flex-col gap-3">
                     {post.relatedProjectLinks.map(link => (
                       <a key={link.href} href={link.href} className="font-bold text-primary hover:text-accent inline-flex items-center gap-2">{link.label}<ArrowRight className="w-4 h-4" /></a>
