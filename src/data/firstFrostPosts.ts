@@ -31,7 +31,7 @@ export const firstFrostPosts: BlogPost[] = [
   "image": "images/first-frost-fireplace.jpg",
   "imageAlt": "Illustration of a technician attending to a gas fireplace",
   "imageCaption": "Fireplace servicing for comfortable winter evenings. Illustration: BeeWarm.",
-  "relatedLinks": [
+  "relatedProjectLinks": [
     {
       "label": "Annual servicing guidance from Technical Safety BC",
       "href": "https://www.technicalsafetybc.ca/regulatory-resources/regulatory-notices/information-bulletin-annual-servicing-gas-appliances"
