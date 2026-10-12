@@ -129,7 +129,7 @@ export default function BlogPostPage() {
           <div className="flex items-center gap-6 text-sm text-slate-400">
             <span className="flex items-center gap-2">
               <Calendar className="w-4 h-4" />
-              {new Date(post.date).toLocaleDateString("en-CA", { month: "long", day: "numeric", year: "numeric" })}
+              {new Date(`${post.date}T12:00:00`).toLocaleDateString("en-CA", { month: "long", day: "numeric", year: "numeric" })}
             </span>
             <span className="flex items-center gap-2">
               <Clock className="w-4 h-4" />
