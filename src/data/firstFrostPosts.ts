@@ -1,5 +1,55 @@
 import type { BlogPost } from "./blogPosts";
 export const firstFrostPosts: BlogPost[] = [
+{
+  "slug": "first-frost-vancouver-strata-fireplace-maintenance",
+  "title": "Feeling the First Frost? Plan Fireplace Maintenance for Your Vancouver Strata",
+  "excerpt": "A Vancouver strata homeowner guide to arranging gas fireplace maintenance, preparing for a service visit and coordinating access with your building.",
+  "metaDescription": "A Vancouver strata homeowner guide to arranging gas fireplace maintenance, preparing for a service visit and coordinating access with your building.",
+  "content": [
+    "Start with comfort in your own home: A cold morning is a reminder to check the fireplace before you depend on it every evening. For Vancouver condo and townhouse owners, the first step is simple: find your last service record and ask whether your building is arranging a fireplace maintenance day. A frosty morning elsewhere in the Fraser Valley is a useful seasonal prompt, even when conditions differ at your building.",
+    "Ask who is arranging the appointment: Contact your strata manager or council to find out whether there is a building-wide visit, a preferred booking process or a record they need from you. Confirm the arrangements for your unit rather than assuming every building follows the same rules. If you are renting, speak with the property contact before authorising work. Keep the actual appliance and any common-property access requirements in the conversation.",
+    "Give the service contact useful details: Provide your unit number, property address, fireplace model if known and the date of the last service. Explain whether this is routine maintenance or a change in operation. Mention repeated shutdowns, ignition difficulties or visible soot. A photo of the installation may help when it can be taken without opening anything. Ask which equipment and locations the provider can support.",
+    "Prepare for the visit: Confirm the appointment window and who will be home to provide access. Move everyday belongings out of the work area without touching the appliance or its gas components. Keep pets away during the visit and make the operating manual or previous report available. If exterior or shared-area access is needed, arrange it with the building contact in advance.",
+    "Know what is included: Technical Safety BC recommends annual servicing of home heating appliances. For your fireplace, ask what the visit includes, whether repairs and parts are separate, and what written notes you will receive. The contractor should assess the equipment using the applicable manufacturer instructions. A maintenance booking is not a promise that every fault or replacement part is included in one price.",
+    "Keep a clear follow-up: Save the service report and any recommendation, then provide the relevant record to the person coordinating the building visit. Ask who will arrange a repair if further work is needed. Report a new problem promptly rather than assuming that the next annual date is the right time to deal with it. Test carbon monoxide alarms using their manufacturer’s instructions.",
+    "Discuss your Vancouver appointment: Strata Property Services can discuss fireplace and HVAC enquiries with you through Robert’s existing contact route. Share your Vancouver address, number of units if requesting coordinated visits, appliance information and preferred timing. Confirm availability and the agreed work before sending residents an appointment notice. For a Surrey or Fraser Valley property, include the exact address so coverage can be checked.",
+    "Keep emergency calls separate: If you suspect a gas leak, leave without operating switches or creating an ignition source. Once outside, call FortisBC on 1-800-663-9911 or 911. If a carbon monoxide alarm sounds, leave and call 911. The strata enquiry form and ordinary service email should not be used to request emergency response."
+  ],
+  "category": "HVAC",
+  "tradeSlugs": [
+    "hvac"
+  ],
+  "citySlugs": [
+    "vancouver",
+    "burnaby",
+    "richmond",
+    "north-vancouver",
+    "west-vancouver"
+  ],
+  "date": "2026-10-12",
+  "readTime": "5 min read",
+  "image": "images/first-frost-fireplace.jpg",
+  "imageAlt": "Illustration of a technician attending to a gas fireplace",
+  "imageCaption": "Fireplace servicing for comfortable winter evenings. Illustration: BeeWarm.",
+  "relatedLinks": [
+    {
+      "label": "Annual servicing guidance from Technical Safety BC",
+      "href": "https://www.technicalsafetybc.ca/regulatory-resources/regulatory-notices/information-bulletin-annual-servicing-gas-appliances"
+    },
+    {
+      "label": "FortisBC gas leaks and odours",
+      "href": "https://www.fortisbc.com/safety-outages/energy-safety/natural-gas-safety/gas-leaks-and-odour"
+    },
+    {
+      "label": "Carbon monoxide guidance from Technical Safety BC",
+      "href": "https://www.technicalsafetybc.ca/annual-state-of-safety/2024/safer-bc/carbon-monoxide"
+    },
+    {
+      "label": "Discuss fireplace maintenance with BeeWarm",
+      "href": "https://beewarm.ca/contact/"
+    }
+  ]
+},
   {
     "slug": "first-frost-strata-new-concrete-winter-plan",
     "title": "First Frost: A Strata Winter Plan for New and Stamped Concrete",
