@@ -40,7 +40,7 @@ export const westSideSnowPosts: BlogPost[] = [
     "readTime": "6 min read",
     "metaDescription": "A hyperlocal West Side Vancouver strata snow-removal guide for Kitsilano and nearby neighbourhoods: sidewalks, steps, parkade access and PlowWow contracts.",
     "image": "images/plowwow/kitsilano-strata-winter.webp",
-    "imageAlt": "PlowWow mascots in a branded illustration of a snowy Kitsilano-style neighbourhood",
+    "imageAlt": "A single PlowWow mascot in a branded illustration of a snowy Kitsilano-style neighbourhood",
     "imageCaption": "Kitsilano winter-planning artwork from PlowWow’s editorial image library. Illustration, not a client-property or service-visit photograph.",
     "relatedProjectLinks": [
       {
