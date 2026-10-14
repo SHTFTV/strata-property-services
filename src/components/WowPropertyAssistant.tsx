@@ -7,8 +7,7 @@ const wowMascot = "/images/wow-mascot.webp";
 const PHONE = "604-761-1518";
 const PHONE_HREF = "tel:+16047611518";
 const SMS_HREF = "sms:+16047611518";
-const EMAIL = "info@stratapropertyservices.com";
-const EMAIL_HREF = `mailto:${EMAIL}`;
+const SPS_EMAIL = "info@stratapropertyservices.com";
 
 
 /**
@@ -20,6 +19,9 @@ export function WowPropertyAssistant() {
   const path = location.split(/[?#]/)[0].replace(/\/$/, "") || "/";
   const post = path.startsWith("/blog/") ? blogPosts.find(p => p.slug === path.slice(6)) : undefined;
   const snow = path === "/services/snow-removal" || path.startsWith("/services/snow-removal/") || Boolean(post?.tradeSlugs.includes("snow-removal"));
+  const EMAIL = snow ? "wow@plowwow.com" : SPS_EMAIL;
+  const EMAIL_HREF = `mailto:${EMAIL}`;
+  const hasDedicatedCard = post?.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist" || post?.slug === "vancouver-strata-spray-insulation-monoglass-repairs-psi";
   const brand = snow ? "PlowWow" : "StrataPropertyServices.com";
   const REVIEWS_URL = snow ? "https://www.google.com/search?q=PlowWow+snow+removal+Vancouver" : "https://www.google.com/search?q=Strata+Property+Services+Lower+Mainland";
   const [visible, setVisible] = useState(false);
@@ -35,6 +37,7 @@ export function WowPropertyAssistant() {
     return () => window.removeEventListener("keydown", dismissWithEscape);
   }, [visible]);
 
+  if (hasDedicatedCard) return null;
   if (!visible) return <button type="button" onClick={() => setVisible(true)} aria-label={`Open ${brand} contact panel`} className="fixed bottom-4 right-4 z-[9999] rounded-full bg-slate-950 px-4 py-3 text-sm font-semibold text-white shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-400">Contact {snow ? "PlowWow" : "SPS"}</button>;
 
   const focusRing =
