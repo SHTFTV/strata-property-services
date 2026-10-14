@@ -1,3 +1,4 @@
+import { psiStrataPosts } from "./psiStrataPosts";
 import { firstFrostPosts } from "./firstFrostPosts";
 export interface BlogPost {
   slug: string;
@@ -18,6 +19,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  ...psiStrataPosts,
   ...firstFrostPosts,
 {
   "slug": "strata-snow-removal-service-handover",

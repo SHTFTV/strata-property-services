@@ -1,3 +1,4 @@
+import PSIContactCard from "@/components/PSIContactCard";
 import { useParams, Link } from "wouter";
 import { getBlogPostBySlug, blogPosts, getBlogPostsByTrade } from "@/data/blogPosts";
 import { trades } from "@/data/trades";
@@ -27,6 +28,7 @@ export default function BlogPostPage() {
     );
   }
 
+  const isPSI = post.slug === "vancouver-strata-spray-insulation-monoglass-repairs-psi";
   const relatedTrades = trades.filter(t => post.tradeSlugs.includes(t.slug));
   const relatedPosts = post.tradeSlugs
     .flatMap(slug => getBlogPostsByTrade(slug))
@@ -101,10 +103,10 @@ export default function BlogPostPage() {
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
       <SEO title={post.title} description={post.metaDescription} ogType="article" ogImage={`https://www.stratapropertyservices.com/${post.image}`} ogImageAlt={post.imageAlt || post.gallery?.find(photo => photo.src === post.image)?.alt || post.title} />
-      {schemaMarkup.map((schema, i) => (
+      {schemaMarkup.filter(schema => !isPSI || schema["@type"] !== "Organization").map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      <Navbar />
+      {isPSI ? <PSIHeader/> : <Navbar />}
 
       <header className="relative bg-secondary text-white py-16 px-6 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -148,7 +150,7 @@ export default function BlogPostPage() {
                 {post.imageCaption && <figcaption className="p-4 text-sm text-muted-foreground">{post.imageCaption}</figcaption>}
               </figure>
               <p className="text-xl text-muted-foreground font-medium leading-relaxed mb-8 not-prose">{post.excerpt}</p>
-              {post.content.map((paragraph, i) => (
+              {post.content.map((paragraph, i) => paragraph.startsWith("## ") ? <h2 key={i} className="text-2xl font-bold mt-8 mb-4">{paragraph.slice(3)}</h2> : (
                 <p key={i} className="text-muted-foreground leading-relaxed mb-6 not-prose">{paragraph}</p>
               ))}
               {post.gallery && post.gallery.length > 0 && (
@@ -182,16 +184,16 @@ export default function BlogPostPage() {
               <div className="sticky top-24 space-y-6">
                 <div className="bg-secondary text-white p-8 rounded-2xl shadow-2xl">
                   <h3 className="text-xl font-bold mb-4 text-primary">Need This Service?</h3>
-                  <p className="text-sm text-slate-300 mb-6">Get a free quote from our experienced team. 35+ years serving the Lower Mainland.</p>
+                  <p className="text-sm text-slate-300 mb-6">{isPSI ? "Discuss your insulation or repair scope with Performance Spray Insulation." : "Get a free quote from our experienced team. 35+ years serving the Lower Mainland."}</p>
                   <a
-                    href={`tel:${contacts.colin.phoneTel}`}
+                    href={isPSI ? "tel:+17787794353" : `tel:${contacts.colin.phoneTel}`}
                     className="bg-primary hover:bg-accent text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 w-full mb-3"
                   >
-                    <Phone className="w-4 h-4" /> Call {contacts.colin.phone}
+                    <Phone className="w-4 h-4" /> Call {isPSI ? "778-779-4353" : contacts.colin.phone}
                   </a>
-                  <Link href="/#contact" className="border-2 border-white text-white font-bold px-6 py-3 rounded-xl hover:bg-white hover:text-secondary transition-all flex items-center justify-center w-full text-sm">
-                    Request a Quote Online
-                  </Link>
+                  <a href={isPSI ? "mailto:insulatevancouver@gmail.com" : "/#contact"} className="border-2 border-white text-white font-bold px-6 py-3 rounded-xl hover:bg-white hover:text-secondary transition-all flex items-center justify-center w-full text-sm">
+                    {isPSI ? "Email Performance Spray Insulation" : "Request a Quote Online"}
+                  </a>
                 </div>
 
                 {relatedTrades.length > 0 && (
@@ -245,10 +247,10 @@ export default function BlogPostPage() {
       <section className="py-16 px-6 bg-secondary text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-black mb-4">Ready to Get Started?</h2>
-          <p className="text-slate-300 mb-8">Contact Strata Property Services for a free, no-obligation quote. 35+ years of trusted service across the Lower Mainland.</p>
+          <p className="text-slate-300 mb-8">{isPSI ? "Contact Performance Spray Insulation with your building location, photos and proposed work." : "Contact Strata Property Services for a free, no-obligation quote. 35+ years of trusted service across the Lower Mainland."}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`tel:${contacts.colin.phoneTel}`} className="bg-primary hover:bg-accent text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg inline-flex items-center justify-center gap-2 text-lg">
-              <Phone className="w-5 h-5" /> Call {contacts.colin.phone}
+            <a href={isPSI ? "tel:+17787794353" : `tel:${contacts.colin.phoneTel}`} className="bg-primary hover:bg-accent text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg inline-flex items-center justify-center gap-2 text-lg">
+              <Phone className="w-5 h-5" /> Call {isPSI ? "778-779-4353" : contacts.colin.phone}
             </a>
             <Link href="/blog" className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white hover:text-secondary transition-all inline-flex items-center justify-center text-lg">
               More Articles
@@ -257,7 +259,11 @@ export default function BlogPostPage() {
         </div>
       </section>
 
-      <Footer />
+      {isPSI ? <PSIFooter/> : <Footer />}
+      {isPSI && <PSIContactCard/>}
     </div>
   );
 }
+
+function PSIHeader(){return <nav className="mx-auto max-w-7xl px-6 py-5 flex flex-wrap gap-4"><a href="/">Strata Property Services</a><span>Featured contractor: Performance Spray Insulation</span><a href="tel:+17787794353">778-779-4353</a></nav>;}
+function PSIFooter(){return <footer className="mx-auto max-w-7xl px-6 pt-8 pb-32"><strong>Performance Spray Insulation</strong><p>Project enquiries: <a href="tel:+17787794353">778-779-4353</a> · <a href="mailto:insulatevancouver@gmail.com">insulatevancouver@gmail.com</a></p></footer>;}
