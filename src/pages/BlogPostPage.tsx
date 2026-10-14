@@ -1,3 +1,4 @@
+import PlowWowContactCard from "@/components/PlowWowContactCard";
 import PSIContactCard from "@/components/PSIContactCard";
 import { useParams, Link } from "wouter";
 import { getBlogPostBySlug, blogPosts, getBlogPostsByTrade } from "@/data/blogPosts";
@@ -28,6 +29,7 @@ export default function BlogPostPage() {
     );
   }
 
+  const isPlowWow = post.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist";
   const isPSI = post.slug === "vancouver-strata-spray-insulation-monoglass-repairs-psi";
   const relatedTrades = trades.filter(t => post.tradeSlugs.includes(t.slug));
   const relatedPosts = post.tradeSlugs
@@ -103,10 +105,10 @@ export default function BlogPostPage() {
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
       <SEO title={post.title} description={post.metaDescription} ogType="article" ogImage={`https://www.stratapropertyservices.com/${post.image}`} ogImageAlt={post.imageAlt || post.gallery?.find(photo => photo.src === post.image)?.alt || post.title} />
-      {schemaMarkup.filter(schema => !isPSI || schema["@type"] !== "Organization").map((schema, i) => (
+      {schemaMarkup.filter(schema => !(isPSI || isPlowWow) || schema["@type"] !== "Organization").map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      {isPSI ? <PSIHeader/> : <Navbar />}
+      {isPlowWow ? <SnowHeader/> : isPSI ? <PSIHeader/> : <Navbar />}
 
       <header className="relative bg-secondary text-white py-16 px-6 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -184,15 +186,15 @@ export default function BlogPostPage() {
               <div className="sticky top-24 space-y-6">
                 <div className="bg-secondary text-white p-8 rounded-2xl shadow-2xl">
                   <h3 className="text-xl font-bold mb-4 text-primary">Need This Service?</h3>
-                  <p className="text-sm text-slate-300 mb-6">{isPSI ? "Discuss your insulation or repair scope with Performance Spray Insulation." : "Get a free quote from our experienced team. 35+ years serving the Lower Mainland."}</p>
+                  <p className="text-sm text-slate-300 mb-6">{isPlowWow ? "Discuss your Kitsilano or West Side winter-service scope with PlowWow." : isPSI ? "Discuss your insulation or repair scope with Performance Spray Insulation." : "Get a free quote from our experienced team. 35+ years serving the Lower Mainland."}</p>
                   <a
                     href={isPSI ? "tel:+17787794353" : `tel:${contacts.colin.phoneTel}`}
                     className="bg-primary hover:bg-accent text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 w-full mb-3"
                   >
                     <Phone className="w-4 h-4" /> Call {isPSI ? "778-779-4353" : contacts.colin.phone}
                   </a>
-                  <a href={isPSI ? "mailto:insulatevancouver@gmail.com" : "/#contact"} className="border-2 border-white text-white font-bold px-6 py-3 rounded-xl hover:bg-white hover:text-secondary transition-all flex items-center justify-center w-full text-sm">
-                    {isPSI ? "Email Performance Spray Insulation" : "Request a Quote Online"}
+                  <a href={isPlowWow ? "mailto:wow@plowwow.com" : isPSI ? "mailto:insulatevancouver@gmail.com" : "/#contact"} className="border-2 border-white text-white font-bold px-6 py-3 rounded-xl hover:bg-white hover:text-secondary transition-all flex items-center justify-center w-full text-sm">
+                    {isPlowWow ? "Email PlowWow" : isPSI ? "Email Performance Spray Insulation" : "Request a Quote Online"}
                   </a>
                 </div>
 
@@ -247,7 +249,7 @@ export default function BlogPostPage() {
       <section className="py-16 px-6 bg-secondary text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-black mb-4">Ready to Get Started?</h2>
-          <p className="text-slate-300 mb-8">{isPSI ? "Contact Performance Spray Insulation with your building location, photos and proposed work." : "Contact Strata Property Services for a free, no-obligation quote. 35+ years of trusted service across the Lower Mainland."}</p>
+          <p className="text-slate-300 mb-8">{isPlowWow ? "Contact PlowWow with your building address, priority routes and access details." : isPSI ? "Contact Performance Spray Insulation with your building location, photos and proposed work." : "Contact Strata Property Services for a free, no-obligation quote. 35+ years of trusted service across the Lower Mainland."}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={isPSI ? "tel:+17787794353" : `tel:${contacts.colin.phoneTel}`} className="bg-primary hover:bg-accent text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg inline-flex items-center justify-center gap-2 text-lg">
               <Phone className="w-5 h-5" /> Call {isPSI ? "778-779-4353" : contacts.colin.phone}
@@ -259,11 +261,15 @@ export default function BlogPostPage() {
         </div>
       </section>
 
-      {isPSI ? <PSIFooter/> : <Footer />}
+      {isPlowWow ? <SnowFooter/> : isPSI ? <PSIFooter/> : <Footer />}
       {isPSI && <PSIContactCard/>}
+      {isPlowWow && <PlowWowContactCard/>}
     </div>
   );
 }
 
 function PSIHeader(){return <nav className="mx-auto max-w-7xl px-6 py-5 flex flex-wrap gap-4"><a href="/">Strata Property Services</a><span>Featured contractor: Performance Spray Insulation</span><a href="tel:+17787794353">778-779-4353</a></nav>;}
 function PSIFooter(){return <footer className="mx-auto max-w-7xl px-6 pt-8 pb-32"><strong>Performance Spray Insulation</strong><p>Project enquiries: <a href="tel:+17787794353">778-779-4353</a> · <a href="mailto:insulatevancouver@gmail.com">insulatevancouver@gmail.com</a></p></footer>;}
+
+function SnowHeader(){return <nav className="mx-auto max-w-7xl px-6 py-5 flex flex-wrap gap-4"><a href="/">Strata Property Services</a><span>Featured winter contractor: PlowWow</span><a href="tel:+16047611518">604-761-1518</a></nav>;}
+function SnowFooter(){return <footer className="mx-auto max-w-7xl px-6 pt-8 pb-32"><strong>PlowWow Snow Removal</strong><p>Winter service enquiries: <a href="tel:+16047611518">604-761-1518</a> · <a href="mailto:wow@plowwow.com">wow@plowwow.com</a></p></footer>;}
