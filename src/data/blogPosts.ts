@@ -1,3 +1,4 @@
+import { fairviewSnowPosts } from "./fairviewSnowPosts";
 import { westSideSnowPosts } from "./westSideSnowPosts";
 import { psiStrataPosts } from "./psiStrataPosts";
 import { firstFrostPosts } from "./firstFrostPosts";
@@ -20,6 +21,7 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+  ...fairviewSnowPosts,
   ...westSideSnowPosts,
   ...psiStrataPosts,
   ...firstFrostPosts,

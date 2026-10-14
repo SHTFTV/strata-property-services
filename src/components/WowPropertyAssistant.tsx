@@ -21,7 +21,7 @@ export function WowPropertyAssistant() {
   const snow = path === "/services/snow-removal" || path.startsWith("/services/snow-removal/") || Boolean(post?.tradeSlugs.includes("snow-removal"));
   const EMAIL = snow ? "wow@plowwow.com" : SPS_EMAIL;
   const EMAIL_HREF = `mailto:${EMAIL}`;
-  const hasDedicatedCard = post?.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist" || post?.slug === "vancouver-strata-spray-insulation-monoglass-repairs-psi";
+  const hasDedicatedCard = post?.slug === "fairview-slopes-strata-snow-removal-access-planning" || post?.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist" || post?.slug === "vancouver-strata-spray-insulation-monoglass-repairs-psi";
   const brand = snow ? "PlowWow" : "StrataPropertyServices.com";
   const REVIEWS_URL = snow ? "https://www.google.com/search?q=PlowWow+snow+removal+Vancouver" : "https://www.google.com/search?q=Strata+Property+Services+Lower+Mainland";
   const [visible, setVisible] = useState(false);

@@ -29,7 +29,7 @@ export default function BlogPostPage() {
     );
   }
 
-  const isPlowWow = post.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist";
+  const isPlowWow = post.slug === "fairview-slopes-strata-snow-removal-access-planning" || post.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist";
   const isPSI = post.slug === "vancouver-strata-spray-insulation-monoglass-repairs-psi";
   const relatedTrades = trades.filter(t => post.tradeSlugs.includes(t.slug));
   const relatedPosts = post.tradeSlugs
