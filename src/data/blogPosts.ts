@@ -21,6 +21,44 @@ export interface BlogPost {
 }
 
 export const blogPosts: BlogPost[] = [
+{
+  "slug": "langley-township-strata-winter-council-route-checklist",
+  "title": "Township of Langley Stratas: Give Every Winter Route an Owner",
+  "excerpt": "A council checklist for sidewalk responsibility, private paths, snow storage, drainage observations and clear winter-service reporting.",
+  "metaDescription": "A council checklist for sidewalk responsibility, private paths, snow storage, drainage observations and clear winter-service reporting.",
+  "content": [
+    "A strata winter plan is a collection of small handovers. Council approves the scope, management coordinates the contractor, residents report a concern and someone must decide what happens next. A simple route register makes those responsibilities visible before the first slippery morning.",
+    "Identify the frontage and classification: The Township states that residential sidewalks must be cleared within 24 hours of first snow accumulation. Commercial and industrial frontage has a different deadline. Confirm the property classification and municipal boundary using the official source linked below; do not apply Township wording automatically to Langley City.",
+    "Create a route register: Give each route a short identifier: entrance A to the street, accessible parking to the lobby, or the path between two townhouse blocks. Record its surface, width, steps, gates and the party responsible for winter attention. Keep the register with a marked site map so a resident report can point to a specific location instead of an ambiguous courtyard description.",
+    "Assign the gaps between contractors: Landscaping, snow clearing and building staff may have different duties. Check where one scope stops and the next starts, especially at entrance pads, public frontage and routes through visitor parking. Ask who performs detailed hand clearing. The council should be able to identify an owner for each segment without relying on an unwritten understanding from a previous winter.",
+    "Agree where the snow can go: Mark proposed storage areas before signing off the site plan. Keep circulation, sight lines, accessible routes and drainage in the review. Ask what happens if the planned storage area fills or is occupied by a parked vehicle. Relocation or hauling, where needed, should be a separate decision with clear authority and pricing in the agreement.",
+    "Treat meltwater as a follow-up task: Identify downspouts, low spots and places where water crosses a walking route. Give those observations to the winter provider and the building maintenance contact. A drainage concern may need attention beyond another treatment visit. Record who receives the report, what interim access arrangement is appropriate and how the issue is closed out.",
+    "Use one resident reporting route: Publish one contact process for ordinary winter concerns and name a backup for the building team. Ask for a location, time and description; photographs help only when taken safely. Tell residents how updates are communicated. Keep gate codes, contractor telephone trees and private access instructions out of the public notice.",
+    "Review the first visit together: After the first service, compare the route register with what the operator actually encountered. Correct gate instructions, obstructed areas and unclear boundaries while the details are fresh. Use the review to improve the plan rather than silently expanding the work. Send the updated map to council, management and the assigned provider."
+  ],
+  "category": "Snow Removal",
+  "tradeSlugs": [
+    "snow-removal"
+  ],
+  "citySlugs": [
+    "langley"
+  ],
+  "date": "2026-10-15",
+  "readTime": "4 min read",
+  "image": "images/langley-township-strata-winter-council-route-checklist.jpg",
+  "imageAlt": "Original Strata Property Services planning diagram: map it, assign it, check it. Illustrative layout; not a Township map, project photograph or equipment specification.",
+  "imageCaption": "Original Strata Property Services planning diagram: map it, assign it, check it. Illustrative layout; not a Township map, project photograph or equipment specification.",
+  "relatedProjectLinks": [
+    {
+      "label": "Township of Langley snow and ice guidance",
+      "href": "https://www.tol.ca/en/services/snow-and-ice.aspx"
+    },
+    {
+      "label": "Discuss a PlowWow winter-service plan",
+      "href": "https://www.plowwow.com/quote"
+    }
+  ]
+},
   ...fairviewSnowPosts,
   ...westSideSnowPosts,
   ...psiStrataPosts,
