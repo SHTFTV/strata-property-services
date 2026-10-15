@@ -152,9 +152,7 @@ export default function BlogPostPage() {
                 {post.imageCaption && <figcaption className="p-4 text-sm text-muted-foreground">{post.imageCaption}</figcaption>}
               </figure>
               <p className="text-xl text-muted-foreground font-medium leading-relaxed mb-8 not-prose">{post.excerpt}</p>
-              {post.content.map((paragraph, i) => paragraph.startsWith("## ") ? <h2 key={i} className="text-2xl font-bold mt-8 mb-4">{paragraph.slice(3)}</h2> : (
-                <p key={i} className="text-muted-foreground leading-relaxed mb-6 not-prose">{paragraph}</p>
-              ))}
+              {post.content.map((paragraph, i) => <div key={i}>{paragraph.startsWith("## ") ? <h2 className="text-2xl font-bold mt-8 mb-4">{paragraph.slice(3)}</h2> : <p className="text-muted-foreground leading-relaxed mb-6 not-prose">{paragraph}</p>}{post.inlineVisuals?.filter(photo => photo.afterParagraph === i).map(photo => <figure key={photo.src} className="not-prose my-10 overflow-hidden rounded-2xl border border-slate-200"><img src={`${import.meta.env.BASE_URL}${photo.src}`} alt={photo.alt} width={1024} height={576} loading="lazy" className="w-full h-auto"/><figcaption className="p-4 text-sm text-muted-foreground">{photo.caption}</figcaption></figure>)}</div>)}
               {post.gallery && post.gallery.length > 0 && (
                 <section className="not-prose mt-10" aria-label={`${post.title} project photographs`}>
                   <h2 className="text-2xl font-black mb-5">Project gallery</h2>

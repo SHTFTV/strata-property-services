@@ -16,6 +16,7 @@ export interface BlogPost {
   image: string;
   imageCaption?: string;
   imageAlt?: string;
+  inlineVisuals?: { afterParagraph: number; src: string; alt: string; caption: string }[];
   gallery?: { src: string; alt: string; caption: string }[];
   relatedProjectLinks?: { label: string; href: string }[];
 }
@@ -28,13 +29,20 @@ export const blogPosts: BlogPost[] = [
   "metaDescription": "Use mild-winter headlines to review strata service scopes, contacts and response scenarios without assuming a snow-free season.",
   "content": [
     "A mild-winter headline can quickly become a council question: should we change our winter arrangements? Start with the property obligations and the agreement already in place. A seasonal discussion is useful when it leads to clearer responsibilities, rather than an assumption that no winter work will be needed.",
-    "Separate the average from the individual event: Environment Canada explains seasonal forecasts through probabilities for temperature and precipitation categories. A broad outlook is different from a daily forecast for the property. It should not be read as a guarantee about the number or timing of local service events.",
-    "Review the actual service brief: Collect the signed agreement, site map and current contact list. Check which frontage, private paths, entrances and vehicle areas are included. Confirm how ordinary service is triggered and how additional concerns are reported. If council wants a scope change, discuss it with the provider and record the outcome instead of treating a forecast headline as a change instruction.",
-    "Keep a modest event exercise on the agenda: Ask the manager to walk through a single reported entrance problem. Who receives the message? Who assesses it? Who can request a visit, and what is communicated to residents? Then consider a more disruptive snowfall with blocked access. The exercise can expose an unclear handover even if the rest of the season is uneventful.",
-    "Compare complete scopes when reviewing costs: A proposal should make included areas, dispatch terms, inspection arrangements, materials and exclusions visible. Council can then compare the same work rather than a seasonal label. Do not infer a revised price, refund or visit allowance from the weather discussion. Any commercial change belongs in the provider conversation and the written terms.",
-    "Give residents one reporting process: Use consistent location names on notices and the site map. Ask residents to identify the place, time and nature of a concern; photographs are helpful when safe to obtain. A named management contact and backup reduce contradictory instructions. Keep private gate and access information within the assigned operational team.",
-    "Treat drainage observations as building information: Note where water crosses a walkway, collects at an entrance or comes from a downspout. Share those observations with both the winter provider and the building maintenance contact. A recurring water source may need a separate maintenance decision. Record what was reported, who owns the next action and how residents will be updated.",
-    "Use regional wording without losing the address: Metro Vancouver helps readers find regional guidance. The winter plan should still identify the municipality, actual boundaries and route constraints. Keep Fraser Valley properties clearly identified when managing a wider portfolio. Confirm current local requirements directly with the municipality, then make the property responsibilities explicit on the council map."
+    "## Separate the average from the individual event",
+    "Environment Canada explains seasonal forecasts through probabilities for temperature and precipitation categories. A broad outlook is different from a daily forecast for the property. It should not be read as a guarantee about the number or timing of local service events.",
+    "## Review the actual service brief",
+    "Collect the signed agreement, site map and current contact list. Check which frontage, private paths, entrances and vehicle areas are included. Confirm how ordinary service is triggered and how additional concerns are reported. If council wants a scope change, discuss it with the provider and record the outcome instead of treating a forecast headline as a change instruction.",
+    "## Keep a modest event exercise on the agenda",
+    "Ask the manager to walk through a single reported entrance problem. Who receives the message? Who assesses it? Who can request a visit, and what is communicated to residents? Then consider a more disruptive snowfall with blocked access. The exercise can expose an unclear handover even if the rest of the season is uneventful.",
+    "## Compare complete scopes when reviewing costs",
+    "A proposal should make included areas, dispatch terms, inspection arrangements, materials and exclusions visible. Council can then compare the same work rather than a seasonal label. Do not infer a revised price, refund or visit allowance from the weather discussion. Any commercial change belongs in the provider conversation and the written terms.",
+    "## Give residents one reporting process",
+    "Use consistent location names on notices and the site map. Ask residents to identify the place, time and nature of a concern; photographs are helpful when safe to obtain. A named management contact and backup reduce contradictory instructions. Keep private gate and access information within the assigned operational team.",
+    "## Treat drainage observations as building information",
+    "Note where water crosses a walkway, collects at an entrance or comes from a downspout. Share those observations with both the winter provider and the building maintenance contact. A recurring water source may need a separate maintenance decision. Record what was reported, who owns the next action and how residents will be updated.",
+    "## Use regional wording without losing the address",
+    "Metro Vancouver helps readers find regional guidance. The winter plan should still identify the municipality, actual boundaries and route constraints. Keep Fraser Valley properties clearly identified when managing a wider portfolio. Confirm current local requirements directly with the municipality, then make the property responsibilities explicit on the council map."
   ],
   "category": "Snow Removal",
   "tradeSlugs": [
@@ -49,9 +57,9 @@ export const blogPosts: BlogPost[] = [
   ],
   "date": "2026-10-15",
   "readTime": "4 min read",
-  "image": "images/metro-vancouver-strata-mild-winter-council-planning.jpg",
-  "imageAlt": "Original Strata Property Services readiness diagram: scope, contacts, scenarios. A planning illustration, not a weather forecast or a project photograph.",
-  "imageCaption": "Original Strata Property Services readiness diagram: scope, contacts, scenarios. A planning illustration, not a weather forecast or a project photograph.",
+  "image": "images/wow-forecast-story-v1.jpg",
+  "imageAlt": "Mild winter? Wow keeps the shovel, blower and plow ready anyway. AI illustration by PlowWow; the newspaper is fictional, not a weather forecast.",
+  "imageCaption": "Mild winter? Wow keeps the shovel, blower and plow ready anyway. AI illustration by PlowWow; the newspaper is fictional, not a weather forecast.",
   "relatedProjectLinks": [
     {
       "label": "Environment Canada seasonal forecast overview",
@@ -69,6 +77,14 @@ export const blogPosts: BlogPost[] = [
       "label": "Discuss a PlowWow winter-service plan",
       "href": "https://www.plowwow.com/quote"
     }
+  ],
+  "inlineVisuals": [
+    {
+      "afterParagraph": 6,
+      "src": "images/wow-ice-story-v1.jpg",
+      "alt": "Wow checks an icy patch beside an entrance and marks a clear route around it. AI illustration by PlowWow.",
+      "caption": "Wow checks an icy patch beside an entrance and marks a clear route around it. AI illustration by PlowWow."
+    }
   ]
 },
 {
@@ -78,13 +94,20 @@ export const blogPosts: BlogPost[] = [
   "metaDescription": "A council checklist for sidewalk responsibility, private paths, snow storage, drainage observations and clear winter-service reporting.",
   "content": [
     "A strata winter plan is a collection of small handovers. Council approves the scope, management coordinates the contractor, residents report a concern and someone must decide what happens next. A simple route register makes those responsibilities visible before the first slippery morning.",
-    "Identify the frontage and classification: The Township states that residential sidewalks must be cleared within 24 hours of first snow accumulation. Commercial and industrial frontage has a different deadline. Confirm the property classification and municipal boundary using the official source linked below; do not apply Township wording automatically to Langley City.",
-    "Create a route register: Give each route a short identifier: entrance A to the street, accessible parking to the lobby, or the path between two townhouse blocks. Record its surface, width, steps, gates and the party responsible for winter attention. Keep the register with a marked site map so a resident report can point to a specific location instead of an ambiguous courtyard description.",
-    "Assign the gaps between contractors: Landscaping, snow clearing and building staff may have different duties. Check where one scope stops and the next starts, especially at entrance pads, public frontage and routes through visitor parking. Ask who performs detailed hand clearing. The council should be able to identify an owner for each segment without relying on an unwritten understanding from a previous winter.",
-    "Agree where the snow can go: Mark proposed storage areas before signing off the site plan. Keep circulation, sight lines, accessible routes and drainage in the review. Ask what happens if the planned storage area fills or is occupied by a parked vehicle. Relocation or hauling, where needed, should be a separate decision with clear authority and pricing in the agreement.",
-    "Treat meltwater as a follow-up task: Identify downspouts, low spots and places where water crosses a walking route. Give those observations to the winter provider and the building maintenance contact. A drainage concern may need attention beyond another treatment visit. Record who receives the report, what interim access arrangement is appropriate and how the issue is closed out.",
-    "Use one resident reporting route: Publish one contact process for ordinary winter concerns and name a backup for the building team. Ask for a location, time and description; photographs help only when taken safely. Tell residents how updates are communicated. Keep gate codes, contractor telephone trees and private access instructions out of the public notice.",
-    "Review the first visit together: After the first service, compare the route register with what the operator actually encountered. Correct gate instructions, obstructed areas and unclear boundaries while the details are fresh. Use the review to improve the plan rather than silently expanding the work. Send the updated map to council, management and the assigned provider."
+    "## Identify the frontage and classification",
+    "The Township states that residential sidewalks must be cleared within 24 hours of first snow accumulation. Commercial and industrial frontage has a different deadline. Confirm the property classification and municipal boundary using the official source linked below; do not apply Township wording automatically to Langley City.",
+    "## Create a route register",
+    "Give each route a short identifier: entrance A to the street, accessible parking to the lobby, or the path between two townhouse blocks. Record its surface, width, steps, gates and the party responsible for winter attention. Keep the register with a marked site map so a resident report can point to a specific location instead of an ambiguous courtyard description.",
+    "## Assign the gaps between contractors",
+    "Landscaping, snow clearing and building staff may have different duties. Check where one scope stops and the next starts, especially at entrance pads, public frontage and routes through visitor parking. Ask who performs detailed hand clearing. The council should be able to identify an owner for each segment without relying on an unwritten understanding from a previous winter.",
+    "## Agree where the snow can go",
+    "Mark proposed storage areas before signing off the site plan. Keep circulation, sight lines, accessible routes and drainage in the review. Ask what happens if the planned storage area fills or is occupied by a parked vehicle. Relocation or hauling, where needed, should be a separate decision with clear authority and pricing in the agreement.",
+    "## Treat meltwater as a follow-up task",
+    "Identify downspouts, low spots and places where water crosses a walking route. Give those observations to the winter provider and the building maintenance contact. A drainage concern may need attention beyond another treatment visit. Record who receives the report, what interim access arrangement is appropriate and how the issue is closed out.",
+    "## Use one resident reporting route",
+    "Publish one contact process for ordinary winter concerns and name a backup for the building team. Ask for a location, time and description; photographs help only when taken safely. Tell residents how updates are communicated. Keep gate codes, contractor telephone trees and private access instructions out of the public notice.",
+    "## Review the first visit together",
+    "After the first service, compare the route register with what the operator actually encountered. Correct gate instructions, obstructed areas and unclear boundaries while the details are fresh. Use the review to improve the plan rather than silently expanding the work. Send the updated map to council, management and the assigned provider."
   ],
   "category": "Snow Removal",
   "tradeSlugs": [
@@ -95,9 +118,9 @@ export const blogPosts: BlogPost[] = [
   ],
   "date": "2026-10-15",
   "readTime": "4 min read",
-  "image": "images/langley-township-strata-winter-council-route-checklist.jpg",
-  "imageAlt": "Original Strata Property Services planning diagram: map it, assign it, check it. Illustrative layout; not a Township map, project photograph or equipment specification.",
-  "imageCaption": "Original Strata Property Services planning diagram: map it, assign it, check it. Illustrative layout; not a Township map, project photograph or equipment specification.",
+  "image": "images/wow-langley-story-v1.jpg",
+  "imageAlt": "Wow maps the walking route beside a Langley welcome sign, connecting homes and entrances. AI illustration by PlowWow; the sign is decorative and does not imply Township endorsement.",
+  "imageCaption": "Wow maps the walking route beside a Langley welcome sign, connecting homes and entrances. AI illustration by PlowWow; the sign is decorative and does not imply Township endorsement.",
   "relatedProjectLinks": [
     {
       "label": "Township of Langley snow and ice guidance",
@@ -106,6 +129,14 @@ export const blogPosts: BlogPost[] = [
     {
       "label": "Discuss a PlowWow winter-service plan",
       "href": "https://www.plowwow.com/quote"
+    }
+  ],
+  "inlineVisuals": [
+    {
+      "afterParagraph": 6,
+      "src": "images/wow-ice-story-v1.jpg",
+      "alt": "Wow checks an icy patch beside an entrance and marks a clear route around it. AI illustration by PlowWow.",
+      "caption": "Wow checks an icy patch beside an entrance and marks a clear route around it. AI illustration by PlowWow."
     }
   ]
 },
