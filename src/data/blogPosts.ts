@@ -22,6 +22,56 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "metro-vancouver-strata-mild-winter-council-planning",
+  "title": "Metro Vancouver Stratas: Plan for the Event, Not Just the Winter Headline",
+  "excerpt": "Use mild-winter headlines to review strata service scopes, contacts and response scenarios without assuming a snow-free season.",
+  "metaDescription": "Use mild-winter headlines to review strata service scopes, contacts and response scenarios without assuming a snow-free season.",
+  "content": [
+    "A mild-winter headline can quickly become a council question: should we change our winter arrangements? Start with the property obligations and the agreement already in place. A seasonal discussion is useful when it leads to clearer responsibilities, rather than an assumption that no winter work will be needed.",
+    "Separate the average from the individual event: Environment Canada explains seasonal forecasts through probabilities for temperature and precipitation categories. A broad outlook is different from a daily forecast for the property. It should not be read as a guarantee about the number or timing of local service events.",
+    "Review the actual service brief: Collect the signed agreement, site map and current contact list. Check which frontage, private paths, entrances and vehicle areas are included. Confirm how ordinary service is triggered and how additional concerns are reported. If council wants a scope change, discuss it with the provider and record the outcome instead of treating a forecast headline as a change instruction.",
+    "Keep a modest event exercise on the agenda: Ask the manager to walk through a single reported entrance problem. Who receives the message? Who assesses it? Who can request a visit, and what is communicated to residents? Then consider a more disruptive snowfall with blocked access. The exercise can expose an unclear handover even if the rest of the season is uneventful.",
+    "Compare complete scopes when reviewing costs: A proposal should make included areas, dispatch terms, inspection arrangements, materials and exclusions visible. Council can then compare the same work rather than a seasonal label. Do not infer a revised price, refund or visit allowance from the weather discussion. Any commercial change belongs in the provider conversation and the written terms.",
+    "Give residents one reporting process: Use consistent location names on notices and the site map. Ask residents to identify the place, time and nature of a concern; photographs are helpful when safe to obtain. A named management contact and backup reduce contradictory instructions. Keep private gate and access information within the assigned operational team.",
+    "Treat drainage observations as building information: Note where water crosses a walkway, collects at an entrance or comes from a downspout. Share those observations with both the winter provider and the building maintenance contact. A recurring water source may need a separate maintenance decision. Record what was reported, who owns the next action and how residents will be updated.",
+    "Use regional wording without losing the address: Metro Vancouver helps readers find regional guidance. The winter plan should still identify the municipality, actual boundaries and route constraints. Keep Fraser Valley properties clearly identified when managing a wider portfolio. Confirm current local requirements directly with the municipality, then make the property responsibilities explicit on the council map."
+  ],
+  "category": "Snow Removal",
+  "tradeSlugs": [
+    "snow-removal"
+  ],
+  "citySlugs": [
+    "vancouver",
+    "burnaby",
+    "surrey",
+    "richmond",
+    "coquitlam"
+  ],
+  "date": "2026-10-15",
+  "readTime": "4 min read",
+  "image": "images/metro-vancouver-strata-mild-winter-council-planning.jpg",
+  "imageAlt": "Original Strata Property Services readiness diagram: scope, contacts, scenarios. A planning illustration, not a weather forecast or a project photograph.",
+  "imageCaption": "Original Strata Property Services readiness diagram: scope, contacts, scenarios. A planning illustration, not a weather forecast or a project photograph.",
+  "relatedProjectLinks": [
+    {
+      "label": "Environment Canada seasonal forecast overview",
+      "href": "https://weather.gc.ca/saisons/"
+    },
+    {
+      "label": "Understanding seasonal forecast probabilities",
+      "href": "https://weather.gc.ca/saisons/prob_e.html"
+    },
+    {
+      "label": "Vancouver Sun winter-outlook discussion (prompt, not independently verified reporting)",
+      "href": "https://vancouversun.com/news/local-news/could-bc-be-headed-for-a-record-breaking-mild-winter"
+    },
+    {
+      "label": "Discuss a PlowWow winter-service plan",
+      "href": "https://www.plowwow.com/quote"
+    }
+  ]
+},
+{
   "slug": "langley-township-strata-winter-council-route-checklist",
   "title": "Township of Langley Stratas: Give Every Winter Route an Owner",
   "excerpt": "A council checklist for sidewalk responsibility, private paths, snow storage, drainage observations and clear winter-service reporting.",
