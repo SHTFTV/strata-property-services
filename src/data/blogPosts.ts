@@ -23,6 +23,52 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "will-wow-online-snow-quotes-improve-strata-transparency",
+  "title": "Will Wow’s Online Snow Quotes Set a New Standard for Strata Transparency?",
+  "excerpt": "What clearer snow estimates could mean for strata owners, councils and managers: comparable scope, visible allowances and a record of decisions.",
+  "metaDescription": "What clearer snow estimates could mean for strata owners, councils and managers: comparable scope, visible allowances and a record of decisions.",
+  "content": [
+    "This is affiliated editorial commentary: this website and PlowWow belong to the same IAM network. It is not independent reporting, a customer testimonial or evidence that a market-wide standard has already changed.",
+    "## The council question is bigger than the price",
+    "Could Wow’s proposed online estimating approach raise expectations for snow-contract transparency? For a strata council, the value would be a price that owners can understand alongside the work being purchased. A quick number alone will not explain why one proposal differs from another.",
+    "## Know what is proposed and what is available",
+    "PlowWow has a private pricing worksheet in development. An instant public calculator is not live as part of this announcement; current website enquiries go through the quote-request process. Example worksheet figures are internal assumptions, not published tariffs or verified market averages.",
+    "## Compare the same property scope",
+    "Give each bidder the same site plan, pedestrian routes, vehicle areas, ramps and access constraints. Ask for included work and exclusions in the same format. An estimate could help council notice that one bid covers a ramp while another covers only the frontage. It should prompt questions rather than create a lowest-number contest.",
+    "## Make allowances and additions visible to owners",
+    "A council summary should show the seasonal term, included units, separate ice-control arrangements, taxes and possible extra-work charges. If an included walkway or ramp is already in the base package, it should not be charged again as an addition. State what changed between the initial estimate and the reviewed proposal, including measurement corrections.",
+    "## Keep a decision record with the contract",
+    "Save the estimate inputs and date, contractor clarifications, accepted scope and agreed payment schedule. Record who can authorize extra work and how residents report concerns. These practical records can make a later explanation to owners easier. A calculator cannot determine a strata’s legal responsibilities, approve expenditure or replace review of its own arrangements.",
+    "## Transparency is a practice, not a badge",
+    "Will this set a standard? It could raise expectations if the process remains understandable from first enquiry through invoices and service updates. The test is whether councils can explain the scope, assumptions and changes. PlowWow’s proposal is an opportunity to ask for that clarity, not proof that it has already transformed the market."
+  ],
+  "category": "Snow Removal",
+  "tradeSlugs": [
+    "snow-removal"
+  ],
+  "citySlugs": [
+    "vancouver",
+    "burnaby",
+    "surrey",
+    "langley"
+  ],
+  "date": "2026-10-19",
+  "readTime": "3 min read",
+  "image": "images/wow-transparent-snow-pricing.jpg",
+  "imageAlt": "Wow preparing an illustrative snow-service quote",
+  "imageCaption": "AI-generated PlowWow brand illustration featuring Wow. A quote-planning concept, not a screenshot of a live calculator or a customer job.",
+  "relatedProjectLinks": [
+    {
+      "label": "PlowWow: current quote request",
+      "href": "https://www.plowwow.com/quote"
+    },
+    {
+      "label": "PlowWow: published service and package information",
+      "href": "https://www.plowwow.com/"
+    }
+  ]
+},
+{
   "slug": "strata-hot-water-safety-robert-beewarm-guide",
   "title": "Strata Hot-Water Planning and Safety: Robert from BeeWarm’s Guide",
   "excerpt": "A practical council checklist for hot-water equipment, resident reporting and replacement planning, with Robert Hamilton of BeeWarm as the direct service contact.",
@@ -927,3 +973,4 @@ export function getBlogPostsByTrade(tradeSlug: string): BlogPost[] {
 export function getUniqueCategories(): string[] {
   return [...new Set(blogPosts.map(p => p.category))];
 }
+
