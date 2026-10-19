@@ -23,6 +23,78 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "strata-hot-water-safety-robert-beewarm-guide",
+  "title": "Strata Hot-Water Planning and Safety: Robert from BeeWarm’s Guide",
+  "excerpt": "A practical council checklist for hot-water equipment, resident reporting and replacement planning, with Robert Hamilton of BeeWarm as the direct service contact.",
+  "metaDescription": "Plan strata hot-water maintenance, access and replacement enquiries. Read Rob Bee’s heat-pump tank guide and contact Robert Hamilton at BeeWarm.",
+  "category": "Heating & Hot Water",
+  "tradeSlugs": [
+    "plumbing",
+    "hvac"
+  ],
+  "citySlugs": [
+    "vancouver",
+    "burnaby",
+    "surrey",
+    "langley",
+    "coquitlam"
+  ],
+  "date": "2026-10-19",
+  "readTime": "3 min read",
+  "image": "images/rob-bee-heat-pump-hot-water.jpg",
+  "imageAlt": "Rob Bee mascot beside an illustrative heat-pump water heater",
+  "imageCaption": "AI-generated BeeWarm concept artwork; not a customer installation or a specific manufacturer’s product.",
+  "content": [
+    "For strata councils and property managers, a hot-water project begins with a clear building brief. Identify what equipment serves each home, what is shared, and who coordinates access and reporting. This companion checklist links to BeeWarm’s Robert / Rob Bee guide; it is editorial planning information, rather than a claim that Robert has inspected the property or reviewed this article.",
+    "## Read Robert / Rob Bee’s full guide",
+    "BeeWarm’s guide to heat-pump hot water tanks explains room suitability, household demand, operating modes and the complete installation scope. Use the full guide linked below before asking for a replacement assessment. A space-heating heat pump and a domestic hot-water tank serve different needs; ask which system the proposal will change.",
+    "## Give the building team one equipment record",
+    "Keep model details, location, service history and the contractor’s handover documents together. Record whether a tank serves a single home or multiple units. Ask the manager to confirm the applicable ownership and approval arrangements before anyone authorizes a change. Avoid assigning responsibility solely because an appliance is physically inside a suite.",
+    "## Make safe reporting easy for residents",
+    "Provide one reporting contact and a backup. Ask residents to describe loss of hot water, visible leakage, unusual sounds or an alarm without opening covers or disturbing equipment. Photos should be taken only from a safe, accessible position. Do not ask residents to diagnose gas, wiring, venting or safety controls. Keep private access instructions within the building team.",
+    "## Keep emergencies separate from routine bookings",
+    "If gas is smelled, stop, go outside and call FortisBC’s emergency line at 1-800-663-9911 or 911 from outside. Do not use phones or electrical switches in the affected area. If a carbon-monoxide alarm sounds or exposure is suspected, leave immediately and call 911 from outside. Do not wait for an email reply or a normal contractor appointment. Official FortisBC guidance is linked below.",
+    "## Plan access before the service visit",
+    "Identify who can authorize entry, how residents will be notified and whether a shared water shutdown needs coordination. Give the contractor a building contact and a clear description of the affected system. Include stairs, doorways and the removal route when discussing replacement. A good access plan helps the assessor understand the work without residents moving or disconnecting equipment.",
+    "## Review the room before switching to a heat-pump tank",
+    "Ask the installer to check the selected model’s airflow, temperature range, sound, maintenance clearances, electrical supply and condensate arrangements. A small utility cupboard is not approved by a generic search-result measurement. Shared demand also deserves a project-specific assessment; a household example should not be copied into a whole-building specification.",
+    "## Ask for a complete proposal and handover",
+    "Request the model, capacity assumptions, removal, trade coordination, permits, commissioning and exclusions in writing. Confirm approvals and any rebate eligibility separately before relying on them. Keep operating instructions and maintenance requirements with the building record, and agree how outstanding items will be tracked.",
+    "## Contact Robert Hamilton at BeeWarm",
+    "For a Lower Mainland heating or hot-water enquiry, call Robert at 604-765-8424 or email bee@beewarm.ca. Include the building location, equipment details, whether service is shared and the problem or planned change. Confirm availability and the scope BeeWarm can support directly. The links below include the full Rob Bee guide, a separate installation checklist and direct call, text and email options."
+  ],
+  "relatedProjectLinks": [
+    {
+      "label": "Read Robert / Rob Bee’s heat-pump hot-water guide",
+      "href": "https://beewarm.ca/rob-bee-heat-pump-hot-water-guide/"
+    },
+    {
+      "label": "Hot-water installation checklist",
+      "href": "https://hotwatertankinstallation.ca/blog/heat-pump-hot-water-tank-installation-checklist/"
+    },
+    {
+      "label": "Call Robert at BeeWarm: 604-765-8424",
+      "href": "tel:+16047658424"
+    },
+    {
+      "label": "Text Robert",
+      "href": "sms:+16047658424"
+    },
+    {
+      "label": "Email BeeWarm: bee@beewarm.ca",
+      "href": "mailto:bee@beewarm.ca"
+    },
+    {
+      "label": "FortisBC: gas leaks and odour",
+      "href": "https://www.fortisbc.com/safety-outages/energy-safety/natural-gas-safety/gas-leaks-and-odour"
+    },
+    {
+      "label": "FortisBC: carbon-monoxide safety",
+      "href": "https://www.fortisbc.com/safety-outages/energy-safety/natural-gas-safety/carbon-monoxide-safety"
+    }
+  ]
+},
+{
   "slug": "metro-vancouver-strata-mild-winter-council-planning",
   "title": "Metro Vancouver Stratas: Plan for the Event, Not Just the Winter Headline",
   "excerpt": "Use mild-winter headlines to review strata service scopes, contacts and response scenarios without assuming a snow-free season.",

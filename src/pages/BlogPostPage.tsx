@@ -30,6 +30,7 @@ export default function BlogPostPage() {
   }
 
   const isPlowWow = post.slug === "fairview-slopes-strata-snow-removal-access-planning" || post.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist";
+  const isBeeWarm = post.slug === "strata-hot-water-safety-robert-beewarm-guide";
   const isPSI = post.slug === "vancouver-strata-spray-insulation-monoglass-repairs-psi";
   const relatedTrades = trades.filter(t => post.tradeSlugs.includes(t.slug));
   const relatedPosts = post.tradeSlugs
@@ -184,15 +185,15 @@ export default function BlogPostPage() {
               <div className="sticky top-24 space-y-6">
                 <div className="bg-secondary text-white p-8 rounded-2xl shadow-2xl">
                   <h3 className="text-xl font-bold mb-4 text-primary">Need This Service?</h3>
-                  <p className="text-sm text-slate-300 mb-6">{isPlowWow ? "Discuss your Kitsilano or West Side winter-service scope with PlowWow." : isPSI ? "Discuss your insulation or repair scope with Performance Spray Insulation." : "Get a free quote from our experienced team. 35+ years serving the Lower Mainland."}</p>
+                  <p className="text-sm text-slate-300 mb-6">{isBeeWarm ? "Discuss your heating or hot-water project with Robert Hamilton at BeeWarm. Confirm availability directly." : isPlowWow ? "Discuss your Kitsilano or West Side winter-service scope with PlowWow." : isPSI ? "Discuss your insulation or repair scope with Performance Spray Insulation." : "Get a free quote from our experienced team. 35+ years serving the Lower Mainland."}</p>
                   <a
-                    href={isPSI ? "tel:+17787794353" : `tel:${contacts.colin.phoneTel}`}
+                    href={isBeeWarm ? "tel:+16047658424" : isPSI ? "tel:+17787794353" : `tel:${contacts.colin.phoneTel}`}
                     className="bg-primary hover:bg-accent text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 w-full mb-3"
                   >
-                    <Phone className="w-4 h-4" /> Call {isPSI ? "778-779-4353" : contacts.colin.phone}
+                    <Phone className="w-4 h-4" /> Call {isBeeWarm ? "604-765-8424" : isPSI ? "778-779-4353" : contacts.colin.phone}
                   </a>
-                  <a href={isPlowWow ? "mailto:wow@plowwow.com" : isPSI ? "mailto:insulatevancouver@gmail.com" : "/#contact"} className="border-2 border-white text-white font-bold px-6 py-3 rounded-xl hover:bg-white hover:text-secondary transition-all flex items-center justify-center w-full text-sm">
-                    {isPlowWow ? "Email PlowWow" : isPSI ? "Email Performance Spray Insulation" : "Request a Quote Online"}
+                  <a href={isBeeWarm ? "mailto:bee@beewarm.ca" : isPlowWow ? "mailto:wow@plowwow.com" : isPSI ? "mailto:insulatevancouver@gmail.com" : "/#contact"} className="border-2 border-white text-white font-bold px-6 py-3 rounded-xl hover:bg-white hover:text-secondary transition-all flex items-center justify-center w-full text-sm">
+                    {isBeeWarm ? "Email Robert at BeeWarm" : isPlowWow ? "Email PlowWow" : isPSI ? "Email Performance Spray Insulation" : "Request a Quote Online"}
                   </a>
                 </div>
 
@@ -247,10 +248,10 @@ export default function BlogPostPage() {
       <section className="py-16 px-6 bg-secondary text-white">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-black mb-4">Ready to Get Started?</h2>
-          <p className="text-slate-300 mb-8">{isPlowWow ? "Contact PlowWow with your building address, priority routes and access details." : isPSI ? "Contact Performance Spray Insulation with your building location, photos and proposed work." : "Contact Strata Property Services for a free, no-obligation quote. 35+ years of trusted service across the Lower Mainland."}</p>
+          <p className="text-slate-300 mb-8">{isBeeWarm ? "Contact Robert at BeeWarm with your building location, equipment details and proposed work." : isPlowWow ? "Contact PlowWow with your building address, priority routes and access details." : isPSI ? "Contact Performance Spray Insulation with your building location, photos and proposed work." : "Contact Strata Property Services for a free, no-obligation quote. 35+ years of trusted service across the Lower Mainland."}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={isPSI ? "tel:+17787794353" : `tel:${contacts.colin.phoneTel}`} className="bg-primary hover:bg-accent text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg inline-flex items-center justify-center gap-2 text-lg">
-              <Phone className="w-5 h-5" /> Call {isPSI ? "778-779-4353" : contacts.colin.phone}
+            <a href={isBeeWarm ? "tel:+16047658424" : isPSI ? "tel:+17787794353" : `tel:${contacts.colin.phoneTel}`} className="bg-primary hover:bg-accent text-white font-bold px-8 py-4 rounded-xl transition-all shadow-lg inline-flex items-center justify-center gap-2 text-lg">
+              <Phone className="w-5 h-5" /> Call {isBeeWarm ? "604-765-8424" : isPSI ? "778-779-4353" : contacts.colin.phone}
             </a>
             <Link href="/blog" className="border-2 border-white text-white font-bold px-8 py-4 rounded-xl hover:bg-white hover:text-secondary transition-all inline-flex items-center justify-center text-lg">
               More Articles
