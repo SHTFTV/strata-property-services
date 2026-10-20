@@ -67,10 +67,11 @@ export function Navbar() {
         <div className="flex items-center gap-2 sm:gap-4">
           <a
             href={`tel:${contacts.colin.phoneTel}`}
-            className="bg-primary hover:bg-accent px-5 py-2.5 rounded-lg font-bold transition-all flex items-center gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 active:translate-y-0"
+            aria-label={`Call Strata Property Services at ${contacts.colin.phone}`}
+            className="bg-primary hover:bg-accent shrink-0 px-3 sm:px-5 py-2.5 rounded-lg font-bold transition-all flex items-center gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/40 hover:-translate-y-0.5 active:translate-y-0"
           >
             <Phone className="w-4 h-4" />
-            <span className="hidden sm:inline">Call Now:</span> {contacts.colin.phone}
+            <span className="hidden sm:inline">Call Now:</span> <span className="hidden sm:inline">{contacts.colin.phone}</span>
           </a>
           <button className="lg:hidden" aria-label={mobileOpen ? "Close navigation" : "Open navigation"} aria-expanded={mobileOpen} onClick={() => setMobileOpen(!mobileOpen)}>
             {mobileOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
