@@ -1,3 +1,4 @@
+import PlowWowServiceCard from "@/components/PlowWowServiceCard";
 import { useParams, Link } from "wouter";
 import { trades } from "@/data/trades";
 import { cities } from "@/data/cities";
@@ -182,14 +183,14 @@ export default function TradePage() {
                       ))}
                     </ul>
                   </div>
-                  <div className="bg-card p-6 rounded-2xl border border-border shadow-sm">
+                  {trade.slug === "snow-removal" ? <PlowWowServiceCard /> : (<div className="bg-card p-6 rounded-2xl border border-border shadow-sm">
                     <h4 className="font-bold text-sm uppercase tracking-wider text-muted-foreground mb-3">Credentials</h4>
                     <div className="space-y-2 text-sm">
                       <div className="flex items-center gap-2"><Award className="w-4 h-4 text-primary" /><span>Class B Gas Fitter #CGA0100182243</span></div>
                       <div className="flex items-center gap-2"><FileCheck2 className="w-4 h-4 text-primary" /><span>Gas Contractor #LGA0041068</span></div>
                       <div className="flex items-center gap-2"><ShieldCheck className="w-4 h-4 text-primary" /><span>WorkSafeBC Insured</span></div>
                     </div>
-                  </div>
+                  </div>)}
                 </div>
               </aside>
             </div>

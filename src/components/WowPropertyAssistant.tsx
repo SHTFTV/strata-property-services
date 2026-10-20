@@ -18,7 +18,7 @@ export function WowPropertyAssistant() {
   const [location] = useLocation();
   const path = location.split(/[?#]/)[0].replace(/\/$/, "") || "/";
   const post = path.startsWith("/blog/") ? blogPosts.find(p => p.slug === path.slice(6)) : undefined;
-  const snow = path === "/services/snow-removal" || path.startsWith("/services/snow-removal/") || Boolean(post?.tradeSlugs.includes("snow-removal"));
+  const snow = path === "/services/snow-removal" || path.startsWith("/services/snow-removal/") || Boolean(post && (post.tradeSlugs.includes("snow-removal") || /snow/i.test(post.category)));
   const EMAIL = snow ? "wow@plowwow.com" : SPS_EMAIL;
   const EMAIL_HREF = `mailto:${EMAIL}`;
   const hasDedicatedCard = post?.slug === "fairview-slopes-strata-snow-removal-access-planning" || post?.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist" || post?.slug === "vancouver-strata-spray-insulation-monoglass-repairs-psi";

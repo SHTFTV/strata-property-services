@@ -1,3 +1,4 @@
+import PlowWowServiceCard from "@/components/PlowWowServiceCard";
 import PlowWowContactCard from "@/components/PlowWowContactCard";
 import PSIContactCard from "@/components/PSIContactCard";
 import { useParams, Link } from "wouter";
@@ -29,6 +30,7 @@ export default function BlogPostPage() {
     );
   }
 
+  const isSnowPost = post.tradeSlugs.includes("snow-removal") || /snow/i.test(post.category);
   const isPlowWow = post.slug === "fairview-slopes-strata-snow-removal-access-planning" || post.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist";
   const isBeeWarm = post.slug === "strata-hot-water-safety-robert-beewarm-guide";
   const isPSI = post.slug === "vancouver-strata-spray-insulation-monoglass-repairs-psi";
@@ -183,7 +185,7 @@ export default function BlogPostPage() {
 
             <aside className="space-y-6">
               <div className="sticky top-24 space-y-6">
-                <div className="bg-secondary text-white p-8 rounded-2xl shadow-2xl">
+                {isSnowPost ? <PlowWowServiceCard /> : (<div className="bg-secondary text-white p-8 rounded-2xl shadow-2xl">
                   <h3 className="text-xl font-bold mb-4 text-primary">Need This Service?</h3>
                   <p className="text-sm text-slate-300 mb-6">{isBeeWarm ? "Discuss your heating or hot-water project with Robert Hamilton at BeeWarm. Confirm availability directly." : isPlowWow ? "Discuss your Kitsilano or West Side winter-service scope with PlowWow." : isPSI ? "Discuss your insulation or repair scope with Performance Spray Insulation." : "Get a free quote from our experienced team. 35+ years serving the Lower Mainland."}</p>
                   <a
@@ -195,7 +197,7 @@ export default function BlogPostPage() {
                   <a href={isBeeWarm ? "mailto:bee@beewarm.ca" : isPlowWow ? "mailto:wow@plowwow.com" : isPSI ? "mailto:insulatevancouver@gmail.com" : "/#contact"} className="border-2 border-white text-white font-bold px-6 py-3 rounded-xl hover:bg-white hover:text-secondary transition-all flex items-center justify-center w-full text-sm">
                     {isBeeWarm ? "Email Robert at BeeWarm" : isPlowWow ? "Email PlowWow" : isPSI ? "Email Performance Spray Insulation" : "Request a Quote Online"}
                   </a>
-                </div>
+                </div>)}
 
                 {relatedTrades.length > 0 && (
                   <div className="bg-card p-6 rounded-2xl border border-border shadow-sm">
