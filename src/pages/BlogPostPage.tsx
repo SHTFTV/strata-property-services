@@ -1,4 +1,3 @@
-import PlowWowServiceCard from "@/components/PlowWowServiceCard";
 import PlowWowContactCard from "@/components/PlowWowContactCard";
 import PSIContactCard from "@/components/PSIContactCard";
 import { useParams, Link } from "wouter";
@@ -185,7 +184,7 @@ export default function BlogPostPage() {
 
             <aside className="space-y-6">
               <div className="sticky top-24 space-y-6">
-                {isSnowPost ? <PlowWowServiceCard /> : (<div className="bg-secondary text-white p-8 rounded-2xl shadow-2xl">
+                {!isSnowPost && (<div className="bg-secondary text-white p-8 rounded-2xl shadow-2xl">
                   <h3 className="text-xl font-bold mb-4 text-primary">Need This Service?</h3>
                   <p className="text-sm text-slate-300 mb-6">{isBeeWarm ? "Discuss your heating or hot-water project with Robert Hamilton at BeeWarm. Confirm availability directly." : isPlowWow ? "Discuss your Kitsilano or West Side winter-service scope with PlowWow." : isPSI ? "Discuss your insulation or repair scope with Performance Spray Insulation." : "Get a free quote from our experienced team. 35+ years serving the Lower Mainland."}</p>
                   <a
