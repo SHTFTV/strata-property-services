@@ -35,7 +35,9 @@ export const blogPosts: BlogPost[] = [
     "## Review the operational plan",
     "Ask who monitors conditions, who attends and how residents report a missed route. Discuss local crew capacity and equipment backup. Special priority windows and dedicated machinery should have a clear scope and price. Keep insurance information and references with the bid review, and explain any material gaps to council before accepting the proposal.",
     "## Give owners a useful decision summary",
-    "Summarize the selected scope, seasonal cost, inclusions, exclusions and reasons for the choice. Keep revised plans and clarifications with the accepted agreement. A more expensive bid may include more work or capacity; a lower bid may be appropriate if its scope fits. The aim is a comparison council can explain, not an unsupported claim that another contractor’s margin is excessive."
+    "Summarize the selected scope, seasonal cost, inclusions, exclusions and reasons for the choice. Keep revised plans and clarifications with the accepted agreement. A more expensive bid may include more work or capacity; a lower bid may be appropriate if its scope fits. The aim is a comparison council can explain, not an unsupported claim that another contractor’s margin is excessive.",
+    "## Part of PlowWow’s Snow Intelligence app rollout",
+    "PlowWow’s preliminary pricing calculator is one component of the Snow Intelligence app it plans to roll out during 2026. The intended pricing coverage includes strata common areas, commercial sites and residential properties. For councils, the aim is a clearer starting point for comparing seasonal scope and additional ice treatment before obtaining a reviewed quote. The calculator remains in development; this update does not announce a live automatic quote for every address or a guaranteed accuracy rate. Strata Property Services and PlowWow are affiliated IAM network businesses."
   ],
   "category": "Snow Removal",
   "tradeSlugs": [
@@ -65,14 +67,22 @@ export const blogPosts: BlogPost[] = [
     {
       "label": "Request a reviewed property quote",
       "href": "https://www.plowwow.com/quote"
+    },
+    {
+      "label": "PlowWow Snow Intelligence",
+      "href": "https://www.plowwow.com/intelligence"
+    },
+    {
+      "label": "Plow.news: Snow Intelligence app rollout and pricing calculator",
+      "href": "https://www.plow.news/news/plowwow-bc-snow-pricing-calculator-development/"
     }
   ]
 },
 {
   "slug": "strata-snow-removal-pricing",
   "title": "Strata Snow Removal Pricing: Build a Budget Council Can Explain",
-  "excerpt": "Compare strata snow and ice contracts by scope, seasonal allowances, treatment and extras. A practical Lower Mainland guide for councils and managers.",
-  "metaDescription": "Compare strata snow and ice contracts by scope, seasonal allowances, treatment and extras. A practical Lower Mainland guide for councils and managers.",
+  "excerpt": "Compare strata winter-service scope and seasonal pricing, with an update on PlowWow’s planned 2026 Snow Intelligence app rollout.",
+  "metaDescription": "Compare strata winter-service scope and seasonal pricing, with an update on PlowWow’s planned 2026 Snow Intelligence app rollout.",
   "content": [
     "## The seasonal total needs a service definition",
     "Owners deserve to know what their winter budget buys. A strata snow removal price should identify the common areas, entrances and routes covered, the service season and the snow and ice work. Unit count alone is a poor substitute for scope: two equally sized strata communities can have very different grades, layouts, pedestrian routes and snow-storage constraints.",
@@ -83,7 +93,9 @@ export const blogPosts: BlogPost[] = [
     "## Keep changes and exclusions in the council record",
     "Use a marked plan and record contractor clarifications, authorized additions and the accepted seasonal price before tax. Identify who can approve extra work. Common walkway stairs may be part of the agreed route while stairs to individual units remain excluded. Snow relocation and hauling should be separately identified, with their equipment, trucking and other applicable charges explained.",
     "## Use an estimate to start a better review",
-    "PlowWow, an affiliated IAM network business, is developing a preliminary pricing calculator. It is still being refined and is not a verified accuracy guarantee. A council can request a reviewed quote now, then document what changed from the original assumptions. An online estimate does not replace the accepted contract or the strata’s own approval process."
+    "PlowWow, an affiliated IAM network business, is developing a preliminary pricing calculator. It is still being refined and is not a verified accuracy guarantee. A council can request a reviewed quote now, then document what changed from the original assumptions. An online estimate does not replace the accepted contract or the strata’s own approval process.",
+    "## Part of PlowWow’s Snow Intelligence app rollout",
+    "PlowWow’s preliminary pricing calculator is one component of the Snow Intelligence app it plans to roll out during 2026. The intended pricing coverage includes strata common areas, commercial sites and residential properties. For councils, the aim is a clearer starting point for comparing seasonal scope and additional ice treatment before obtaining a reviewed quote. The calculator remains in development; this update does not announce a live automatic quote for every address or a guaranteed accuracy rate. Strata Property Services and PlowWow are affiliated IAM network businesses."
   ],
   "category": "Snow Removal",
   "tradeSlugs": [
@@ -117,6 +129,14 @@ export const blogPosts: BlogPost[] = [
     {
       "label": "Request a reviewed property quote",
       "href": "https://www.plowwow.com/quote"
+    },
+    {
+      "label": "PlowWow Snow Intelligence",
+      "href": "https://www.plowwow.com/intelligence"
+    },
+    {
+      "label": "Plow.news: Snow Intelligence app rollout and pricing calculator",
+      "href": "https://www.plow.news/news/plowwow-bc-snow-pricing-calculator-development/"
     }
   ]
 },
@@ -138,7 +158,9 @@ export const blogPosts: BlogPost[] = [
     "## Keep a decision record with the contract",
     "Save the estimate inputs and date, contractor clarifications, accepted scope and agreed payment schedule. Record who can authorize extra work and how residents report concerns. These practical records can make a later explanation to owners easier. A calculator cannot determine a strata’s legal responsibilities, approve expenditure or replace review of its own arrangements.",
     "## Transparency is a practice, not a badge",
-    "Will this set a standard? It could raise expectations if the process remains understandable from first enquiry through invoices and service updates. The test is whether councils can explain the scope, assumptions and changes. PlowWow’s proposal is an opportunity to ask for that clarity, not proof that it has already transformed the market."
+    "Will this set a standard? It could raise expectations if the process remains understandable from first enquiry through invoices and service updates. The test is whether councils can explain the scope, assumptions and changes. PlowWow’s proposal is an opportunity to ask for that clarity, not proof that it has already transformed the market.",
+    "## Part of PlowWow’s Snow Intelligence app rollout",
+    "PlowWow’s preliminary pricing calculator is one component of the Snow Intelligence app it plans to roll out during 2026. The intended pricing coverage includes strata common areas, commercial sites and residential properties. For councils, the aim is a clearer starting point for comparing seasonal scope and additional ice treatment before obtaining a reviewed quote. The calculator remains in development; this update does not announce a live automatic quote for every address or a guaranteed accuracy rate. Strata Property Services and PlowWow are affiliated IAM network businesses."
   ],
   "category": "Snow Removal",
   "tradeSlugs": [
@@ -163,6 +185,14 @@ export const blogPosts: BlogPost[] = [
     {
       "label": "PlowWow: published service and package information",
       "href": "https://www.plowwow.com/"
+    },
+    {
+      "label": "PlowWow Snow Intelligence",
+      "href": "https://www.plowwow.com/intelligence"
+    },
+    {
+      "label": "Plow.news: Snow Intelligence app rollout and pricing calculator",
+      "href": "https://www.plow.news/news/plowwow-bc-snow-pricing-calculator-development/"
     }
   ]
 },
