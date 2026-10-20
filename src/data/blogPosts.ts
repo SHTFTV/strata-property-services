@@ -23,6 +23,104 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "compare-strata-snow-removal-quotes",
+  "title": "How Strata Councils Can Compare Snow Removal Quotes Fairly",
+  "excerpt": "Use the same property plan, treatment scope and winter terms to compare snow removal proposals and explain the decision to owners.",
+  "metaDescription": "Use the same property plan, treatment scope and winter terms to compare snow removal proposals and explain the decision to owners.",
+  "content": [
+    "## Send every bidder the same brief",
+    "Start with a property plan and the same list of common pedestrian routes, parking lanes, entrances and ramps. Identify access restrictions, storage areas and any individual-unit work requested. Ask bidders to state exclusions explicitly. If one contractor covers the whole lot and another covers only circulation lanes, council should record the distinction before deciding which proposal offers better value.",
+    "## Normalize the payment and service terms",
+    "Compare the full seasonal total before GST, not a monthly instalment against a full-season figure. Record the dates, clearing trigger, treatment arrangements and agreed attendance obligations. Note visit limits, extra snowfall charges and repeat-pass rules. Ask how any product substitution or additional work is authorized. These questions make differing contract models understandable without forcing them into an invented identical price.",
+    "## Review the operational plan",
+    "Ask who monitors conditions, who attends and how residents report a missed route. Discuss local crew capacity and equipment backup. Special priority windows and dedicated machinery should have a clear scope and price. Keep insurance information and references with the bid review, and explain any material gaps to council before accepting the proposal.",
+    "## Give owners a useful decision summary",
+    "Summarize the selected scope, seasonal cost, inclusions, exclusions and reasons for the choice. Keep revised plans and clarifications with the accepted agreement. A more expensive bid may include more work or capacity; a lower bid may be appropriate if its scope fits. The aim is a comparison council can explain, not an unsupported claim that another contractor’s margin is excessive."
+  ],
+  "category": "Snow Removal",
+  "tradeSlugs": [
+    "snow-removal"
+  ],
+  "citySlugs": [
+    "vancouver",
+    "burnaby",
+    "surrey",
+    "langley",
+    "coquitlam"
+  ],
+  "date": "2026-10-19",
+  "readTime": "4 min read",
+  "image": "images/wow-transparent-snow-pricing.jpg",
+  "imageAlt": "Wow, the PlowWow mascot, explaining property quote planning",
+  "imageCaption": "AI-generated affiliated PlowWow brand illustration; not a live calculator screenshot.",
+  "relatedProjectLinks": [
+    {
+      "label": "Strata Snow Removal Pricing: Build a Budget Council Can Explain",
+      "href": "https://www.stratapropertyservices.com/blog/strata-snow-removal-pricing"
+    },
+    {
+      "label": "How to Choose a Great Snow Removal Contractor: Wow’s Checklist",
+      "href": "https://www.plowwow.com/how-to-choose-snow-removal-contractor/"
+    },
+    {
+      "label": "Request a reviewed property quote",
+      "href": "https://www.plowwow.com/quote"
+    }
+  ]
+},
+{
+  "slug": "strata-snow-removal-pricing",
+  "title": "Strata Snow Removal Pricing: Build a Budget Council Can Explain",
+  "excerpt": "Compare strata snow and ice contracts by scope, seasonal allowances, treatment and extras. A practical Lower Mainland guide for councils and managers.",
+  "metaDescription": "Compare strata snow and ice contracts by scope, seasonal allowances, treatment and extras. A practical Lower Mainland guide for councils and managers.",
+  "content": [
+    "## The seasonal total needs a service definition",
+    "Owners deserve to know what their winter budget buys. A strata snow removal price should identify the common areas, entrances and routes covered, the service season and the snow and ice work. Unit count alone is a poor substitute for scope: two equally sized strata communities can have very different grades, layouts, pedestrian routes and snow-storage constraints.",
+    "## Budget for availability as well as attendance",
+    "Winter contracts may fund monitoring, readiness, equipment and crew capacity as well as completed visits. A low-snow year does not eliminate every operating cost. Councils should ask how the proposal funds backup and what attendance obligations are actually accepted. A fixed seasonal price, a limited package and per-event billing allocate weather risk differently; compare their terms before comparing totals.",
+    "## Make additional treatment visible",
+    "A snow-clearing visit may already include treatment, so avoid counting that treatment again as an extra salt-only visit. Separate the allowance for additional ice-control work. Identify the product and the treated surfaces, especially ramps, shaded areas and drainage trouble spots. No generic calculator can determine the correct application rate for every surface or weather condition.",
+    "## Keep changes and exclusions in the council record",
+    "Use a marked plan and record contractor clarifications, authorized additions and the accepted seasonal price before tax. Identify who can approve extra work. Common walkway stairs may be part of the agreed route while stairs to individual units remain excluded. Snow relocation and hauling should be separately identified, with their equipment, trucking and other applicable charges explained.",
+    "## Use an estimate to start a better review",
+    "PlowWow, an affiliated IAM network business, is developing a preliminary pricing calculator. It is still being refined and is not a verified accuracy guarantee. A council can request a reviewed quote now, then document what changed from the original assumptions. An online estimate does not replace the accepted contract or the strata’s own approval process."
+  ],
+  "category": "Snow Removal",
+  "tradeSlugs": [
+    "snow-removal"
+  ],
+  "citySlugs": [
+    "vancouver",
+    "burnaby",
+    "surrey",
+    "langley",
+    "coquitlam"
+  ],
+  "date": "2026-10-19",
+  "readTime": "4 min read",
+  "image": "images/wow-transparent-snow-pricing.jpg",
+  "imageAlt": "Wow, the PlowWow mascot, explaining property quote planning",
+  "imageCaption": "AI-generated affiliated PlowWow brand illustration; not a live calculator screenshot.",
+  "relatedProjectLinks": [
+    {
+      "label": "How Strata Councils Can Compare Snow Removal Quotes Fairly",
+      "href": "https://www.stratapropertyservices.com/blog/compare-strata-snow-removal-quotes"
+    },
+    {
+      "label": "How Much Does Snow Removal Cost in the Lower Mainland?",
+      "href": "https://www.plowwow.com/snow-removal-pricing-lower-mainland/"
+    },
+    {
+      "label": "What Does Snow Removal Really Cost? Seasonal vs Per-Event Pricing",
+      "href": "https://www.plow.news/news/snow-removal-cost-seasonal-vs-per-event/"
+    },
+    {
+      "label": "Request a reviewed property quote",
+      "href": "https://www.plowwow.com/quote"
+    }
+  ]
+},
+{
   "slug": "will-wow-online-snow-quotes-improve-strata-transparency",
   "title": "Will Wow’s Online Snow Quotes Set a New Standard for Strata Transparency?",
   "excerpt": "What clearer snow estimates could mean for strata owners, councils and managers: comparable scope, visible allowances and a record of decisions.",
