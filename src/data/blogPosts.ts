@@ -21,7 +21,10 @@ export interface BlogPost {
   relatedProjectLinks?: { label: string; href: string }[];
 }
 
+import { snowCostPosts2026 } from "./snowCostPosts2026";
+
 export const blogPosts: BlogPost[] = [
+  ...snowCostPosts2026,
 {
   "slug": "compare-strata-snow-removal-quotes",
   "title": "How Strata Councils Can Compare Snow Removal Quotes Fairly",

@@ -15,6 +15,7 @@ export function BlogSection() {
           <h2 className="text-3xl md:text-4xl font-black text-foreground mt-3 mb-4">
             Latest From Our Blog
           </h2>
+          {recentPosts[0] && <p className="mb-4 text-sm font-semibold text-primary">Latest article: <time dateTime={recentPosts[0].date}>{new Date(`${recentPosts[0].date}T12:00:00Z`).toLocaleDateString("en-CA", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })}</time></p>}
           <p className="text-muted-foreground max-w-2xl mx-auto">
             Expert insights on Strata property maintenance, building systems, and contractor best practices for the Lower Mainland.
           </p>
