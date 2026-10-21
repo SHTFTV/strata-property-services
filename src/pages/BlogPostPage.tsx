@@ -263,7 +263,7 @@ export default function BlogPostPage() {
 
       {isPlowWow ? <SnowFooter/> : isPSI ? <PSIFooter/> : <Footer />}
       {isPSI && <PSIContactCard/>}
-      {isPlowWow && <PlowWowContactCard/>}
+      {isPlowWow && !post.slug.endsWith("-budget-2026-2027") && <PlowWowContactCard/>}
     </div>
   );
 }
