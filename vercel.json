@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/blog/common-area-ceiling-renewal-access-maintenance",
+      "destination": "/blog/common-area-ceiling-renewal-access-maintenance/index.html"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }
