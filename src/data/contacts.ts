@@ -13,7 +13,7 @@ export const contacts = {
     title: "Gas & HVAC Division Manager",
     phone: "604-765-8424",
     phoneTel: "+16047658424",
-    email: "info@stratapropertyservices.com",
+    email: "bee@beewarm.ca",
     website: "beewarm.ca",
     description: "Licensed Class B Gas Fitter and HVAC specialist. Robert manages all gas fitting, fireplace maintenance, HVAC installations, and plumbing services. Certified under TSBC with Gas Fitter License #CGA0100182243 and Gas Contractor License #LGA0041068.",
   },

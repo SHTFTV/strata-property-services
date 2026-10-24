@@ -1,3 +1,4 @@
+import { BeeWarmContactCard } from "./BeeWarmContactCard";
 import { useEffect, useState } from "react";
 import { ExternalLink, Mail, MessageSquare, Phone, Star, X } from "lucide-react";
 import { useLocation } from "wouter";
@@ -21,6 +22,7 @@ export function WowPropertyAssistant() {
   const snow = path === "/services/snow-removal" || path.startsWith("/services/snow-removal/") || Boolean(post && (post.tradeSlugs.includes("snow-removal") || /snow/i.test(post.category)));
   const EMAIL = snow ? "wow@plowwow.com" : SPS_EMAIL;
   const EMAIL_HREF = `mailto:${EMAIL}`;
+  const beeWarm = path === "/services/hvac" || path.startsWith("/services/hvac/") || Boolean(post && /beewarm/i.test(JSON.stringify(post)));
   const hasDedicatedCard = post?.slug === "beewarm-strata-fireplace-booking-app-beta" || post?.slug === "strata-hot-water-safety-robert-beewarm-guide" || post?.slug === "fairview-slopes-strata-snow-removal-access-planning" || post?.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist" || post?.slug === "vancouver-strata-spray-insulation-monoglass-repairs-psi";
   const brand = snow ? "PlowWow" : "StrataPropertyServices.com";
   const REVIEWS_URL = snow ? "https://www.google.com/search?q=PlowWow+snow+removal+Vancouver" : "https://www.google.com/search?q=Strata+Property+Services+Lower+Mainland";
@@ -37,6 +39,7 @@ export function WowPropertyAssistant() {
     return () => window.removeEventListener("keydown", dismissWithEscape);
   }, [visible]);
 
+  if (beeWarm) return <BeeWarmContactCard key={path}/>;
   if (hasDedicatedCard) return null;
   if (!visible) return <button type="button" onClick={() => setVisible(true)} aria-label={`Open ${brand} contact panel`} className="fixed bottom-4 right-4 z-[9999] rounded-full bg-slate-950 px-4 py-3 text-sm font-semibold text-white shadow-lg focus-visible:outline focus-visible:outline-2 focus-visible:outline-sky-400">Contact {snow ? "PlowWow" : "SPS"}</button>;
 

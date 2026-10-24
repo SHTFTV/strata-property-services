@@ -1,4 +1,3 @@
-import { BeeWarmContactCard } from "@/components/BeeWarmContactCard";
 import PlowWowContactCard from "@/components/PlowWowContactCard";
 import PSIContactCard from "@/components/PSIContactCard";
 import { useParams, Link } from "wouter";
@@ -269,7 +268,6 @@ export default function BlogPostPage() {
       </section>
 
       {isBeeWarm ? <BeeWarmFooter/> : isPlowWow ? <SnowFooter/> : isPSI ? <PSIFooter/> : <Footer />}
-      {isBeeWarm && <BeeWarmContactCard/>}
       {isPSI && <PSIContactCard/>}
       {isPlowWow && !post.slug.endsWith("-budget-2026-2027") && <PlowWowContactCard/>}
     </div>
