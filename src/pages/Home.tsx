@@ -16,7 +16,7 @@ export default function Home() {
       "@id": "https://www.stratapropertyservices.com/#organization",
       "name": "Strata Property Services",
       "url": "https://www.stratapropertyservices.com",
-      "description": "Strata Property Services — Vancouver's complete property maintenance partner. Snow removal, roofing, painting, rental turnovers, HVAC, plumbing, drainage, renovations and building maintenance.",
+      "description": "Strata Property Services — Vancouver's complete property maintenance partner. Strata snow removal, roofing, painting, rental turnovers, HVAC, plumbing, drainage, renovations and building maintenance.",
       "telephone": "+16047611518",
       "email": "info@stratapropertyservices.com",
       "image": "https://www.stratapropertyservices.com/opengraph.jpg",
@@ -41,7 +41,7 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
       {schemaMarkup.map((schema, i) => <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />)}
-      <SEO title="Strata Property Maintenance Vancouver & Lower Mainland" description="One coordinated partner for strata snow removal, roofing, painting, rental turnovers, HVAC, plumbing, drainage, renovations and building maintenance across Metro Vancouver." />
+      <SEO title="Strata Snow Removal & Property Services | Vancouver & Lower Mainland" description="One coordinated partner for strata snow removal, roofing, painting, rental turnovers, HVAC, plumbing, drainage, renovations and building maintenance across Metro Vancouver." />
       <Navbar />
       <main>
         <HeroSection />

@@ -14,7 +14,7 @@ const trustBadges = [
 
 const quickServices = [
   { name: "Gas Fireplaces", slug: "hvac", icon: Zap },
-  { name: "Snow Removal", slug: "snow-removal", icon: Snowflake },
+  { name: "Strata Snow Removal", slug: "snow-removal", icon: Snowflake },
   { name: "Roofing", slug: "roofing", icon: Building2 },
   { name: "Siding", slug: "siding", icon: Hammer },
   { name: "Painting", slug: "painting", icon: PaintBucket },
@@ -52,8 +52,10 @@ export function HeroSection() {
             </h1>
             
             <p className="text-xl text-slate-300 mb-8 max-w-xl font-medium leading-relaxed">
-              Your complete Strata property maintenance partner. Gas fireplaces, Roofing, HVAC, siding, painting, renovations, landscaping & more — all under one roof since 1989.
+              Your strata property maintenance partner for Vancouver and the Lower Mainland. Strata snow removal and salting through PlowWow™, plus gas fireplaces, roofing, HVAC, painting, renovations and building care.
             </p>
+
+            <p className="text-base text-slate-300 mb-6 max-w-xl"><Link href="/services/snow-removal" className="underline underline-offset-4 font-semibold text-white">Strata snow removal</Link> for condo and townhouse complexes: plan parking-lot plowing, walkway clearing and salting around your property’s agreed winter-service scope.</p>
 
             <div className="flex flex-wrap gap-2 mb-8">
               {quickServices.map((s) => (
