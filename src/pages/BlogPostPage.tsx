@@ -150,10 +150,16 @@ export default function BlogPostPage() {
         <div className="max-w-4xl mx-auto">
           <div className="grid lg:grid-cols-3 gap-12">
             <article className="lg:col-span-2 prose prose-slate prose-lg max-w-none">
+              {post.slug === "beewarm-strata-fireplace-booking-app-beta" ? <figure className="not-prose mb-8 overflow-hidden rounded-2xl border border-amber-200 bg-amber-50">
+                <a href="/images/beewarm-booking/sps-beewarm-booking-share.jpg" aria-label="Open the full-size BeeWarm promotional card"><img src="/images/beewarm-booking/sps-beewarm-booking-share.jpg" width={1200} height={630} alt="BeeWarm on Strata Property Services: All fired up. Built for strata. Coordinated group rates from $85 per fireplace before tax, for 20 or more confirmed fireplaces in a Rob-approved tight service block." className="block h-auto w-full" fetchPriority="high" /></a>
+                <figcaption className="px-4 pt-3 text-xs text-slate-600">BeeWarm promotional/share card · AI-generated brand illustration, not a customer service visit.</figcaption>
+                <div className="flex flex-wrap gap-3 p-4"><a href="https://beewarm.ca/fireplace-booking/" className="rounded-lg bg-slate-900 px-4 py-3 text-sm font-bold text-white">Plan fireplace servicing ↗</a><a href="/images/beewarm-booking/sps-beewarm-booking-share.jpg" download="BeeWarm-strata-fireplace-card.jpg" className="rounded-lg border border-amber-700 px-4 py-3 text-sm font-bold text-amber-900">Download share card ↓</a></div>
+              </figure> : (
               <figure className="rounded-2xl overflow-hidden mb-8 not-prose">
                 <img src={`${import.meta.env.BASE_URL}${post.image}`} alt={post.imageAlt || post.title} className={post.imageCaption ? "w-full h-auto" : "w-full h-64 md:h-80 object-cover"} />
                 {post.imageCaption && <figcaption className="p-4 text-sm text-muted-foreground">{post.imageCaption}</figcaption>}
               </figure>
+              )}
               <p className="text-xl text-muted-foreground font-medium leading-relaxed mb-8 not-prose">{post.excerpt}</p>
               {post.content.map((paragraph, i) => <div key={i}>{paragraph.startsWith("## ") ? <h2 className="text-2xl font-bold mt-8 mb-4">{paragraph.slice(3)}</h2> : <p className="text-muted-foreground leading-relaxed mb-6 not-prose">{paragraph}</p>}{post.inlineVisuals?.filter(photo => photo.afterParagraph === i).map(photo => <figure key={photo.src} className="not-prose my-10 overflow-hidden rounded-2xl border border-slate-200"><img src={`${import.meta.env.BASE_URL}${photo.src}`} alt={photo.alt} width={1024} height={576} loading="lazy" className="w-full h-auto"/><figcaption className="p-4 text-sm text-muted-foreground">{photo.caption}</figcaption></figure>)}</div>)}
               {post.gallery && post.gallery.length > 0 && (
