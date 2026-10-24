@@ -68,7 +68,7 @@ export default function BlogPostPage() {
         },
       },
       "wordCount": post.content.reduce((sum, p) => sum + p.split(/\s+/).length, 0),
-      "keywords": post.tradeSlugs.map(s => s.replace(/-/g, " ")).join(", "),
+      "keywords": post.searchPhrases?.join(", ") || post.tradeSlugs.map(s => s.replace(/-/g, " ")).join(", "),
       "articleSection": post.category,
       "inLanguage": "en-CA",
     },
@@ -107,7 +107,7 @@ export default function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
-      <SEO title={post.title} description={post.metaDescription} ogType="article" ogImage={`https://www.stratapropertyservices.com/${post.shareImage || post.image}`} ogImageAlt={post.imageAlt || post.gallery?.find(photo => photo.src === post.image)?.alt || post.title} />
+      <SEO title={post.seoTitle || post.title} description={post.metaDescription} ogType="article" ogImage={`https://www.stratapropertyservices.com/${post.shareImage || post.image}`} ogImageAlt={post.imageAlt || post.gallery?.find(photo => photo.src === post.image)?.alt || post.title} />
       {schemaMarkup.filter(schema => !(isPSI || isPlowWow || isBeeWarm) || schema["@type"] !== "Organization").map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}

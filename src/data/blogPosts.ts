@@ -17,6 +17,8 @@ export interface BlogPost {
   imageCaption?: string;
   imageAlt?: string;
   shareImage?: string;
+  seoTitle?: string;
+  searchPhrases?: string[];
   inlineVisuals?: { afterParagraph: number; src: string; alt: string; caption: string }[];
   gallery?: { src: string; alt: string; caption: string }[];
   relatedProjectLinks?: { label: string; href: string }[];
@@ -28,7 +30,7 @@ export const blogPosts: BlogPost[] = [
 {
   "slug": "beewarm-strata-fireplace-booking-app-beta",
   "title": "BeeWarm Is All Fired Up About Its Strata Fireplace Booking App",
-  "excerpt": "Plan a coordinated fireplace service day for your condo, townhouse or multifamily complex. BeeWarm’s booking app is in private beta, with individual requests available through Rob.",
+  "excerpt": "How much does fireplace service cost? BeeWarm’s individual estimate is $140 per fireplace before tax, with qualifying strata group rates from $85. Explore the private booking beta.",
   "category": "Gas Fireplaces",
   "tradeSlugs": [
     "hvac"
@@ -41,18 +43,21 @@ export const blogPosts: BlogPost[] = [
     "langley"
   ],
   "date": "2026-10-24",
-  "readTime": "5 min read",
-  "metaDescription": "BeeWarm’s strata fireplace booking beta: coordinated group rates from $85 per fireplace before tax, resident access planning and individual service enquiries.",
+  "readTime": "7 min read",
+  "metaDescription": "How much does fireplace service cost? BeeWarm: $140 individually, with tight strata groups from $85 per fireplace before tax. Lower Mainland enquiries welcome.",
   "image": "images/beewarm-booking/bee-fireplace.jpg",
   "shareImage": "images/beewarm-booking/sps-beewarm-booking-share.jpg",
   "imageAlt": "BeeWarm bee mascot beside a fireplace in an illustrative winter home scene",
   "imageCaption": "BeeWarm’s existing AI-generated brand illustration. Not a customer property, a service photograph or evidence of a completed visit.",
   "content": [
     "BeeWarm is all fired up about a simpler way to organize strata fireplace servicing. The new booking app brings building details, resident participation, access arrangements and Rob’s scheduling queue into one private beta workspace. It is being built around the people who need to make a service day work: strata councils, property managers, individual owners and Robert Hamilton at BeeWarm.",
+    "## How much does a fireplace service cost?",
+    "BeeWarm’s standard individual fireplace service estimate is $140 CAD per fireplace before tax. Coordinated strata rates are $140 each for 1–4 fireplaces, $120 each for 5–9, $100 each for 10–19 and $85 each for 20 or more. Rob confirms the service scope, availability and applicable tax before the appointment is agreed.",
     "## Book your fireplace service for a multifamily complex",
     "A condo or townhouse service day starts with a practical question: which owners want to participate, and when can the technician access their fireplaces? A list of interested units is useful, but it is not yet a workable schedule. BeeWarm’s approach connects the participation list with confirmed access and a service window that Rob can review before approving the booking.",
     "For a building-wide enquiry, contact Robert with the property location, an expected fireplace count and your proposed organizer. A manager or council member can help coordinate owners, while Rob confirms the service scope and availability. Service is not automatically booked just because a date is requested.",
-    "## Coordinated group rates, before tax",
+    "## Can a strata get a deal on bulk fireplace servicing?",
+    "Yes. BeeWarm offers group rates for tightly coordinated fireplace service bookings at the same property. The rate depends on the number of confirmed fireplaces in the Rob-approved service block. A building’s total unit count or a list of interested owners does not automatically qualify it for a bulk discount.",
     "The current group rates are CAD $140 per fireplace for 1–4 fireplaces; $120 each for 5–9; $100 each for 10–19; and $85 each for 20 or more. These are per-fireplace prices before tax, not a total price for the whole building. For example, an approved block of 20 confirmed fireplaces would have a service subtotal of $1,700 before tax.",
     "These rates require tight bookings: the fireplaces must form a coordinated same-property service block with access arranged and a schedule Rob can approve. The final group count is based on confirmed participating fireplaces, rather than the building’s total unit count or a list of expressions of interest. Scattered visits on unrelated dates do not automatically qualify as one group.",
     "If the confirmed count changes, the applicable group tier can change too. An estimate based on 20 interested owners is not a locked-in $85 rate if only 15 fireplaces are confirmed for the coordinated block. Ask Rob to confirm the rate and service scope before committing.",
@@ -71,10 +76,21 @@ export const blogPosts: BlogPost[] = [
     "## How to ask about service or beta participation",
     "Call Robert at 604-765-8424 or email bee@beewarm.ca. Include the building location, whether you are organizing a group or requesting an individual visit, the expected fireplace count and your preferred service period. Confirm availability and the work included directly with him.",
     "Strata Property Services is introducing this affiliated BeeWarm beta to its council and property-management audience. Fireplace enquiries on this page go directly to Robert at BeeWarm. The private staff app is linked below for authorized users only; it is not a public booking portal.",
-    "## Quick answers",
-    "Can an owner enquire without a strata group? Yes. Contact Robert about an individual visit. The standard individual estimate is $140 per fireplace before tax, subject to confirmed scope and availability.",
-    "What is needed for the $85 rate? At least 20 confirmed participating fireplaces within a tight same-property service block approved by Rob. Twenty interested owners alone do not establish eligibility.",
-    "Can residents register in the app now? Public registration is not enabled in this private beta. Ask Robert about current service options and participation rather than treating the staff sign-in page as an open customer portal."
+    "## Fireplace service cost and strata booking questions",
+    "## How much would fireplace servicing cost for 5, 10 or 20 participating fireplaces?",
+    "At the current qualifying group rates, 5 fireplaces total $600, 10 total $1,000 and 20 total $1,700 CAD before tax. These are service subtotals for approved coordinated blocks, not guaranteed quotes for every building. Rob must confirm the work and access plan.",
+    "## What does a tight strata fireplace booking mean?",
+    "It means a same-property service block with participating units identified, resident access confirmed and enough time for Rob to carry out the agreed work. Unrelated visits spread across different dates do not automatically form one discounted group. Rob reviews the proposed service window before approving the rate.",
+    "## Can individual condo or townhouse owners book fireplace service?",
+    "Yes. You can ask Rob about an individual fireplace visit even if your strata is not organizing a group. The standard individual estimate is $140 CAD per fireplace before tax. Individual requests do not automatically receive a building-wide discount.",
+    "## Is fireplace service available in Vancouver and the Lower Mainland?",
+    "BeeWarm welcomes service enquiries from Vancouver and the Lower Mainland, including Burnaby, Coquitlam, Surrey, Richmond, New Westminster and Langley. Give Rob the property location, fireplace details and proposed dates so he can confirm availability for that address. No city listing guarantees an immediate appointment.",
+    "## What is included in the fireplace service price?",
+    "Ask Rob to confirm the maintenance tasks, fireplace type and condition, access requirements, and any separately quoted diagnostic work, repairs or parts. The booking estimate alone is not a detailed service specification. Do not assume the advertised maintenance rate includes every possible fault or replacement component.",
+    "## Will the price change if fewer owners confirm access?",
+    "It can. Group pricing uses the number of confirmed fireplaces in the approved service block. If 20 owners express interest but only 15 fireplaces are confirmed, the 10–19 tier is $100 each before tax rather than the 20+ rate of $85. Confirm the final count and price with Rob.",
+    "## How do strata councils arrange a building-wide fireplace service day?",
+    "Choose an organizer, collect owner participation, identify the fireplaces and units, and discuss access and a preferred service period with Rob. He reviews the scope and a workable service block. Councils and property managers can contact Robert directly; public resident registration in the app is not enabled during this private beta."
   ],
   "relatedProjectLinks": [
     {
@@ -101,6 +117,14 @@ export const blogPosts: BlogPost[] = [
       "label": "SPS gas fireplace and HVAC services",
       "href": "https://www.stratapropertyservices.com/services/hvac"
     }
+  ],
+  "seoTitle": "Fireplace Service Cost & Strata Group Deals",
+  "searchPhrases": [
+    "gas fireplace service cost",
+    "strata fireplace service discounts",
+    "bulk fireplace servicing",
+    "Lower Mainland fireplace maintenance",
+    "condo fireplace service bookings"
   ]
 },
   ...snowCostPosts2026,
