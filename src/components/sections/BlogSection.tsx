@@ -43,7 +43,7 @@ export function BlogSection() {
                   <div className="flex items-center gap-3 text-xs text-muted-foreground mt-auto pt-3 border-t border-slate-100">
                     <span className="flex items-center gap-1">
                       <Calendar className="w-3 h-3" />
-                      {new Date(post.date).toLocaleDateString("en-CA", { month: "short", year: "numeric" })}
+                      <time dateTime={post.date}>{new Date(`${post.date}T12:00:00Z`).toLocaleDateString("en-CA", { month: "short", day:"numeric", year: "numeric", timeZone:"UTC" })}</time>
                     </span>
                     <span className="flex items-center gap-1">
                       <Clock className="w-3 h-3" />

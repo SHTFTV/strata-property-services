@@ -1,3 +1,4 @@
+import { BeeWarmContactCard } from "@/components/BeeWarmContactCard";
 import PlowWowContactCard from "@/components/PlowWowContactCard";
 import PSIContactCard from "@/components/PSIContactCard";
 import { useParams, Link } from "wouter";
@@ -31,7 +32,7 @@ export default function BlogPostPage() {
 
   const isSnowPost = post.tradeSlugs.includes("snow-removal") || /snow/i.test(post.category);
   const isPlowWow = post.slug.endsWith("-budget-2026-2027") || post.slug === "fairview-slopes-strata-snow-removal-access-planning" || post.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist";
-  const isBeeWarm = post.slug === "strata-hot-water-safety-robert-beewarm-guide";
+  const isBeeWarm = post.slug === "strata-hot-water-safety-robert-beewarm-guide" || post.slug === "beewarm-strata-fireplace-booking-app-beta";
   const isPSI = post.slug === "vancouver-strata-spray-insulation-monoglass-repairs-psi";
   const relatedTrades = trades.filter(t => post.tradeSlugs.includes(t.slug));
   const relatedPosts = post.tradeSlugs
@@ -106,11 +107,11 @@ export default function BlogPostPage() {
 
   return (
     <div className="min-h-screen bg-background font-sans selection:bg-primary/30 selection:text-primary-foreground">
-      <SEO title={post.title} description={post.metaDescription} ogType="article" ogImage={`https://www.stratapropertyservices.com/${post.image}`} ogImageAlt={post.imageAlt || post.gallery?.find(photo => photo.src === post.image)?.alt || post.title} />
-      {schemaMarkup.filter(schema => !(isPSI || isPlowWow) || schema["@type"] !== "Organization").map((schema, i) => (
+      <SEO title={post.title} description={post.metaDescription} ogType="article" ogImage={`https://www.stratapropertyservices.com/${post.shareImage || post.image}`} ogImageAlt={post.imageAlt || post.gallery?.find(photo => photo.src === post.image)?.alt || post.title} />
+      {schemaMarkup.filter(schema => !(isPSI || isPlowWow || isBeeWarm) || schema["@type"] !== "Organization").map((schema, i) => (
         <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
       ))}
-      {isPlowWow ? <SnowHeader/> : isPSI ? <PSIHeader/> : <Navbar />}
+      {isBeeWarm ? <BeeWarmHeader/> : isPlowWow ? <SnowHeader/> : isPSI ? <PSIHeader/> : <Navbar />}
 
       <header className="relative bg-secondary text-white py-16 px-6 overflow-hidden">
         <div className="absolute inset-0 z-0">
@@ -186,7 +187,7 @@ export default function BlogPostPage() {
               <div className="sticky top-24 space-y-6">
                 {!isSnowPost && (<div className="bg-secondary text-white p-8 rounded-2xl shadow-2xl">
                   <h3 className="text-xl font-bold mb-4 text-primary">Need This Service?</h3>
-                  <p className="text-sm text-slate-300 mb-6">{isBeeWarm ? "Discuss your heating or hot-water project with Robert Hamilton at BeeWarm. Confirm availability directly." : isPlowWow ? "Discuss your Kitsilano or West Side winter-service scope with PlowWow." : isPSI ? "Discuss your insulation or repair scope with Performance Spray Insulation." : "Get a free quote from our experienced team. 35+ years serving the Lower Mainland."}</p>
+                  <p className="text-sm text-slate-300 mb-6">{isBeeWarm ? "Discuss your fireplace, heating or hot-water service with Robert Hamilton at BeeWarm. Confirm availability directly." : isPlowWow ? "Discuss your Kitsilano or West Side winter-service scope with PlowWow." : isPSI ? "Discuss your insulation or repair scope with Performance Spray Insulation." : "Get a free quote from our experienced team. 35+ years serving the Lower Mainland."}</p>
                   <a
                     href={isBeeWarm ? "tel:+16047658424" : isPSI ? "tel:+17787794353" : `tel:${contacts.colin.phoneTel}`}
                     className="bg-primary hover:bg-accent text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 w-full mb-3"
@@ -261,7 +262,8 @@ export default function BlogPostPage() {
         </div>
       </section>
 
-      {isPlowWow ? <SnowFooter/> : isPSI ? <PSIFooter/> : <Footer />}
+      {isBeeWarm ? <BeeWarmFooter/> : isPlowWow ? <SnowFooter/> : isPSI ? <PSIFooter/> : <Footer />}
+      {isBeeWarm && <BeeWarmContactCard/>}
       {isPSI && <PSIContactCard/>}
       {isPlowWow && !post.slug.endsWith("-budget-2026-2027") && <PlowWowContactCard/>}
     </div>
@@ -273,3 +275,6 @@ function PSIFooter(){return <footer className="mx-auto max-w-7xl px-6 pt-8 pb-32
 
 function SnowHeader(){return <nav className="mx-auto max-w-7xl px-6 py-5 flex flex-wrap gap-4"><a href="/">Strata Property Services</a><span>Featured winter contractor: PlowWow</span><a href="tel:+16047611518">604-761-1518</a></nav>;}
 function SnowFooter(){return <footer className="mx-auto max-w-7xl px-6 pt-8 pb-32"><strong>PlowWow Snow Removal</strong><p>Winter service enquiries: <a href="tel:+16047611518">604-761-1518</a> · <a href="mailto:wow@plowwow.com">wow@plowwow.com</a></p><div data-iam-credit="true" style={{boxSizing:"border-box",width:"100%",gridColumn:"1 / -1",padding:"16px 24px",textAlign:"center",fontSize:"12px",lineHeight:1.5,color:"inherit"}}>Powered by <a href="https://industryarmymarketing.com/" style={{color:"inherit",textDecoration:"underline",textUnderlineOffset:"3px"}}>Industry Army Marketing</a></div></footer>;}
+
+function BeeWarmHeader(){return <nav className="mx-auto max-w-7xl px-6 py-5 flex flex-wrap items-center justify-between gap-4"><a href="/" className="font-bold">Strata Property Services</a><span>Featured service: BeeWarm</span><a href="tel:+16047658424" className="font-bold">Robert · 604-765-8424</a></nav>;}
+function BeeWarmFooter(){return <footer className="mx-auto max-w-7xl px-6 pt-8 pb-40"><strong>BeeWarm fireplace service</strong><p>Service and beta enquiries: <a href="tel:+16047658424">604-765-8424</a> · <a href="mailto:bee@beewarm.ca">bee@beewarm.ca</a></p><p>Featured on Strata Property Services. Availability and service scope confirmed by Robert.</p><div className="py-4 text-center text-xs">Powered by <a href="https://industryarmymarketing.com/" className="underline">Industry Army Marketing</a></div></footer>;}

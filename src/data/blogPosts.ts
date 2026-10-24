@@ -16,6 +16,7 @@ export interface BlogPost {
   image: string;
   imageCaption?: string;
   imageAlt?: string;
+  shareImage?: string;
   inlineVisuals?: { afterParagraph: number; src: string; alt: string; caption: string }[];
   gallery?: { src: string; alt: string; caption: string }[];
   relatedProjectLinks?: { label: string; href: string }[];
@@ -24,6 +25,84 @@ export interface BlogPost {
 import { snowCostPosts2026 } from "./snowCostPosts2026";
 
 export const blogPosts: BlogPost[] = [
+{
+  "slug": "beewarm-strata-fireplace-booking-app-beta",
+  "title": "BeeWarm Is All Fired Up About Its Strata Fireplace Booking App",
+  "excerpt": "Plan a coordinated fireplace service day for your condo, townhouse or multifamily complex. BeeWarm’s booking app is in private beta, with individual requests available through Rob.",
+  "category": "Gas Fireplaces",
+  "tradeSlugs": [
+    "hvac"
+  ],
+  "citySlugs": [
+    "vancouver",
+    "burnaby",
+    "coquitlam",
+    "surrey",
+    "langley"
+  ],
+  "date": "2026-10-24",
+  "readTime": "5 min read",
+  "metaDescription": "BeeWarm’s strata fireplace booking beta: coordinated group rates from $85 per fireplace before tax, resident access planning and individual service enquiries.",
+  "image": "images/beewarm-booking/bee-fireplace.jpg",
+  "shareImage": "images/beewarm-booking/sps-beewarm-booking-share.jpg",
+  "imageAlt": "BeeWarm bee mascot beside a fireplace in an illustrative winter home scene",
+  "imageCaption": "BeeWarm’s existing AI-generated brand illustration. Not a customer property, a service photograph or evidence of a completed visit.",
+  "content": [
+    "BeeWarm is all fired up about a simpler way to organize strata fireplace servicing. The new booking app brings building details, resident participation, access arrangements and Rob’s scheduling queue into one private beta workspace. It is being built around the people who need to make a service day work: strata councils, property managers, individual owners and Robert Hamilton at BeeWarm.",
+    "## Book your fireplace service for a multifamily complex",
+    "A condo or townhouse service day starts with a practical question: which owners want to participate, and when can the technician access their fireplaces? A list of interested units is useful, but it is not yet a workable schedule. BeeWarm’s approach connects the participation list with confirmed access and a service window that Rob can review before approving the booking.",
+    "For a building-wide enquiry, contact Robert with the property location, an expected fireplace count and your proposed organizer. A manager or council member can help coordinate owners, while Rob confirms the service scope and availability. Service is not automatically booked just because a date is requested.",
+    "## Coordinated group rates, before tax",
+    "The current group rates are CAD $140 per fireplace for 1–4 fireplaces; $120 each for 5–9; $100 each for 10–19; and $85 each for 20 or more. These are per-fireplace prices before tax, not a total price for the whole building. For example, an approved block of 20 confirmed fireplaces would have a service subtotal of $1,700 before tax.",
+    "These rates require tight bookings: the fireplaces must form a coordinated same-property service block with access arranged and a schedule Rob can approve. The final group count is based on confirmed participating fireplaces, rather than the building’s total unit count or a list of expressions of interest. Scattered visits on unrelated dates do not automatically qualify as one group.",
+    "If the confirmed count changes, the applicable group tier can change too. An estimate based on 20 interested owners is not a locked-in $85 rate if only 15 fireplaces are confirmed for the coordinated block. Ask Rob to confirm the rate and service scope before committing.",
+    "## Individual owners do not need a group",
+    "Your building may not be organizing a shared service day. You can still ask BeeWarm about an individual fireplace visit. The app includes a separate individual request path, and the standard individual estimate is $140 per fireplace before tax. A group discount is not automatically applied to an individual request.",
+    "Contact Rob directly to discuss your fireplace, the service you need and a workable date. The actual appointment and any work outside the agreed service scope require his confirmation. The beta does not provide instant public appointments or collect online payments.",
+    "## What the private beta currently does",
+    "The first release saves strata and individual booking requests, records a resident access roster and provides a scheduling queue. Rob can review a proposed service block, adjust planning time, approve the coordinated group arrangement and record the confirmed rate. The scheduling checks reject overlapping booked windows and blocks that do not allow the selected planning time.",
+    "The beta is currently restricted to Colin and Rob. Public customer registration and separate resident accounts are not enabled. Booking updates stay inside the workspace; automatic customer emails, text confirmations and online payment are not connected. Councils and owners should use Robert’s direct contact options rather than assume submitting a public form will reserve an appointment.",
+    "## CHOA-friendly planning, with clear responsibilities",
+    "We are aiming for a CHOA-friendly experience in the everyday sense: understandable information for councils and owners, clear scope, coordinated access and a price that people can discuss before booking. That description is an intention, not a claim of CHOA affiliation, approval, certification or endorsement.",
+    "A council still needs to confirm who may authorize work and how owner participation will be organized. The app does not decide the building’s maintenance responsibilities, approve council spending or replace the property’s own arrangements. Keep door codes, payment details and other sensitive access information out of general booking notes.",
+    "## Help us BEEcome the best fireplace service company for your strata community",
+    "We are in beta, and useful feedback can help shape the next version. Tell Rob what makes organizing your property difficult: collecting participation, explaining pricing, arranging access, reviewing the schedule or handling owners who need an individual appointment instead.",
+    "Our aim is to BEEcome the best fireplace service company for your strata community by making the process easier to understand and easier to coordinate. That is an ambition we want to earn through service and feedback, rather than an award or an independently verified ranking.",
+    "## How to ask about service or beta participation",
+    "Call Robert at 604-765-8424 or email bee@beewarm.ca. Include the building location, whether you are organizing a group or requesting an individual visit, the expected fireplace count and your preferred service period. Confirm availability and the work included directly with him.",
+    "Strata Property Services is introducing this affiliated BeeWarm beta to its council and property-management audience. Fireplace enquiries on this page go directly to Robert at BeeWarm. The private staff app is linked below for authorized users only; it is not a public booking portal.",
+    "## Quick answers",
+    "Can an owner enquire without a strata group? Yes. Contact Robert about an individual visit. The standard individual estimate is $140 per fireplace before tax, subject to confirmed scope and availability.",
+    "What is needed for the $85 rate? At least 20 confirmed participating fireplaces within a tight same-property service block approved by Rob. Twenty interested owners alone do not establish eligibility.",
+    "Can residents register in the app now? Public registration is not enabled in this private beta. Ask Robert about current service options and participation rather than treating the staff sign-in page as an open customer portal."
+  ],
+  "relatedProjectLinks": [
+    {
+      "label": "Call Robert at BeeWarm — service and beta enquiries",
+      "href": "tel:+16047658424"
+    },
+    {
+      "label": "Text Robert",
+      "href": "sms:+16047658424"
+    },
+    {
+      "label": "Email BeeWarm",
+      "href": "mailto:bee@beewarm.ca"
+    },
+    {
+      "label": "BeeWarm service enquiries",
+      "href": "https://beewarm.ca/contact/"
+    },
+    {
+      "label": "Private staff beta — Colin and Rob sign-in required",
+      "href": "https://beewarm-fireplace-booking.frameinsteel.chatgpt.site"
+    },
+    {
+      "label": "SPS gas fireplace and HVAC services",
+      "href": "https://www.stratapropertyservices.com/services/hvac"
+    }
+  ]
+},
   ...snowCostPosts2026,
 {
   "slug": "compare-strata-snow-removal-quotes",

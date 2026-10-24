@@ -12,7 +12,8 @@ let ok = 0, fail = 0;
 for (const url of routes) {
   try {
     const { html, head } = render(url);
-    const page = template.replace("<!--app-html-->", html).replace("<!--app-head-->", head);
+    let page = template.replace("<!--app-html-->", html).replace("<!--app-head-->", head);
+    if (url === "/blog/beewarm-strata-fireplace-booking-app-beta") page = page.replace(/<script[^>]*src="https:\/\/talc-tv\.replit\.app\/bot\.js[^>]*><\/script>/g, "");
     const outDir = path.join(dist, url === "/" ? "" : url);
     fs.mkdirSync(outDir, { recursive: true });
     fs.writeFileSync(path.join(outDir, "index.html"), page);

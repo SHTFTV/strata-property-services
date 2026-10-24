@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/blog/beewarm-strata-fireplace-booking-app-beta",
+      "destination": "/blog/beewarm-strata-fireplace-booking-app-beta/index.html"
+    },
+    {
       "source": "/blog/common-area-ceiling-renewal-access-maintenance",
       "destination": "/blog/common-area-ceiling-renewal-access-maintenance/index.html"
     },

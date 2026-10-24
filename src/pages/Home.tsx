@@ -6,6 +6,8 @@ import { ContactSection } from "@/components/sections/ContactSection";
 import { BlogSection } from "@/components/sections/BlogSection";
 import { SEO } from "@/components/SEO";
 
+import { BeeWarmBookingSection } from "@/components/sections/BeeWarmBookingSection";
+
 export default function Home() {
   const schemaMarkup = [
     {
@@ -44,6 +46,7 @@ export default function Home() {
       <main>
         <HeroSection />
         <ServicesSection />
+        <BeeWarmBookingSection />
         <BlogSection />
         <ContactSection />
       </main>
