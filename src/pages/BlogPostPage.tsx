@@ -30,7 +30,7 @@ export default function BlogPostPage() {
   }
 
   const isSnowPost = post.tradeSlugs.includes("snow-removal") || /snow/i.test(post.category);
-  const isPlowWow = post.slug.endsWith("-budget-2026-2027") || post.slug === "fairview-slopes-strata-snow-removal-access-planning" || post.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist";
+  const isPlowWow = post.slug === "metro-vancouver-strata-mild-winter-council-planning" || post.slug.endsWith("-budget-2026-2027") || post.slug === "fairview-slopes-strata-snow-removal-access-planning" || post.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist";
   const isBeeWarm = post.slug === "strata-hot-water-safety-robert-beewarm-guide" || post.slug === "beewarm-strata-fireplace-booking-app-beta";
   const isPSI = post.slug === "vancouver-strata-spray-insulation-monoglass-repairs-psi";
   const relatedTrades = trades.filter(t => post.tradeSlugs.includes(t.slug));
@@ -192,7 +192,7 @@ export default function BlogPostPage() {
               <div className="sticky top-24 space-y-6">
                 {!isSnowPost && (<div className="bg-secondary text-white p-8 rounded-2xl shadow-2xl">
                   <h3 className="text-xl font-bold mb-4 text-primary">Need This Service?</h3>
-                  <p className="text-sm text-slate-300 mb-6">{isBeeWarm ? "Discuss your fireplace, heating or hot-water service with Robert Hamilton at BeeWarm. Confirm availability directly." : isPlowWow ? "Discuss your Kitsilano or West Side winter-service scope with PlowWow." : isPSI ? "Discuss your insulation or repair scope with Performance Spray Insulation." : "Get a free quote from our experienced team. 35+ years serving the Lower Mainland."}</p>
+                  <p className="text-sm text-slate-300 mb-6">{isBeeWarm ? "Discuss your fireplace, heating or hot-water service with Robert Hamilton at BeeWarm. Confirm availability directly." : isPlowWow ? "Discuss your property’s winter-service scope with PlowWow." : isPSI ? "Discuss your insulation or repair scope with Performance Spray Insulation." : "Get a free quote from our experienced team. 35+ years serving the Lower Mainland."}</p>
                   <a
                     href={isBeeWarm ? "tel:+16047658424" : isPSI ? "tel:+17787794353" : `tel:${contacts.colin.phoneTel}`}
                     className="bg-primary hover:bg-accent text-white font-bold px-6 py-3 rounded-xl transition-all shadow-lg flex items-center justify-center gap-2 w-full mb-3"

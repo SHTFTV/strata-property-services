@@ -394,7 +394,12 @@ export const blogPosts: BlogPost[] = [
     "## Treat drainage observations as building information",
     "Note where water crosses a walkway, collects at an entrance or comes from a downspout. Share those observations with both the winter provider and the building maintenance contact. A recurring water source may need a separate maintenance decision. Record what was reported, who owns the next action and how residents will be updated.",
     "## Use regional wording without losing the address",
-    "Metro Vancouver helps readers find regional guidance. The winter plan should still identify the municipality, actual boundaries and route constraints. Keep Fraser Valley properties clearly identified when managing a wider portfolio. Confirm current local requirements directly with the municipality, then make the property responsibilities explicit on the council map."
+    "Metro Vancouver helps readers find regional guidance. The winter plan should still identify the municipality, actual boundaries and route constraints. Keep Fraser Valley properties clearly identified when managing a wider portfolio. Confirm current local requirements directly with the municipality, then make the property responsibilities explicit on the council map.",
+    "## Snow Intelligence beta: two council-facing ideas",
+    "For Metro Vancouver stratas, PlowWow™ is exploring clearer client-facing visit records and source-linked municipal reference information. The practical goal is for a council to distinguish a recorded visit, the work included and an unresolved access issue, while keeping the municipality’s own requirements separately identifiable. These are beta development goals. This update does not announce live arrival alerts for every building, an automated bylaw-compliance check or an AI-certified service record.",
+    "## The experience behind a first-year beta",
+    "The founder reports 15 seasons in snow removal, four seasons marketing across North America under a previous brand and 25 years in contracting. Snow Intelligence is nevertheless in its first year of beta. PlowWow believes practical experience, AI and business ingenuity can make winter communication more useful; field testing and property-manager feedback must demonstrate the results. Ask which features are actually enabled for your property. Records do not guarantee a legal result or a lower insurance premium.",
+    "Beta context added October 24, 2026. Read the current product status at https://www.plowwow.com/intelligence. SPS and PlowWow are affiliated IAM network businesses."
   ],
   "category": "Snow Removal",
   "tradeSlugs": [
@@ -413,6 +418,7 @@ export const blogPosts: BlogPost[] = [
   "imageAlt": "Mild winter? Wow keeps the shovel, blower and plow ready anyway. AI illustration by PlowWow; the newspaper is fictional, not a weather forecast.",
   "imageCaption": "Mild winter? Wow keeps the shovel, blower and plow ready anyway. AI illustration by PlowWow; the newspaper is fictional, not a weather forecast.",
   "relatedProjectLinks": [
+    {"label":"PlowWow Snow Intelligence: current beta status","href":"https://www.plowwow.com/intelligence"},
     {
       "label": "Environment Canada seasonal forecast overview",
       "href": "https://weather.gc.ca/saisons/"
