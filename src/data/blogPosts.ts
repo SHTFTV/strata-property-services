@@ -41,9 +41,10 @@ export const blogPosts: BlogPost[] = [
   "date": "2026-11-19",
   "readTime": "4 min read",
   "metaDescription": "Vancouver strata fireplace maintenance and replacement planning. Check the existing firebox and vent route, strata approvals and how the building bills for gas.",
-  "image": "images/blog-fireplace-seasonal.png",
-  "imageAlt": "Fireplace service illustration from Strata Property Services",
-  "imageCaption": "Strata Property Services editorial illustration of fireplace maintenance.",
+  "image": "images/first-frost-fireplace.jpg",
+  "shareImage": "images/first-frost-fireplace.jpg",
+  "imageAlt": "Illustration of a technician attending to a gas fireplace",
+  "imageCaption": "Fireplace servicing illustration by BeeWarm.",
   "content": [
     "An older gas fireplace in a Vancouver condo can leave you with two questions: can it be serviced for another winter, and what would a replacement change? Start with an assessment of the appliance you have. The answer may depend as much on the building’s vent route and access rules as on the dimensions of the opening.",
     "## Start with maintenance and a model number",
