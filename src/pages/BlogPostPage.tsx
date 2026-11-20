@@ -31,7 +31,7 @@ export default function BlogPostPage() {
 
   const isSnowPost = post.tradeSlugs.includes("snow-removal") || /snow/i.test(post.category);
   const isPlowWow = post.slug === "metro-vancouver-strata-mild-winter-council-planning" || post.slug.endsWith("-budget-2026-2027") || post.slug === "fairview-slopes-strata-snow-removal-access-planning" || post.slug === "west-side-vancouver-strata-snow-removal-kitsilano-checklist";
-  const isBeeWarm = post.slug === "strata-hot-water-safety-robert-beewarm-guide" || post.slug === "beewarm-strata-fireplace-booking-app-beta";
+  const isBeeWarm = post.slug === "vancouver-strata-gas-fireplace-service-or-replace" || post.slug === "strata-hot-water-safety-robert-beewarm-guide" || post.slug === "beewarm-strata-fireplace-booking-app-beta";
   const isPSI = post.slug === "vancouver-strata-spray-insulation-monoglass-repairs-psi";
   const relatedTrades = trades.filter(t => post.tradeSlugs.includes(t.slug));
   const relatedPosts = post.tradeSlugs

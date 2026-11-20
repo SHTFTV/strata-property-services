@@ -28,6 +28,54 @@ import { snowCostPosts2026 } from "./snowCostPosts2026";
 
 export const blogPosts: BlogPost[] = [
 {
+  "slug": "vancouver-strata-gas-fireplace-service-or-replace",
+  "title": "Service It or Replace It? A Vancouver Strata Gas Fireplace Guide",
+  "excerpt": "Start with the fireplace you have. Then check what fits, who approves vent work and how gas costs are shared in your building.",
+  "category": "Gas Fireplaces",
+  "tradeSlugs": [
+    "hvac"
+  ],
+  "citySlugs": [
+    "vancouver"
+  ],
+  "date": "2026-11-19",
+  "readTime": "4 min read",
+  "metaDescription": "Vancouver strata fireplace maintenance and replacement planning. Check the existing firebox and vent route, strata approvals and how the building bills for gas.",
+  "image": "images/blog-fireplace-seasonal.png",
+  "imageAlt": "Fireplace service illustration from Strata Property Services",
+  "imageCaption": "Strata Property Services editorial illustration of fireplace maintenance.",
+  "content": [
+    "An older gas fireplace in a Vancouver condo can leave you with two questions: can it be serviced for another winter, and what would a replacement change? Start with an assessment of the appliance you have. The answer may depend as much on the building’s vent route and access rules as on the dimensions of the opening.",
+    "## Start with maintenance and a model number",
+    "Send Robert Hamilton at BeeWarm the make and model from your paperwork or an already visible label. Include a wide photo of the fireplace and surround, any previous service record, and what you have noticed during normal use. If the fireplace has been behaving abnormally, stop using it and arrange an assessment. Leave covers, glass, gas connections and vent parts in place.",
+    "Ask the gas fitter to explain what the service covers and what they found. If they recommend replacement, ask which condition prompted it and whether parts are available for your exact model. For a building-wide service day, have the manager gather model numbers and access windows by suite. Units that look alike from the living room can have different appliances or vent routes.",
+    "## Check what the new fireplace can actually fit",
+    "A replacement may preserve the existing surround or use the same chimney route. Those are two separate decisions. Some gas inserts are designed for a compatible existing wood-burning firebox and use approved vent liners routed through a suitable chimney. An older factory-built gas fireplace’s metal enclosure is a different starting point. Have the contractor identify what it is and show which replacement configuration the manufacturer approves for that opening and vent route.",
+    "Before ordering, ask what the proposal assumes about the opening depth, surrounding finishes and vent termination. Have the contractor identify what can remain, what needs replacement and what still needs inspection. A unit that physically fits the opening still needs the correct venting and clearances for that model. The installer should confirm what access is needed inside the suite, at the exterior or at the roof.",
+    "## Coordinate the work with the strata",
+    "Ask the manager who maintains the appliance and who is responsible for the vent, roof or exterior termination. Review the building’s bylaws and alteration process before booking replacement work. If any common property is affected, have the manager confirm the written approval required. Ask the licensed gas contractor to identify the applicable permit authority and who handles permits and inspections for your address. Vancouver publishes its gas permit process, including contractor requirements for strata owners.",
+    "Where several suites are considering replacements, agree how the contractor will document the model and vent route for each unit. A building can coordinate access and still approve different scopes for different suites. Keep the installer’s written scope, any approval conditions and the completion records together.",
+    "## Ask how the building pays for gas",
+    "Check whether your fireplace gas is individually metered, included in a shared utility charge or covered through strata fees. If the building pays a combined bill, ask the manager how it is allocated and what other equipment is on that account. A newer fireplace may make the room more comfortable. Any change in your own costs depends on how it is used, what heat it displaces and how the building bills for gas.",
+    "## Talk to Robert at BeeWarm",
+    "For a Vancouver service or replacement enquiry, send Robert the building address, suite count if you are organizing a group, available model details and the name of the person coordinating access. Ask him to confirm the scope and availability before setting a date."
+  ],
+  "relatedProjectLinks": [
+    {
+      "label": "City of Vancouver gas permit guidance",
+      "href": "https://vancouver.ca/home-property-development/gas-permit.aspx"
+    },
+    {
+      "label": "BC guidance for strata owners",
+      "href": "https://www2.gov.bc.ca/gov/content/housing-tenancy/strata-housing/operating-a-strata/roles-and-responsibilities/strata-owners"
+    },
+    {
+      "label": "Valor G4 manufacturer installation guide",
+      "href": "https://www.valorfireplaces.com/media/G4/english/780R-Installation.pdf"
+    }
+  ]
+},
+{
   "slug": "beewarm-strata-fireplace-booking-app-beta",
   "title": "BeeWarm Is All Fired Up About Its Strata Fireplace Booking App",
   "excerpt": "How much does fireplace service cost? BeeWarm’s individual estimate is $140 per fireplace before tax, with qualifying strata group rates from $85. Explore the private booking beta.",

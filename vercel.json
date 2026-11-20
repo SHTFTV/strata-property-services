@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/blog/vancouver-strata-gas-fireplace-service-or-replace",
+      "destination": "/blog/vancouver-strata-gas-fireplace-service-or-replace/index.html"
+    },
+    {
       "source": "/blog/beewarm-strata-fireplace-booking-app-beta",
       "destination": "/blog/beewarm-strata-fireplace-booking-app-beta/index.html"
     },
