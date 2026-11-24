@@ -56,3 +56,8 @@ const xml = [
 ].join('\n');
 fs.writeFileSync(path.join(dist, "sitemap.xml"), xml);
 console.log(`✓ prerendered ${ok} routes (${fail} skipped)`);
+
+const dailySitemapPath=path.join(dist,"sitemap.xml");
+fs.writeFileSync(dailySitemapPath,fs.readFileSync(dailySitemapPath,"utf8").replace("</urlset>",()=>"<url><loc>https://www.stratapropertyservices.com/blog/strata-building-wide-fireplace-servicing-schedule</loc><lastmod>2026-11-24</lastmod></url>"+"</urlset>"));
+const dailyHomePath=path.join(dist,"index.html");
+fs.writeFileSync(dailyHomePath,fs.readFileSync(dailyHomePath,"utf8").replace("</body>",()=>"<section aria-label=\"Latest article\" style=\"max-width:1050px;margin:24px auto;padding:20px 5%;font-family:system-ui\"><a href=\"/blog/strata-building-wide-fireplace-servicing-schedule\"><img src=\"https://ppdnkogmsfwhhknayolb.supabase.co/storage/v1/object/public/post-images/stratapropertyservices.com/strata-building-wide-fireplace-servicing-schedule.png\" alt=\"Gas fitter servicing a gas fireplace insert in a condo living room with the glass front set aside\" loading=\"lazy\" style=\"width:min(100%,400px);height:auto;border-radius:8px\"><h2>How Strata Councils Should Schedule Building-Wide Fireplace Servicing</h2></a><p>Servicing every fireplace in a building at once is cheaper and easier to track than leaving it to each owner, but only if the logistics are planned. Here&#39;s a schedule councils can follow, from booking to records.</p></section>"+"</body>"));

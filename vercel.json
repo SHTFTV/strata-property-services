@@ -1,6 +1,10 @@
 {
   "rewrites": [
     {
+      "source": "/blog/strata-building-wide-fireplace-servicing-schedule",
+      "destination": "/blog/strata-building-wide-fireplace-servicing-schedule/index.html"
+    },
+    {
       "source": "/blog/vancouver-strata-gas-fireplace-service-or-replace",
       "destination": "/blog/vancouver-strata-gas-fireplace-service-or-replace/index.html"
     },
