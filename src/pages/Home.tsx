@@ -1,3 +1,4 @@
+import { NovemberEditorialGuide } from "@/components/NovemberEditorialGuide";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { HeroSection } from "@/components/sections/HeroSection";
@@ -43,7 +44,7 @@ export default function Home() {
       {schemaMarkup.map((schema, i) => <script key={i} type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />)}
       <SEO title="Strata Snow Removal & Property Services | Vancouver & Lower Mainland" description="One coordinated partner for strata snow removal, roofing, painting, rental turnovers, HVAC, plumbing, drainage, renovations and building maintenance across Metro Vancouver." />
       <Navbar />
-      <main>
+      <main><NovemberEditorialGuide/>
         <HeroSection />
         <ServicesSection />
         <BeeWarmBookingSection />

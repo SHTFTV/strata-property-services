@@ -1,3 +1,4 @@
+import { NovemberEditorialGuide } from "@/components/NovemberEditorialGuide";
 import { Link } from "wouter";
 import { blogPosts, getUniqueCategories } from "@/data/blogPosts";
 import { Navbar } from "@/components/layout/Navbar";
@@ -49,7 +50,7 @@ export default function BlogPage() {
         </div>
       </div>
 
-      <main className="py-16 px-6">
+      <main className="py-16 px-6"><NovemberEditorialGuide/>
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-wrap gap-3 mb-12">
             <button
