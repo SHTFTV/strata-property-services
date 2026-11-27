@@ -1,0 +1,78 @@
+{
+  "site": "stratapropertyservices.com",
+  "source": "Supabase public.posts",
+  "sourceProject": "ppdnkogmsfwhhknayolb",
+  "posts": [
+    {
+      "site": "stratapropertyservices.com",
+      "title": "Fireplace Upgrades in a Strata: What Approvals Are Needed?",
+      "slug": "strata-fireplace-upgrade-approvals",
+      "excerpt": "Swapping a fireplace in a strata unit usually needs more than a contractor's quote. Here's the approval path under BC's Strata Property Act and the gas rules, and what councils should ask for before work starts.",
+      "body_md": "Gas fireplace upgrades in a BC strata commonly need several separate approvals before work starts: written approval from the strata (usually through council, under the strata's alteration bylaws), a gas permit taken out by a licensed gas contractor, and often a signed alteration and indemnity agreement. If the job changes common property in a significant way, such as a new vent through an exterior wall or a new chimney, the Strata Property Act can require a 3/4 vote at a general meeting as well. The exact rules depend on your strata's registered bylaws, so councils and owners should start there.\n\n## Step 1: Check which bylaws apply\n\nStart with the strata's current registered bylaws and the strata plan. Under [section 120 of the Strata Property Act](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/98043_07), the Standard Bylaws apply except where different bylaws have been filed. A building can therefore have a combination of standard provisions and amendments; do not rely on another strata's bylaws.\n\nUnder [Standard Bylaw 5](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/98043_18), an owner needs the strata's written approval before altering a strata lot in ways that involve the building's structure, its exterior, chimneys, stairs, balconies or other attached features, common property inside the lot, or parts of the lot the strata must insure. Standard Bylaw 6 requires written approval before any change to common property, including limited common property.\n\nStandard Bylaw 5 also has a bare-land-strata exception. A fireplace upgrade in a conventional apartment or townhouse strata can touch several regulated elements at once: the vent or chimney, an exterior wall, the framing around the firebox, and fixtures the strata insures.\n\n## Step 2: Is it a \"significant change\" to common property?\n\n[Section 71 of the Strata Property Act](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/98043_05) says the strata must not make a significant change in the use or appearance of common property unless it's approved by a 3/4 vote at an annual or special general meeting, or is needed immediately for safety or to prevent significant damage. An owner proposal affecting common property needs review under the applicable alteration bylaws and statutory requirements. Ask the strata to assess significance before committing to the work; a contractor cannot supply the strata vote or approval.\n\nExamples that may cross the line, depending on the building:\n\n- A new direct vent termination on a visible exterior wall.\n- A new chimney or flue through the roof.\n- Removing a masonry chimney or changing the building's exterior appearance.\n\nA replacement in an existing location still needs review of the actual scope. Do not assume the old vent is compatible with the new appliance, or that a similar-looking installation needs no approval. The licensed contractor should confirm the manufacturer's venting requirements, while the strata considers the property and appearance changes. Obtain advice when the approval threshold is uncertain.\n\n## Step 3: The gas permit and who can do the work\n\n[Technical Safety BC's permit guidance](https://www.technicalsafetybc.ca/apply-for/permits/homeowner-permits/homeowner-gas-permits) includes gas fireplace installation and replacement among work requiring a permit. It states that strata owners cannot obtain its homeowner gas permits and must hire a licensed contractor. The contractor should confirm the correct permit issuer and requirements for the address, fuel and system. Municipal delegation is not identical for every gas installation, so use the current [gas jurisdiction guidance](https://www.technicalsafetybc.ca/regulatory-resources/regulatory-notices/information-bulletin-gas-installation-permit-and-safety-jurisdiction-british-columbia).\n\nCouncils should request the permit number and the relevant completion and assessment records. Under [Technical Safety BC's assessment process](https://www.technicalsafetybc.ca/technologies/gas/gas-assessments), a declaration can be accepted without a remote or physical inspection. Permit issuance, an accepted compliance declaration and a completed physical inspection are different records; ask for the record actually issued.\n\n## Step 4: Alteration and indemnity agreements\n\nStandard Bylaw 5 says the strata must not unreasonably withhold approval for a strata lot alteration, but can require the owner to agree in writing to take responsibility for expenses relating to it. A written alteration and indemnity agreement can record that responsibility.\n\nKeep alteration agreements with the strata records. [Section 59 of the Act](https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/98043_04) requires the Information Certificate to disclose agreements under which the owner takes responsibility for alteration expenses. Whether a particular obligation binds a later purchaser depends on the agreement, bylaws and applicable law; do not assume disclosure alone settles every succession question. Owners and purchasers should have the actual documents reviewed.\n\n## What councils should ask for\n\n| Document or detail | Why it matters |\n|---|---|\n| Written description and drawings of the work | Shows what changes, inside and out |\n| Product specifications and installation manual | Confirms venting, clearances and model |\n| Vent termination location (photo or drawing) | Exterior appearance, neighbours, windows |\n| Licensed gas contractor's name and licence | Only licensed contractors can do strata gas work |\n| Gas permit and completion/assessment records | Identifies the permit and the actual declaration or inspection outcome |\n| Evidence of contractor insurance | Allows the strata to review the policy and scope; does not establish coverage for every event |\n| Signed alteration and indemnity agreement | Sets who pays for future repairs and damage |\n| Work schedule and access plan | Elevator bookings, noise, common area protection |\n\n## Tips for owners\n\n- **Ask before you buy.** Get council's answer on venting and appearance before ordering a unit.\n- **Plan for the vote.** If a 3/4 vote may be needed, the timeline is set by the next general meeting, not the contractor's schedule.\n- **Talk to your neighbours.** Vent terminations near balconies and windows are a common source of complaints.\n- **Keep the paperwork.** Approvals, permits and the indemnity agreement will matter when you sell.\n\n## Tips for councils\n\n- **Be consistent.** Use the same application form and criteria for every owner so decisions are defensible.\n- **Respond in writing**, with reasons, and within a reasonable time.\n- **Apply the correct approval rule.** Standard Bylaw 5 prohibits unreasonable withholding of the approval it covers. Check the registered bylaws and distinguish strata-lot work from common-property work.\n- **Get advice** on whether a change is significant before deciding a vote isn't needed.\n\nIf the proposal is to replace gas with an electric fireplace, identify the gas decommissioning, electrical work and enclosure changes separately. A gas permit is not a universal permit for every electric appliance. The relevant qualified trades and permit authorities should confirm the scope, and the strata should review any affected common property or insured building elements.\n\nThis article is general information, not legal advice. For a specific situation, check your strata's registered bylaws and speak with a strata lawyer or your property manager.",
+      "faq": [
+        {
+          "a": "Usually yes. Under the Standard Bylaws, owners need written approval before alterations involving chimneys, the building exterior, structure or parts the strata insures, and many stratas have similar or stricter bylaws.",
+          "q": "Do I need strata approval to replace my gas fireplace?"
+        },
+        {
+          "a": "A proposed fireplace alteration that significantly changes the use or appearance of common property may require a three-quarter vote under section 71, subject to the Act's conditions and emergency exception. Ask the strata to assess the actual proposal before ordering or installing equipment.",
+          "q": "When does a fireplace upgrade need a 3/4 vote?"
+        },
+        {
+          "a": "Technical Safety BC states that strata owners cannot obtain its homeowner gas permits and must hire a licensed contractor. The contractor should confirm the correct permitting jurisdiction for the actual installation.",
+          "q": "Can a strata owner get a homeowner gas permit?"
+        },
+        {
+          "a": "That requires review of the particular agreement, registered bylaws and applicable law. Section 59 requires disclosure of alteration-expense agreements in the Information Certificate; disclosure alone should not be treated as a universal answer about a later purchaser's obligations.",
+          "q": "Does an indemnity agreement transfer to a new owner?"
+        }
+      ],
+      "sources": [
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/98043_07",
+          "title": "BC Laws: Strata Property Act, bylaws and section 120"
+        },
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/98043_18",
+          "title": "BC Laws: Schedule of Standard Bylaws, alterations"
+        },
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/98043_05",
+          "title": "BC Laws: Strata Property Act, section 71"
+        },
+        {
+          "url": "https://www.bclaws.gov.bc.ca/civix/document/id/complete/statreg/98043_04",
+          "title": "BC Laws: Strata Property Act, section 59 Information Certificate"
+        },
+        {
+          "url": "https://www.technicalsafetybc.ca/apply-for/permits/homeowner-permits/homeowner-gas-permits",
+          "title": "Technical Safety BC: Homeowner gas permits and strata exclusions"
+        },
+        {
+          "url": "https://www.technicalsafetybc.ca/technologies/gas/gas-assessments",
+          "title": "Technical Safety BC: Gas assessments and declaration acceptance"
+        },
+        {
+          "url": "https://www.technicalsafetybc.ca/regulatory-resources/regulatory-notices/information-bulletin-gas-installation-permit-and-safety-jurisdiction-british-columbia",
+          "title": "Technical Safety BC: Gas installation permit and safety jurisdiction"
+        }
+      ],
+      "image_url": "https://ppdnkogmsfwhhknayolb.supabase.co/storage/v1/object/public/post-images/stratapropertyservices.com/strata-fireplace-upgrade-approvals.png",
+      "image_alt": "Strata council members reviewing fireplace installation drawings and a product brochure at a meeting table",
+      "meta_description": "Strata council approval, possible 3/4 votes, gas permits and indemnity agreements: what a BC fireplace upgrade in a strata unit needs.",
+      "published_at": "2026-11-27T14:00:00+00:00"
+    }
+  ],
+  "review": {
+    "date": "2026-11-27",
+    "changes": [
+      "Retained prepared topic, title, slug, original date and illustration",
+      "Distinguished gas permits from electric-appliance work and strata approvals",
+      "Qualified standard versus registered bylaws and alteration-agreement succession",
+      "Replaced unverified case summaries with current primary legislation",
+      "Corrected physical-inspection assumption and removed misrouted KongTractors cross-link",
+      "Preserved earlier guide in homepage/archive/feed and added new canonical sitemap entry"
+    ]
+  },
+  "verification": "Production receipt recorded after deployment"
+}

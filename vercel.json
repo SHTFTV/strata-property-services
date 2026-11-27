@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/blog/strata-fireplace-upgrade-approvals",
+      "destination": "/blog/strata-fireplace-upgrade-approvals/index.html"
+    },
+    {
+      "source": "/blog/strata-fireplace-upgrade-approvals/",
+      "destination": "/blog/strata-fireplace-upgrade-approvals/index.html"
+    },
+    {
       "source": "/blog/owner-wont-allow-fireplace-inspection-strata",
       "destination": "/blog/owner-wont-allow-fireplace-inspection-strata/index.html"
     },

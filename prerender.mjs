@@ -64,3 +64,6 @@ fs.writeFileSync(dailyHomePath,fs.readFileSync(dailyHomePath,"utf8").replace("</
 
 // Owner-requested November26 reviewed editorial import.
 fs.writeFileSync(path.join(dist,"sitemap.xml"),fs.readFileSync(path.join(dist,"sitemap.xml"),"utf8").replace("</urlset>",()=>"<url><loc>https://www.stratapropertyservices.com/blog/owner-wont-allow-fireplace-inspection-strata</loc><lastmod>2026-11-26</lastmod></url>"+"</urlset>"));
+
+// Preserve the November27 imported guide in canonical discovery.
+fs.writeFileSync(path.join(dist,"sitemap.xml"),fs.readFileSync(path.join(dist,"sitemap.xml"),"utf8").replace("</urlset>",()=>"<url><loc>https://www.stratapropertyservices.com/blog/strata-fireplace-upgrade-approvals</loc><lastmod>2026-11-27</lastmod></url></urlset>"));
